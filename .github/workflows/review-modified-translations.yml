@@ -102,15 +102,14 @@ jobs:
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             MODIFIED_FILES: ${{ env.modified_files }}
             DELETED_FILES: ${{ env.deleted_files }}
-            LANGUAGES: "en-US ro-RO hr-HR" # List of languages
+            LANGUAGES: "en-US ro-RO" # List of languages
             REPO: ${{ github.repository }}
         run: |
             # Define mappings of languages to team member usernames
             declare -A team_usernames
             team_usernames=( 
-                ["en-US"]="alba-fluentis" 
-                ["ro-RO"]="rodica1234" 
-                ["hr-HR"]="Federica-fluentis" 
+                ["ro-RO"]="adi-fluentis" 
+                ["en-US"]="adi-fluentis" 
             )
             
             # get last commit message for use in issue title

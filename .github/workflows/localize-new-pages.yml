@@ -51,9 +51,9 @@ jobs:
         run: |
           declare -A team_usernames
           team_usernames=( 
-              ["en-US"]="alba-fluentis" 
-              ["ro-RO"]="rodica1234" 
-              ["hr-HR"]="Federica-fluentis" 
+              ["en-US"]="Adi-Fluentis" 
+              ["ro-RO"]="Adi-Fluentis" 
+              ["hr-HR"]="Adi-Fluentis" 
           )
 
           commit_message=$(git log -1 --pretty=%B)

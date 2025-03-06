@@ -22,14 +22,21 @@ jobs:
       - name: Detect newly added Markdown files
         id: detect-new-files
         run: |
-          new_files=$(git diff --name-status HEAD~1 HEAD | awk '$1 == "A" && $2 ~ /\.md$/ { print $2 }')
+          new_files=$(git diff --diff-filter=A --name-only HEAD~1 HEAD -- 'docs/**/*.md')
           
           if [ -z "$new_files" ]; then
             echo "No new files to process."
             echo "new-files=" >> $GITHUB_OUTPUT
           else
-            echo "New files detected: $new_files"
-            echo "new-files=$new_files" >> $GITHUB_OUTPUT
+            echo "New files detected:"
+            echo "$new_files"
+            # Save output to a temp file to handle special characters
+            temp_file=$(mktemp)
+            echo "$new_files" > "$temp_file"
+            echo "new-files<<EOF" >> $GITHUB_OUTPUT
+            cat "$temp_file" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            rm "$temp_file"
           fi
 
   create-issues:
@@ -57,14 +64,13 @@ jobs:
           )
 
           commit_message=$(git log -1 --pretty=%B)
-          new_files=$(echo "$NEW_FILES" | tr ' ' '\n')
+          new_files=$(echo "$NEW_FILES" | tr '\n' ' ')
 
           for lang in $LANGUAGES; do
             team_member=${team_usernames[$lang]}
             team_name="translation-team-${lang:0:2}"
 
-            issue_body="The following new files need to be translated into **${lang}**:
-            \n@fluentis-doc/${team_name}\n"
+            issue_body="The following new files need to be translated into **${lang}**:\n\n@fluentis-doc/${team_name}\n"
             for file in $new_files; do
               file_link="https://github.com/${REPO}/blob/main/${file}"
               issue_body+="- [$file]($file_link)\n"

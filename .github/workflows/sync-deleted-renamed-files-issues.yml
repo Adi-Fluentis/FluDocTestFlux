@@ -23,8 +23,8 @@ jobs:
       - name: Detect deleted and renamed Markdown files
         id: detect-changes
         run: |
-          deleted_files=$(git diff --diff-filter=D --name-only HEAD~1 HEAD -- 'docs/**/*.md')
-          renamed_files=$(git diff --diff-filter=R --name-only HEAD~1 HEAD -- 'docs/**/*.md')
+          deleted_files=$(git diff --diff-filter=D --name-only HEAD~1 HEAD -- 'docs/**/*.md'| tr -d '[:space:]')
+          renamed_files=$(git diff --diff-filter=R --name-only HEAD~1 HEAD -- 'docs/**/*.md'| tr -d '[:space:]')
           
           if [ -z "$deleted_files" ]; then
             echo "No deleted files to process."

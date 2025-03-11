@@ -88,6 +88,7 @@ jobs:
             team_name="translation-team-${lang:0:2}"
 
             if [ -n "$deleted_files" ]; then
+              echo "DEBUG: deleted_files content: [$deleted_files]"
               issue_body="The following files were deleted and need review for localization updates in **${lang}**:\n\n@fluentis-doc/${team_name}\n"
               for file in $deleted_files; do
                 issue_body+="- $file\n"
@@ -106,6 +107,7 @@ jobs:
             fi
             
             if [ -n "$renamed_files" ]; then
+              echo "DEBUG: deleted_files content: [$renamed_files]"
               issue_body="The following files were renamed/moved and need review for localization updates in **${lang}**:\n\n@fluentis-doc/${team_name}\n"
               for file in $renamed_files; do
                 issue_body+="- $file\n"

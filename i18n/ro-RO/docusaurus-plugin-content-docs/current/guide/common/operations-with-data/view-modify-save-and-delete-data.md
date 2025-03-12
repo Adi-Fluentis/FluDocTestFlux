@@ -25,10 +25,10 @@ Există înregistrări care nu pot fi șterse înaintea ștergerii legăturilor 
 
 Pentru mai multe detalii:
 
-- Consultați  [Caută dateguide/common/operations-with-data/data-search-in-read-only-forms)  e  [Inserimento e selezione datiguide/common/operations-with-data/manual-entry-or-help-and-data-selection) pentru a insera corect câmpurile.
+- Consultați  [Caută date](/docs/guide/common/operations-with-data/data-search-in-read-only-forms)  e  [Inserimento e selezione dati](/docs/guide/common/operations-with-data/manual-entry-or-help-and-data-selection) pentru a insera corect câmpurile.
 
-- Consultați  [Rapoarteguide/common/operations-with-data/reports) pentru a insera diverse opțiuni pentru tipărirea documentelor.
+- Consultați  [Rapoarte](/docs/guide/common/operations-with-data/reports) pentru a insera diverse opțiuni pentru tipărirea documentelor.
 
-- Consultați  [Câmpuri comune-intro)  e  [Pulsanti comuniguide/common/common-buttons) pentru descrierea câmpurilor și butoanelor comune majorității form-urilor.
+- Consultați  [Câmpuri comune](/docs/guide/common/glossary/glossary-intro)  e  [Pulsanti comuni](/docs/guide/common/common-buttons) pentru descrierea câmpurilor și butoanelor comune majorității form-urilor.
 
-- Consultați  [Navigare și acceleratoriguide/common/operations-with-data/navigation-and-accelerators) pentru navigarea rapidă în aplicație.
+- Consultați  [Navigare și acceleratori](/docs/guide/common/operations-with-data/navigation-and-accelerators) pentru navigarea rapidă în aplicație.

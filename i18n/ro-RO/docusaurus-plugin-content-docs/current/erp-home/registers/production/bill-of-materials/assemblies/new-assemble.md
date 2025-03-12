@@ -13,4 +13,4 @@ sau
 
 Aplicația va deschide form-ul [Gestionare structuri](structure-management), compusă dintr-o secțiune în care se inserează caracteristicile obligatorii ale ansamblului și dintr-o secțiune compusă din diverse tab-uri care grupează caracteristicile specifice.
 
-Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comune](/docs/guide/common).

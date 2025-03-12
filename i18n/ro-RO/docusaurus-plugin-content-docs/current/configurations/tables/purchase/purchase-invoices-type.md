@@ -13,7 +13,7 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 
 *Câmpuri specifice*
 
-**Numerotare**: consultați [Numerotări Fluentisconfigurations/tables/fluentis-numerations).   
+**Numerotare**: consultați [Numerotări Fluentis](/docs/configurations/tables/fluentis-numerations).   
 **Natură factură**: indică natura facturii: factură, chitanţă, credit/debit note etc. Este un tabel fix, care nu se poate modifica.  
 **Şablon/Descriere şablon**: șablon contabil folosit pentru contabilizarea facturii. Este utilizat în cazul în care nu a fost inserată facturarea achizițiilor sau contrul de contrapartidă implicit în *registrul furnizorului*.  
 **Şablon analitic/Descriere şablon analitic**: reprezintă șablonul utilizat pentru contabilizarea facturii.  

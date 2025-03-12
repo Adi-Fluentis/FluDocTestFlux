@@ -24,7 +24,7 @@ Acești parametrii pot fi modificați din *Definire MPS*.
 
 **Consideră disponibilitățile provenite din** permit utilizatorului să aleagă ca aplicația să considere disponibilitatea produselor finite pentru generarea comenzilor de producție din: **sistem loh**, **achiziții**, **vânzări**, **producție**, **gestiune**.
 
-**Calcul cantitate pe baza LeadTime articol**: este utilizat în cazul în care nu dorește utilizarea ciclurilor de lucru pentru a calcula durata unei comenzi de producție; în acest caz, pentru a calcula durata comenzii se face referință la câmpul Lead time de producție prezent în [Parametri MRPconfigurations/parameters/production/mrp-parameters/search-mrp-parameters) ai articolului.  
+**Calcul cantitate pe baza LeadTime articol**: este utilizat în cazul în care nu dorește utilizarea ciclurilor de lucru pentru a calcula durata unei comenzi de producție; în acest caz, pentru a calcula durata comenzii se face referință la câmpul Lead time de producție prezent în [Parametri MRP](/docs/configurations/parameters/production/mrp-parameters/search-mrp-parameters) ai articolului.  
 
 **Generare automată comenzi din ordine clienți**: dacă este activ, procedura creează automat comanda de producție imediat ce este inserată o linie ordin client. Comanda, în acest caz, este creată cu statusul *Neexaminată*. În general, este activat când pentru planificare se utilizează procedura *MRP* în locul *Planificării generale*.
 
@@ -59,7 +59,7 @@ Gridul afișează lista cu gestiunile în care trebuie să fie controlată disp
 
 **Numărul maxim de luni pentru calcularea disponibilității materialelor**: se poate insera numărul pentru calcularea disponibilității, și anume numărul de luni în care vor fi luate în considerare documentele; în schimb, documentele cu o dată ulterioară lunilor luate în considerare nu vor fi incluse în planificare. 
 
-**Prima zi din săptămână vizualizată în calendarul fabricii**: combo box-ul permite alegerea zilei care va fi prima din săptămâna de lucru în [Calendar fabricăconfigurations/tables/production/factory-calendar). De obicei este luni.
+**Prima zi din săptămână vizualizată în calendarul fabricii**: combo box-ul permite alegerea zilei care va fi prima din săptămâna de lucru în [Calendar fabrică](/docs/configurations/tables/production/factory-calendar). De obicei este luni.
 
 **Culori comenzi**  
 În această secțiune se pot insera culorile fontului și ale textului comenzilor de producție, pe baza statusului lor (neexaminate, lansate...etc).

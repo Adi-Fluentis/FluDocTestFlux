@@ -15,7 +15,7 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 
 **Tip reclamație**: conține **Codul** și **Descrierea** tipului;       
 **Model de reclamație**: permite alegerea modelului reclamației din listă preconfigurată și needitabilă. Acest model alege gestionarea reclamației pentru un anumit tip, între *Classic* și *8D Problem Solving*. La crearea unei noi *Reclamații*, alegerea unuia dintre aceste două tipuri afișarea tab-urilor corespondente;     
-**Numerotare**: consultați [Numerotări Fluentisconfigurations/tables/fluentis-numerations).     
+**Numerotare**: consultați [Numerotări Fluentis](/docs/configurations/tables/fluentis-numerations).     
 **Tip factură**: permite alegerea facturii care va fi emisă (credit note) în cazul confirmării reclamației, cu **Tipul TVA** relativ.        
 
-Fiecărui tip de reclamație îi pot fi asociate [Extra Dataconfigurations/utility/extra-data/extradata/search-extradata).
+Fiecărui tip de reclamație îi pot fi asociate [Extra Data](/docs/configurations/utility/extra-data/extradata/search-extradata).

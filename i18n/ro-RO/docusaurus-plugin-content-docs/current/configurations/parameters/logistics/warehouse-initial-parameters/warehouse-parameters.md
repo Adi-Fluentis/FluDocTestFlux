@@ -7,7 +7,7 @@ sidebar_position: 2
 
 **An**: reprezintă anul pentru care doriți să setați parametrii.
 
-**Data ultimei închideri exercițiu**: reprezintă data când a fost făcută ultima închidere de gestiune cu preluarea soldurilor (detalii în [Valorizare gestiunephysical-inventory/warehouse-valorization)). În majoritatea cazurilor corespunde datei 31/12 a anului precedent. În ziua succesivă, deci în mod normal 1 ianuarie, se inserează înregistrările de gestiune de încărcare pentru inventarul inițial, create automat de procedura *Valorizare gestiune*, cu ajutorul șablonului pentru încărcarea articolelor *Stocuri*; acest șablon trebuie să aibă flag-ul *Stocuri* activ.
+**Data ultimei închideri exercițiu**: reprezintă data când a fost făcută ultima închidere de gestiune cu preluarea soldurilor (detalii în [Valorizare gestiune](/docs/logistics/physical-inventory/warehouse-valorization)). În majoritatea cazurilor corespunde datei 31/12 a anului precedent. În ziua succesivă, deci în mod normal 1 ianuarie, se inserează înregistrările de gestiune de încărcare pentru inventarul inițial, create automat de procedura *Valorizare gestiune*, cu ajutorul șablonului pentru încărcarea articolelor *Stocuri*; acest șablon trebuie să aibă flag-ul *Stocuri* activ.
 
 Pentru fiecare gestiune prezentă în societate trebuie să existe un singur șablon de încărcare a stocurilor inițiale. Stocurile încărcate cu acest șablon în ziua deschiderii gestiunii reprezintă stocurile inițiale ale gestiunii însăși. Toate mișcările succesive acestei înregistrări de încărcare vor fi identificate ca intrări (în cazul încărcării) sau ca ieșiri (în cazul descărcării).
 

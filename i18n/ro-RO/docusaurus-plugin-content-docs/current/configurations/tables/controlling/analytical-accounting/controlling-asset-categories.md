@@ -32,10 +32,10 @@ Deci datele contabile și înregistrările conturilor analitice pentru amortiză
 
 **Procent**: procent pentru calculul cotei de amortizare (specific pentru controlling);
 
-**Utilizează actualizare procent**: parametru, preluat și în tab *Amortizare pentru controlling* din fișa mijlocului fix, determină ca valoarea mijlocului fix să fie majorat în fiecare an pe baza valorii setate în câmp *Factor de actualizare* în [*Parametri contabilitate* configurations/parameters/finance/accounting-parameters). Această setare este utilă doar amortizării calculate în mod specific în modulul Controlling.
+**Utilizează actualizare procent**: parametru, preluat și în tab *Amortizare pentru controlling* din fișa mijlocului fix, determină ca valoarea mijlocului fix să fie majorat în fiecare an pe baza valorii setate în câmp *Factor de actualizare* în [*Parametri contabilitate* ](/docs/configurations/parameters/finance/accounting-parameters). Această setare este utilă doar amortizării calculate în mod specific în modulul Controlling.
 
 **Recreează valori control**: dacă este activ, permite recalcularea istoricului datelor din controlling în urma schimbării vreunei proceduri. (de exemplu, dacă s-a schimbat vreun procent sau caracteristică a categoriei). 
 
 :::tip Nota
-Categoriile inserate în acest tabel, cu setările relative, vor fi preluate în [**Fișe mijloc fix**/fixed-assets/fixed-assets-management) în tab *Amortizare pentru controlling*, pentru a asocia fiecare mijloc fix la categorie.
+Categoriile inserate în acest tabel, cu setările relative, vor fi preluate în [**Fișe mijloc fix**](/docs/finance-area/fixed-assets/fixed-assets-management) în tab *Amortizare pentru controlling*, pentru a asocia fiecare mijloc fix la categorie.
 :::

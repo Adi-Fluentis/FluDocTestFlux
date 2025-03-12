@@ -3,9 +3,9 @@ title: Gestionare structuri
 sidebar_position: 2
 ---
 
-Din fereastra [Ansambleerp-home/registers/production/bill-of-materials/search-and-insert-assemblies), selectând lista componentelor dorită și facând dublu clic, se pot vizualiza detaliile acesteia.
+Din fereastra [Ansamble](/docs/erp-home/registers/production/bill-of-materials/search-and-insert-assemblies), selectând lista componentelor dorită și facând dublu clic, se pot vizualiza detaliile acesteia.
 
-Lista componentelor este o structură multi nivel, în care sunt relații de tip părinte-fiul. [Fiul-intro#a) poate fi părinte, la rândul său pentru nivele nelimitate până la ultimul nivel, unde se află materialele.
+Lista componentelor este o structură multi nivel, în care sunt relații de tip părinte-fiul. [Fiul](/docs/guide/common/glossary/glossary-intro#a) poate fi părinte, la rândul său pentru nivele nelimitate până la ultimul nivel, unde se află materialele.
 
 Form-ul este împărțit în două părți: la stânga se află arborele listei componentelor iar la dreapta detaliile aferente diverselor componente.
 
@@ -26,7 +26,7 @@ După extinderea meniului, pentru articolul selectat se poate:
 > **Inserează component**: inserează un nou subnivel de listă;  
 > **Șterge/Copie/Decupează componente**: șterge, copie și mută componentul selectat;  
 > **Actualizează structura**: actualizează lista componentelor (de exemplu, dacă a fost modificată descrierea unui articol din listă, această procedură va afișa descrierea actualizată a articolului);  
-> **[Parametri MRPconfigurations/parameters/production/mrp-parameters/search-mrp-parameters)** și **[Ciclu de lucruerp-home/registers/production/routes/new-route)**: permit gestionarea acestor informații pentru componentul selectat. 
+> **[Parametri MRP](/docs/configurations/parameters/production/mrp-parameters/search-mrp-parameters)** și **[Ciclu de lucru](/docs/erp-home/registers/production/routes/new-route)**: permit gestionarea acestor informații pentru componentul selectat. 
 
 ## Informații părinte/component din listă
 
@@ -55,7 +55,7 @@ Referitor la component sunt următoarele tab-uri:
 
 În acest tab pot fi inserate alternativele componentului în baza priorității, în cazul în care componentul nu este disponibil în momentul producerii acelei liste.
 
-*Planificare generală* și *MRP* vor considera alternativele în funcție de parametrii setați. Pentru *Parametri MRP* trebuie activat flag-ul *Consideră și alternativele materialelor* în [Parametri MRPconfigurations/parameters/production/mrp-parameters/search-mrp-parameters), iar pentru *Planificare generală* același flag, dar în tab-ul *Parametri* al procedurii.
+*Planificare generală* și *MRP* vor considera alternativele în funcție de parametrii setați. Pentru *Parametri MRP* trebuie activat flag-ul *Consideră și alternativele materialelor* în [Parametri MRP](/docs/configurations/parameters/production/mrp-parameters/search-mrp-parameters), iar pentru *Planificare generală* același flag, dar în tab-ul *Parametri* al procedurii.
 
 ### Faze de descărcare
 
@@ -67,7 +67,7 @@ Tipurile de descărcare **Automat**, **Cu listă** și **Manual** se setează î
 
 ### Ciclu
 
-Afișează lista fazelor care compun [ciclul de lucruerp-home/registers/production/routes/new-route) pentru articolul selectat.
+Afișează lista fazelor care compun [ciclul de lucru](/docs/erp-home/registers/production/routes/new-route) pentru articolul selectat.
 
 ### Componente
 
@@ -85,4 +85,4 @@ Afișează eventualele componente ale articolul selectat, precum și inserarea �
 
 În acest tab pot fi vizualizare și modificate atributele prezente în registrul articolului.
 
-Pentru detalii despre utilizarea comună a form-urilor vezi [Funcționlități, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea comună a form-urilor vezi [Funcționlități, butoane și câmpuri comune](/docs/guide/common).

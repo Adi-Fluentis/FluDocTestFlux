@@ -66,4 +66,4 @@ Con i filtri messi a disposizione è possibile filtrare i documenti per effettua
 Nella stampa, sotto lo stesso fornitore/data consegna (in base all'ordinamento scelto) vengono elencati per ogni articolo gli ordini con i seguenti dati: numero, data inserimento, stato evasione, quantità residua, ecc.      
 
 
-Più dettagli su questo argomento negli articoli: [Anteprima e stampaguide/common/operations-with-data/reports) 
+Più dettagli su questo argomento negli articoli: [Anteprima e stampa](/docs/guide/common/operations-with-data/reports) 

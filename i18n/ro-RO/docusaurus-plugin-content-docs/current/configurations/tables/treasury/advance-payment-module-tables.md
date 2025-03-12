@@ -3,7 +3,7 @@ title**: Tip avans
 sidebar_position**: 4
 ---
 
-Această secțiune conține definițiile pentru posibile tipologii de [liste de avanstreasury/advance/advances-collections) facturi și parametrii corespunzători.
+Această secțiune conține definițiile pentru posibile tipologii de [liste de avans](/docs/treasury/advance/advances-collections) facturi și parametrii corespunzători.
 
 **Cod** și **Descriere**: date obligatorii pentru definirea tipurilor de avans, inserate liber de utilizator.
 
@@ -13,7 +13,7 @@ Această secțiune conține definițiile pentru posibile tipologii de [liste de 
 
 **Tip achiziție**: operațiunile posibile sunt *Scadențe* sau *Facturi*. Această opțiune controlează doar modul în care datele sunt afișate în form-ul de căutare pentru crearea unei noi liste, dacă poate fi selectată întreaga factură sau fiecare scadență a facturii. În orice caz, din perspectiva bazei de date, scadențele (toate) sunt gestionate și în cazul modalității *Facturi*.
 
-**Numerotare**: consultați [Numerotări Fluentisconfigurations/tables/fluentis-numerations).
+**Numerotare**: consultați [Numerotări Fluentis](/docs/configurations/tables/fluentis-numerations).
 
 **Banca C/C (cont sitetic și analitic)**: reprezintă contul analitic care va fi utilizat în înregistrările contabile referitoare la contul curent bancar.
 

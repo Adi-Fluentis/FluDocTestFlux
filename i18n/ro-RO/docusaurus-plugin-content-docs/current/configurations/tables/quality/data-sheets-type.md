@@ -12,7 +12,7 @@ Tabelul se află pe calea **Configurare > Tabele > Calitate > Control articol > 
 **Creează cod**: dacă este activ, permite utilizarea codificării relative;             
 **Ordonare**: conține succesiunea parametrilor utilizați la compunerea codului;       
 **Tip**: permite selectarea parametrilor care vor compune codul, ordonați în baza coloanei *Ordonare*;      
-**Extra Data**: se activează dacă tipul ales este [Extra Dataconfigurations/utility/extra-data/extradata/search-extradata). Dacă  ExtraData inserat este **Simplu**, va apare în *Cod*, în *Descriere* sau în ambele, în funcție de parametrul inserat în **Utilizează descriere** și/sau **Utilizează cod**. Dacă ExtraData este **tabelar**, în câmpurile **Proprietate cod** și **Proprietate descriere** se pot alege cu dublu clic câmpurile tabelului selectat în ExtraData;         
+**Extra Data**: se activează dacă tipul ales este [Extra Data](/docs/configurations/utility/extra-data/extradata/search-extradata). Dacă  ExtraData inserat este **Simplu**, va apare în *Cod*, în *Descriere* sau în ambele, în funcție de parametrul inserat în **Utilizează descriere** și/sau **Utilizează cod**. Dacă ExtraData este **tabelar**, în câmpurile **Proprietate cod** și **Proprietate descriere** se pot alege cu dublu clic câmpurile tabelului selectat în ExtraData;         
 **Lungime**: reprezintă numărul de caractere care vor fi afișate în câmp;                 
 **Spațiu**: dacă este activ, va insera un spațiu între parametrii inserați;             
 **Separator**: permite inserarea unui separator între parametrii;                

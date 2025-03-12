@@ -69,12 +69,12 @@ Nella griglia di dettaglio si vedranno invece, cliccando sulla riga d'interesse 
 Tramite un doppio click del tasto sx del mouse sulla riga seleziona è possibile aprire il relativo documento.     
 
 :::note Nota
-La disponibilità dell'articolo da produrre è data solamente dall'ultima fase con i flag **produttiva** e **movimentabile** attivi presente nel [Ciclo di lavoroerp-home/registers/production/routes/new-route).
+La disponibilità dell'articolo da produrre è data solamente dall'ultima fase con i flag **produttiva** e **movimentabile** attivi presente nel [Ciclo di lavoro](/docs/erp-home/registers/production/routes/new-route).
 :::
 
-Per quanto riguarda la descrizione delle funzionalità comuni a tutti le form, presenti nella ribbon bar, si rimanda all'articolo relativo ai [Pulsanti Comuniguide/common/common-buttons), in particolare per le funzionalità delle stampe si rimanda anche all'articolo [Anteprima e Stampaguide/common/operations-with-data/reports).
+Per quanto riguarda la descrizione delle funzionalità comuni a tutti le form, presenti nella ribbon bar, si rimanda all'articolo relativo ai [Pulsanti Comuni](/docs/guide/common/common-buttons), in particolare per le funzionalità delle stampe si rimanda anche all'articolo [Anteprima e Stampa](/docs/guide/common/operations-with-data/reports).
 
 *Pulsante specifico*:
 > **Espandi/riduci griglia articoli**: pulsante che permette di espandere o ridurre le griglie di risultato. 
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

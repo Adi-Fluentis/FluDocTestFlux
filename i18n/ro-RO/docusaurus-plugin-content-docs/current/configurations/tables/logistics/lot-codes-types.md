@@ -24,8 +24,8 @@ Pentru fiecare parametru se poate stabili numărul de caractere care-l formează
 > *Ziua & Lună & An Dată inserare*: reprezintă data inserării;   
 > *Ziua & Lună & An Dată scadență*: reprezintă data scadenței;      
 > *Tip lot*: reprezintă tipul lotului articolului;     
-> *Asociere an-literă*: reprezintă valoarea asociată anului în tabelul [Asociere an-literăconfigurations/tables/general-settings/year-letter-association);    
-> *Asociere lună-literă*: reprezintă valoarea asociată anului în tabelul [Asociere lună-literăconfigurations/tables/general-settings/month-letter-association);    
+> *Asociere an-literă*: reprezintă valoarea asociată anului în tabelul [Asociere an-literă](/docs/configurations/tables/general-settings/year-letter-association);    
+> *Asociere lună-literă*: reprezintă valoarea asociată anului în tabelul [Asociere lună-literă](/docs/configurations/tables/general-settings/month-letter-association);    
 > *Nume furnizor*: reprezintă codul furnizprului prezent în registrul său;          
 > *Număr aviz achiziție*: reprezintă numărul avizului de achiziție;     
 > *Număr factură achiziție*: reprezintă numărul facturii de achiziție;    

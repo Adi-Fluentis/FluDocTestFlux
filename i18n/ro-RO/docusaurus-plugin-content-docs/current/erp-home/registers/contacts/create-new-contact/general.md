@@ -51,7 +51,7 @@ Flag-ul **Contabil**, prezent implicit în noile inserări, va permite definirea
 
 *Butoane specifice*
 
-> **[Propune date-intro#v)**: după ce ați inserat codul fiscal puteți să apăsați acest buton sistemul, prin intermediul web-service va interoga sistemul informatic V.I.E.S. care va verifica valabilitatea și corectitudinea codului fiscal. Daca este corect, sistemul va propune toate celelalte date de bază ale contactului , evitând astfel inserarea manuală. 
+> **[Propune date](/docs/guide/common/glossary/glossary-intro#v)**: după ce ați inserat codul fiscal puteți să apăsați acest buton sistemul, prin intermediul web-service va interoga sistemul informatic V.I.E.S. care va verifica valabilitatea și corectitudinea codului fiscal. Daca este corect, sistemul va propune toate celelalte date de bază ale contactului , evitând astfel inserarea manuală. 
 
 ### Referințe
 
@@ -69,7 +69,7 @@ Flag-ul **Contabil**, prezent implicit în noile inserări, va permite definirea
 
 ### Adrese alternative
 
-Aici se pot insera adresele alternative pe baza *Tipului adresei* asociat (nu este vorba despre adresele de expediție a mărfii, care se pot specifica în tab [Expedițiierp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/delivery) în Date contabile unde se inserează Destinatarii și Destinațiile care permit gestionarea documentelor din achiziții și vânzări).
+Aici se pot insera adresele alternative pe baza *Tipului adresei* asociat (nu este vorba despre adresele de expediție a mărfii, care se pot specifica în tab [Expediții](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/delivery) în Date contabile unde se inserează Destinatarii și Destinațiile care permit gestionarea documentelor din achiziții și vânzări).
 
 *Exemplu*: dacă în grid selectăm tipul de adresă Sediu comercial vom insera și persoana/persoanele de referință pentru biroul comercial la care care va fi expediată, de exemplu, confirmarea ordinului via mail (mail-ul se inserează în câmpul de lângă grid, împreună cu numărul de telefon și celelalte date). Astfel, în tab-ul **Rezumate** al ordinului, când se vom alege expedierea confirmării ordinului la client, se va deschide un form care va afișa mailul cu adresa destinatarului deja completată cu informațiile care au fost inserate în acest tab, evitându-se astfel inserarea lor manuală. Urmând aceeași procedura, se va putea alege la cine să fie expediate facturile, comenzile etc.
 
@@ -77,7 +77,7 @@ Funcționalitatea acestui form, pe lângă inserarea adreselor (mai ales a e-mai
 
 - gestionarea adreselor de e-mail la expedierea masivă a documentelor (facturi de vânzare, dar și alte tipuri dacă au fost configurate) printr-o coadă de expediție gestionată de BizLink.
 
-- gestionarea [Cotitularilorerp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/fiscal-information) facturii de vânzare
+- gestionarea [Cotitularilor](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/fiscal-information) facturii de vânzare
 
 ### Procedură pentru inserare adrese
 
@@ -87,7 +87,7 @@ Se pot insera și gestiona mai multe adrese e-mail simultan (pentru a fi expedia
 
 ### Expediere masivă documente via mail
 
-Pentru gestionarea automată a adresei de e-mail la expedierea masivă a facturilor de vânzare este necesară utilizarea unui tip de adresă particular (mai exact, în tabelul [Tipuri adreseconfigurations/tables/general-settings/address-types) trebuie să aibă activ flag-ul **Email Fact.C.=email factură client**).
+Pentru gestionarea automată a adresei de e-mail la expedierea masivă a facturilor de vânzare este necesară utilizarea unui tip de adresă particular (mai exact, în tabelul [Tipuri adrese](/docs/configurations/tables/general-settings/address-types) trebuie să aibă activ flag-ul **Email Fact.C.=email factură client**).
 
 Va fi posibilă, dacă s-a configurat, gestionarea expedierii masive și a altor tipuri de documente (de exemplu, solicitarea unei plăți etc.) atașând adresa de e-mail unui anume tip de adresă utilizând unul din flag-urile disponibile în tabelul Tipuri de adrese. În acest caz va fi necesară definirea atât a *Transformation* pentru documentului specificat, cât și Workflow-ului (Schimbare status) dedicat.
 
@@ -97,8 +97,8 @@ Gestionare adresei de e-mail inserate, codificate și cu flag-ul Email Fact. C.
 
 ### Gestionare cotitulari
 
-În acest caz, informația relevantă este numele cotitularilor. Va fi deci necesară inserarea unei linii pentru fiecare cotitular pentru inserarea tuturor datelor personale. În tabelul [Tipuri adreseconfigurations/tables/general-settings/address-types) trebuie să le activati flagul [Cotitulariconfigurations/tables/general-settings/address-types).
+În acest caz, informația relevantă este numele cotitularilor. Va fi deci necesară inserarea unei linii pentru fiecare cotitular pentru inserarea tuturor datelor personale. În tabelul [Tipuri adrese](/docs/configurations/tables/general-settings/address-types) trebuie să le activati flagul [Cotitulari](/docs/configurations/tables/general-settings/address-types).
 
-Pentru modul în care este gestionat în factură vezi [documentulerp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/fiscal-information).
+Pentru modul în care este gestionat în factură vezi [documentul](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/fiscal-information).
 
 După inserarea acestor date **Generale** se continuă cu inserarea detaliilor în **Date contabile**.

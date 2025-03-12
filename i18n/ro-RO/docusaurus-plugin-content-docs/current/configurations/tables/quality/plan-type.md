@@ -13,10 +13,10 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 
 *Câmpuri specifice* 
 
-**Numerotare**: consultați [Numerotări Fluentisconfigurations/tables/fluentis-numerations).
+**Numerotare**: consultați [Numerotări Fluentis](/docs/configurations/tables/fluentis-numerations).
 **Poate fi eliminat**: dacă este activ, permite ștergerea tipului relativ.
 
 Fiecărei linii i se poate asocia, în diversele tab-uri:    
 
-**[Extra Dataconfigurations/utility/extra-data/extradata/search-extradata)**;      
+**[Extra Data](/docs/configurations/utility/extra-data/extradata/search-extradata)**;      
 **Probe planificate**: utilizat la codificarea unui nou plan de control pentru acest tip.

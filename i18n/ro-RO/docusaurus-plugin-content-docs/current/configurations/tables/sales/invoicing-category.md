@@ -11,4 +11,4 @@ Conține o zonă de filtrare și una de rezultate. După ce ați setat toate fil
 
 Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsați butonul **Nou**.
 
-Pentru detalii despre utilizarea form-urilor consultați [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea form-urilor consultați [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

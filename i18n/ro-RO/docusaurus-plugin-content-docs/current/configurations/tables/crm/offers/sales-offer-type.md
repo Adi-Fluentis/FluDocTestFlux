@@ -11,7 +11,7 @@ Tabelul este utilizat pentru a determina proprietățile unei oferte de vânzăr
 
 **Preț cu TVA**: dacă este activ, prețurile din ofertă vor fi afișate cu TVA;
 
-**Numărător**: pentru informații suplimentare, consultați articolul [Numărători Fluentisconfigurations/tables/fluentis-numerations);
+**Numărător**: pentru informații suplimentare, consultați articolul [Numărători Fluentis](/docs/configurations/tables/fluentis-numerations);
 
 **Tip ordin client/Descriere**: în aceste câmpuri trebuie inserate codul si descrierea tipului de ordin care va fi generat de oferta indicată prin procedura de conversie prezentă în antetul aplicației;
 

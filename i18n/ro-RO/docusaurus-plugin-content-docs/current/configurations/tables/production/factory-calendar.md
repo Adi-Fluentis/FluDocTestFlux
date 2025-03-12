@@ -7,7 +7,7 @@ Form-ul se află în **Configurare > Tabele > Producție > Calendar de lucru** �
 
 În partea superioară conține zilele și lunile anului care pot fi selectate.   
 Fiecare căsuță poate fi activată pentru a indica faptul că ziua respectivă este o sarbatoare legală.  
-Faptul că o anumită zi este sărbătoare legală, permite ca, în momentul în care se generează [Calendarul capacităților productiveconfigurations/tables/production/productive-capacity-calendar), aplicația să genereze automat disponibilitatea *Resursei productive* doar pentru zilele care, în *Calendarul de lucru*, nu sunt sărbători legale.  
+Faptul că o anumită zi este sărbătoare legală, permite ca, în momentul în care se generează [Calendarul capacităților productive](/docs/configurations/tables/production/productive-capacity-calendar), aplicația să genereze automat disponibilitatea *Resursei productive* doar pentru zilele care, în *Calendarul de lucru*, nu sunt sărbători legale.  
 În plus, inserarea sărbătorilor legale este importantă și când sunt definiți *timpii de aprovizionare ai furnizorilor preferențiali*, care trebuie deci să fie inserați considerând *Calendarul de lucru*.  
 
 *Exemplu*:

@@ -40,4 +40,4 @@ Pentru a insera noi centre, puteți să faceți clic pe prima linie liberă din 
 
 În a doua secțiune se pot introduce excepții privind programul de lucru al centrului de lucru selectat.
 
-Pentru detalii despre utilizarea comună a form-urilor vezi [Funcționlități, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea comună a form-urilor vezi [Funcționlități, butoane și câmpuri comune](/docs/guide/common).

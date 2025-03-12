@@ -3,11 +3,11 @@ title: Distinta Base
 sidebar_position: 2
 ---
 
-**Introduzione**: [Distinta baseerp-home/registers/production/bill-of-materials/bom-intro) 
+**Introduzione**: [Distinta base](/docs/erp-home/registers/production/bill-of-materials/bom-intro) 
 
-Come accennato già, dalla form [Assiemierp-home/registers/production/bill-of-materials/search-and-insert-assemblies), selezionando la distinta base che si vuole visualizzare e facendo doppio click, si entra nel dettaglio della distinta stessa in modifica e si visualizza la sua rappresentazione grafica ad albero.
+Come accennato già, dalla form [Assiemi](/docs/erp-home/registers/production/bill-of-materials/search-and-insert-assemblies), selezionando la distinta base che si vuole visualizzare e facendo doppio click, si entra nel dettaglio della distinta stessa in modifica e si visualizza la sua rappresentazione grafica ad albero.
 
-La distinta base è una struttura multilivello, ad albero in cui si ha un legame di tipo padre-figlio. Il [figlio-intro#a) può essere a sua volta padre e così via per un indeterminato di livelli fino ad arrivare all'ultimo livello dove si trovano i materiali.
+La distinta base è una struttura multilivello, ad albero in cui si ha un legame di tipo padre-figlio. Il [figlio](/docs/guide/common/glossary/glossary-intro#a) può essere a sua volta padre e così via per un indeterminato di livelli fino ad arrivare all'ultimo livello dove si trovano i materiali.
 
 La schermata si presenta suddivisa in due parti: nella parte sinistra si trova la rappresentazione ad albero della distinta base, mentre nella parte destra si vedranno nel dettaglio le informazioni relative ai vari componenti dell'albero.
 
@@ -22,7 +22,7 @@ Per visualizzare l'albero, basterà cliccare con il mouse sul **+** accanto al c
 
 ![](/img/it-it/erp-home/registers/production/bill-of-materials/assemblies/structure-management/image04.png) : rappresenta gli articoli di conto lavoro.
 
-Il tipo di approvvigionamento dell'articolo viene indicato all’interno dei [Parametri MRPconfigurations/parameters/production/mrp-parameters/search-mrp-parameters) dell’articolo stesso.
+Il tipo di approvvigionamento dell'articolo viene indicato all’interno dei [Parametri MRP](/docs/configurations/parameters/production/mrp-parameters/search-mrp-parameters) dell’articolo stesso.
 
 La distinta può essere costruita e modificata molto semplicemente utilizzando gli appositi pulsanti: **inserisci**, **cancella componente** o **copia**, **taglia** ed **incolla componente**.        
 Ad esempio, posizionandosi su un elemento dell’albero e premendo il pulsante **inserisci componente**, si ha la possibilità di inserire un articolo che diventerà figlio dell’articolo selezionato inizialmente; mentre, premendo il pulsante cancella componente, questo verrà rimosso dalla distinta.            
@@ -37,8 +37,8 @@ Dopo aver esploso il menù a cascata, si ha la possibilità, per l'articolo sele
 > **Copia componente**: permette di copiare il componente selezionato;     
 > **Taglia componente**: permette di tagliare il componente selezionato;     
 > **Incolla componente**: permette di incollare il componente selezionato;     
-> **Parametri MRP**: permette di aprire i [Parametri MRPconfigurations/parameters/production/mrp-parameters/search-mrp-parameters) del componente selezionato;     
-> **Ciclo di lavoro**: permette di aprire il  [Ciclo di lavoroerp-home/registers/production/routes/new-route) del componente selezionato;       
+> **Parametri MRP**: permette di aprire i [Parametri MRP](/docs/configurations/parameters/production/mrp-parameters/search-mrp-parameters) del componente selezionato;     
+> **Ciclo di lavoro**: permette di aprire il  [Ciclo di lavoro](/docs/erp-home/registers/production/routes/new-route) del componente selezionato;       
 > **Aggiorna struttura**: permette di aggiornare tutte le informazioni della distinta base (per esempio se è stata modificata la descrizione di un articolo della distinta, usando questa funzione l'applicazione mostra la descrizione aggiornata di quell'articolo). 
 
 Selezionando uno dei componenti della distinta si visualizza nella parte destra della finestra la lista di informazioni relative al livello superiore rispetto al componente selezionato (nella parte superiore destra della finestra chiamata **Assieme**) e al componente stesso (nella parte inferiore destra della finestra denominata **Componente**).
@@ -68,7 +68,7 @@ Legati al componente sono anche tutti i seguenti tab:
 **Inizio validità** e **Fine validità**: permettono di decidere che un componente sia valido da una certa data o fino ad una certa data;      
 **Priorità**: indica l'ordinamento con il quale deve essere visualizzato il componente nell'albero della distinta;        
 **Movimentabile**: permette di decidere se il componente debba o non debba essere movimentato a magazzino. Questo flag influirà su tutti i movimenti di magazzino, perchè nella creazione dei movimenti vengono presi in considerazione solamente gli articoli che hanno il flag attivo, mentre gli altri non verranno movimentati;      
-**Critico**: se il flag è attivo serve per indicare la criticità di quel componente (per ora è utilizzato solo per la [Schedulazione a capacità finita/ms-master-scheduling/finite-capacityscheduling));          
+**Critico**: se il flag è attivo serve per indicare la criticità di quel componente (per ora è utilizzato solo per la [Schedulazione a capacità finita](/docs/planning/ms-master-scheduling/finite-capacityscheduling));          
 **Livello fittizio**: permette di decidere se, limitatamente a quella distinta base, il componente selezionato debba essere considerato fittizio o meno; inoltre, fa si che la procedura di *Pianificazione Generale* e l'*MRP* saltino quel componente nel corso dell'esplosione dei fabbisogni;  
 **Riferimento schema**: permette di inserire una nota libera relativa al componente (ad esempio il riferimento schema del disegno tecnico);              
 **Note**: permette di inserire una nota libera relativa al componente.           
@@ -78,21 +78,21 @@ Legati al componente sono anche tutti i seguenti tab:
 In questo tab possono essere impostate in ordine di priorità le alternative al componente della distinta base nel caso in cui il componente non sia disponibile al momento della produzione di quella distinta.
 
 Queste alternative, vengono considerate nelle registrazioni di magazzino se viene usata una causale che ha i flag **Alternative** e o **Alternative miste** attivi.   
-Mentre le procedure di Pianificazione e MRP prenderanno in considerazione le alternative in conseguenza dell'attivazione o meno di appositi flag: per la schedulazione il flag da attivare sarà **Considera anche le alternative dei materiali** che andrà impostato nella schermata di [Pianificazione generale/ms-master-scheduling/general-schedule#parametri-di-schedulazione-generale), nel tab *Parametri*; per la procedura MRP il flag da impostare sarà **Considera anche le alternative dei materiali** che andrà impostato nella finestra *Parametri* della procedura [MRP/ms-master-scheduling/mrp/). 
+Mentre le procedure di Pianificazione e MRP prenderanno in considerazione le alternative in conseguenza dell'attivazione o meno di appositi flag: per la schedulazione il flag da attivare sarà **Considera anche le alternative dei materiali** che andrà impostato nella schermata di [Pianificazione generale](/docs/planning/ms-master-scheduling/general-schedule#parametri-di-schedulazione-generale), nel tab *Parametri*; per la procedura MRP il flag da impostare sarà **Considera anche le alternative dei materiali** che andrà impostato nella finestra *Parametri* della procedura [MRP](/docs/planning/ms-master-scheduling/mrp/). 
 
-In tutti i casi precedentemente elencati, deve essere anche attivato il flag **Considera anche le alternative dei materiali** presente nella finestra [Parametri MRPconfigurations/parameters/production/mrp-parameters/search-mrp-parameters) dell'articolo.
+In tutti i casi precedentemente elencati, deve essere anche attivato il flag **Considera anche le alternative dei materiali** presente nella finestra [Parametri MRP](/docs/configurations/parameters/production/mrp-parameters/search-mrp-parameters) dell'articolo.
 
 ### Fasi di scarico
 
 In questo tab può essere impostata la fase durante la quale deve essere scaricato il componente.
 
-Ci sono tre tipi di scarico materiale ovvero **Automatico**, **Con lista** e **Manuale** che vengono impostati nei [Parametri MRPconfigurations/parameters/production/mrp-parameters/search-mrp-parameters).
+Ci sono tre tipi di scarico materiale ovvero **Automatico**, **Con lista** e **Manuale** che vengono impostati nei [Parametri MRP](/docs/configurations/parameters/production/mrp-parameters/search-mrp-parameters).
 
 Nel caso in cui si opti per lo scarico manuale, **Fluentis** considera in automatico che lo scarico del materiale (non assegnato ad un fase) venga fatto, nel caso si abbiano più fasi per quel prodotto, in corrispondenza dell'ultima fase che ha i flag *Movimentabile* e *Produttiva* abilitati. 
 
 ### Ciclo
 
-In questo tab si visualizza la lista delle [fasiconfigurations/tables/production/standard-phases) che compongono il [ciclo di lavorazioneerp-home/registers/production/routes/new-route) dell'articolo selezionato.
+In questo tab si visualizza la lista delle [fasi](/docs/configurations/tables/production/standard-phases) che compongono il [ciclo di lavorazione](/docs/erp-home/registers/production/routes/new-route) dell'articolo selezionato.
 
 ### Componenti
 
@@ -110,4 +110,4 @@ In questo tab è possibile visualizzare ed eventualmente modificare gli extra da
 
 In questo tab è possibile visualizzare ed eventualmente modificare gli extra data relativi al componente selezionato.
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

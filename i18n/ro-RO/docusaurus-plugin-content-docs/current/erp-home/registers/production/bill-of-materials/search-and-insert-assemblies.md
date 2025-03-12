@@ -15,4 +15,4 @@ Pentru a deschide detaliile unui ansamblu, selectați-l și faceți dublu clic c
 > **Nou**: permite inserarea unui nou ansamblu cu toate componentele și informațiile sale.
 > **Calculează nivel minim**: buton care permite calcularea costului articolului selectat la nivelul cel mai mic pe care îl poate avea în listele în care este prezent. Permite calcularea rapidă a succesivelor valorizări ale listelor de componente.    
 
-Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comune](/docs/guide/common).

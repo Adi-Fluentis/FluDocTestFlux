@@ -19,4 +19,4 @@ Permite importul datelor cu ajutorul butonului *Import* prezent în acest tab.
 Dacă operațiunea este reușită, va apărea mesajul *Import completat*.  
 În caz contrar, erorile pot fi consultate în **Documente de Intrare BizLink**.
 
-După import se pot utiliza procedurile ofertelor, accesibile în **Achiziții > Proceduri oferte furnizori > [Prețuri Furnizorpurchase/purchase-price-lists/procedures/supplier-price)**.
+După import se pot utiliza procedurile ofertelor, accesibile în **Achiziții > Proceduri oferte furnizori > [Prețuri Furnizor](/docs/purchase/purchase-price-lists/procedures/supplier-price)**.

@@ -11,7 +11,7 @@ Fereastra conține o zona de filtre în care se poate insera articolul de analiz
 În acest tab sunt afișate caracteristicile din registrul articolului.  
 
 ### Disponibilitate  
-În acest tab este afișată disponibilitatea articolului la data inserată, dacă este sau nu **Rezumat** și pentru care departamente (sistem lohn, gestiune, achiziții, vânzări, producție planificată și lansată). Rezultatele sunt afișate în tabelele inferioare, în modalitatea explicată și în [Analize disponibilitateerp-home/registers/items/availability-analysis).
+În acest tab este afișată disponibilitatea articolului la data inserată, dacă este sau nu **Rezumat** și pentru care departamente (sistem lohn, gestiune, achiziții, vânzări, producție planificată și lansată). Rezultatele sunt afișate în tabelele inferioare, în modalitatea explicată și în [Analize disponibilitate](/docs/erp-home/registers/items/availability-analysis).
 
 ### Alternative  
 În acest tab sunt afișate articolele alternative celui căutat. Aceste articole pot fi utilizate în cazul în care articolul principal nu este disponibil în momentul dorit.
@@ -57,4 +57,4 @@ După completarea acestora, efectuați clic pe butonul **Caută** din ribbon bar
 ### Categorie discount vânzări/achiziții 
 În acest tab sunt afișate categoriile de discount relative la vânzări/achiziții cu datele lor de valabilitate.
 
-Pentru detalii despre funcționarea generală a form-urilor: [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru detalii despre funcționarea generală a form-urilor: [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

@@ -18,7 +18,7 @@ Vor fi afișate: clasa, codul, descrierea și varianta ansamblului, versiunea li
 4. alegeți una din liste sau, cu *CTRL+click*, mai multe liste de componente;  
 5. în secțiunea inferioară a ferestrei, selectați noul component care îl va înlocui pe cel selectat în secțiunea filtru și inserați informațiile, inclusiv cantitatea.   
 Activarea opțiunii *Alternative* permite inserarea alternativelor noului component în legătura nouă.
-Pentru opțiunile *Cu înregistrare* și *Fictiv* consultați [Gestionare structurierp-home/registers/production/bill-of-materials/assemblies/structure-management).
+Pentru opțiunile *Cu înregistrare* și *Fictiv* consultați [Gestionare structuri](/docs/erp-home/registers/production/bill-of-materials/assemblies/structure-management).
 
 :::note Note
 Aceeași procedura permite inserarea, în secțiuna inferioară, a aceluiași component inserat în zona de filtrare. În acest caz va fi efectuată doar modificarea informațiilor componentelor în listele selectate în grid.
@@ -38,7 +38,7 @@ Procedura va afișa în grid toate listele de componente (clasa, cod, descriere 
 4. alegeți una din liste sau, cu *CTRL+click*, mai multe liste de componente;
 5. în secțiunea inferioară a ferestrei, selectați noul component care îl va înlocui pe cel selectat în secțiunea filtru și inserați informațiile, inclusiv cantitatea.   
 Activarea opțiunii *Alternative* permite inserarea alternativelor noului component în legătura nouă.
-Pentru opțiunile *Cu înregistrare* și *Fictiv* consultați [Gestionare structurierp-home/registers/production/bill-of-materials/assemblies/structure-management).  
+Pentru opțiunile *Cu înregistrare* și *Fictiv* consultați [Gestionare structuri](/docs/erp-home/registers/production/bill-of-materials/assemblies/structure-management).  
 6. după inserarea informațiilor dorite, finalizați procedura de **Inserare** utilizând butonul **Execută**.
 
 ### Anulare
@@ -52,4 +52,4 @@ Procedura va afișa în grid toate listele de componente(clasa, cod, descriere �
 4. alegeți una din liste sau, cu *CTRL+click*, mai multe liste de componente;
 5. după componentului de eliminat, finalizați procedura de **Anulare** utilizând butonul **Execută**.
 
-Pentru detalii despre utilizarea comună a form-urilor vezi [Funcționlități, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea comună a form-urilor vezi [Funcționlități, butoane și câmpuri comune](/docs/guide/common).

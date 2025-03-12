@@ -16,4 +16,4 @@ Permite asocierea listei de clienți la articol.
 **Variante**: reprezintă eventuala variantă a articolului, codificat anterior în tabelul **Variante articol**;  
 **Note**: reprezintă eventualele note pentru articol.
 
-Gridul inferior conține eventuale informații despre [Extra Dataconfigurations/utility/extra-data/extradata/search-extradata).
+Gridul inferior conține eventuale informații despre [Extra Data](/docs/configurations/utility/extra-data/extradata/search-extradata).

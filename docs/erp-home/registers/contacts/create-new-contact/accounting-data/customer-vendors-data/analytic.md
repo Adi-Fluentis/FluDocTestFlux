@@ -7,7 +7,7 @@ In questa form è possibile definire un legame per la valorizzazione dei costi/r
 
 Questa associazione tiene conto ed interagisce, tuttavia, con le altre opzioni di valorizzazione dei centri di costo e profitto (secondo l'articolo, il piano dei conti generale, il magazzino) che può essere definito modulo per modulo.
 
-La priorità di lettura nella valorizzazione dei centri di costo/profitto è impostata, anno per anno, all'interno dei [Parametri di contabilitàconfigurations/parameters/finance/accounting-parameters#center-proposal).
+La priorità di lettura nella valorizzazione dei centri di costo/profitto è impostata, anno per anno, all'interno dei [Parametri di contabilità](/docs/configurations/parameters/finance/accounting-parameters#center-proposal).
 
 **N**: rappresenta il numero di riga.
 

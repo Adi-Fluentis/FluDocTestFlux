@@ -39,4 +39,4 @@ Permite introducerea datelor de propus în *Nonconformități*.
 > **Grupare date UdI**: indică dacă să fie raportate automat, printre *Obiectele defecte* ale unei *Nonconformități*, toate articolele conținute într-o UdI la introducerea unui articol defect care este în UdI specificată.  
 > **Propunere U.M. alternativă**: indică dacă se afișează, printre *Obiectele defecte*, informații despre *Cantitățile* exprimate într-o unitate de măsură alternativă celei principale.
 
-Pentru detalii despre funcționarea comună a form-urilor, consultați [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru detalii despre funcționarea comună a form-urilor, consultați [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

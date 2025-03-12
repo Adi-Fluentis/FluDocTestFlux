@@ -18,7 +18,7 @@ const config = {
   projectName: 'academy-FluentisErp', // Usually your repo name.
   i18n: {
     defaultLocale: 'it-IT',
-    locales: ['en-US', 'fr-FR', 'hr-HR', 'it-IT', 'pt-PT', 'ro-RO'],  // , 'sr-Latn-CS', 'zh-CN'
+    locales: ['en-US', 'it-IT'],  // , 'ro-RO', 'sr-Latn-CS', 'zh-CN', 'fr-FR', 'hr-HR', 'it-IT', 'pt-PT', 
     localeConfigs: {
       "en-US": {
         label: 'English',

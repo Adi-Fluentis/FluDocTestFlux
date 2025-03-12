@@ -17,4 +17,4 @@ Butonul **Nou** permite inserarea unei noi versiuni cu toate informațiile sale.
 **Implicit pentru modele**: dacă este activ, indică versiunea care trebuie să fie propusă automat când se utilizează Prototiparea;  
 **Activă**: dacă este activ, indică versiunea care se poate utiliza.
 
-Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comune](/docs/guide/common).

@@ -3,7 +3,7 @@ title: Planul de conturi
 sidebar_position: 1
 ---
 
-Codificarea planului de conturi implică și completarea unei serii de tabele:  [Tipuri contconfigurations/tables/finance/account-types), [Registre contacteerp-home/registers/contacts/registers-management), [Element de cheltuieliconfigurations/tables/finance/charge-item), Centre de cost, [Centre de profitconfigurations/tables/controlling/cost-accounting/profit-centres), Departamente, Înregistrări de rectificare/integrare, [Șabloane automateconfigurations/tables/finance/ledger-records-templates/insert-ledger-records-templates/attributes-detail), Tip sumă.
+Codificarea planului de conturi implică și completarea unei serii de tabele:  [Tipuri cont](/docs/configurations/tables/finance/account-types), [Registre contacte](/docs/erp-home/registers/contacts/registers-management), [Element de cheltuieli](/docs/configurations/tables/finance/charge-item), Centre de cost, [Centre de profit](/docs/configurations/tables/controlling/cost-accounting/profit-centres), Departamente, Înregistrări de rectificare/integrare, [Șabloane automate](/docs/configurations/tables/finance/ledger-records-templates/insert-ledger-records-templates), Tip sumă.
 
 *Butoane comune*
 
@@ -71,11 +71,11 @@ Este posibil să activați flag-ul de aici pentru conturile fără registru (cos
 
 **Data sf**: se foloseste pentru a bloca utilizarea contului analitic în tranzacții noi (începand de la data inserată), pastrând vizibilitatea tranzacțiilor introduse anterior;
 
-**Cheltuieli/venituri - anticipate/angajate- Cont sintetic/analitic/Descriere**: reprezintă conturile care au prioritate față de cele inserate în [parametri contabilitateconfigurations/parameters/finance/accounting-parameters) care permit introducerea, pentru veniturile și cheltuielile anticipate și angajate, a unui cont analitic specific utilizat la contabilizarea înregistrărilor de ajustare și integrare aferente contului analitic de cheltuieli sau venituri pe care îl inserăm.
+**Cheltuieli/venituri - anticipate/angajate- Cont sintetic/analitic/Descriere**: reprezintă conturile care au prioritate față de cele inserate în [parametri contabilitate](/docs/configurations/parameters/finance/accounting-parameters) care permit introducerea, pentru veniturile și cheltuielile anticipate și angajate, a unui cont analitic specific utilizat la contabilizarea înregistrărilor de ajustare și integrare aferente contului analitic de cheltuieli sau venituri pe care îl inserăm.
 
-Vă amintim că pentru gestionarea automată a acestor câmpuri, contul de cheltuieli sau venituri supus ajustărilor trebuie să aibă un anumit tip de cont (de exemplu „de rectificat”) care să aibă flag-ul Serviciu activ în tabelul [Tip contconfigurations/tables/finance/account-types).
+Vă amintim că pentru gestionarea automată a acestor câmpuri, contul de cheltuieli sau venituri supus ajustărilor trebuie să aibă un anumit tip de cont (de exemplu „de rectificat”) care să aibă flag-ul Serviciu activ în tabelul [Tip cont](/docs/configurations/tables/finance/account-types).
 
-**Element de cheltuieli/Descriere**: combo box asociat la tabelul [Elemente de cheltuieliconfigurations/tables/finance/charge-item); permite asocierea la o informație statistică utilă în controlul de gestiune.
+**Element de cheltuieli/Descriere**: combo box asociat la tabelul [Elemente de cheltuieli](/docs/configurations/tables/finance/charge-item); permite asocierea la o informație statistică utilă în controlul de gestiune.
 
 **Variabilitate**: acest câmp, conectat la gridurile *Atribuire CdC* și *Variație CdC* este utilizat îndeosebi când *înregistrarea contabilă este asociată la mai multe centre ale companiei*. La fel și în câmpul omonim din gridul *Variație CdC* se inserează o valoare procentuală care *definește dacă costul este un cost fix *(0% variație ) sau un *cost total variabil* (100% variație) sau parțial variabil (de ex. 70%). Vedeți în imaginea de mai jos completarea corectă.
 
@@ -99,11 +99,11 @@ Următoarele două câmpuri sunt utile acestei proceduri:
 
 - **Diferențe analitică**: de la contabilitatea de gestiune (controlling) și o realiniează la datele contabile prin introducerea ajustărilor cu un semn pozitiv sau negativ.
 
-**Procente de variație/descriere**: combo box asociat la tabelul [Procente de variațieconfigurations/tables/controlling/analytical-accounting/variation-percentages), permite definirea, pe fiecare analitic, a procentelor (predefinite și clasificate în tabelul relativ) care urmează să fie aplicate în diferite procese din controlling (de ex. bugetul prevăzut pornind de la cel realizat în anul precedent, aplicând majorări sau scăderi).
+**Procente de variație/descriere**: combo box asociat la tabelul [Procente de variație](/docs/configurations/tables/controlling/analytical-accounting/variation-percentages), permite definirea, pe fiecare analitic, a procentelor (predefinite și clasificate în tabelul relativ) care urmează să fie aplicate în diferite procese din controlling (de ex. bugetul prevăzut pornind de la cel realizat în anul precedent, aplicând majorări sau scăderi).
 
-**Distribuție perioade/Descrizione**: combo box asociat la tabelul [Distribuție perioadeconfigurations/tables/controlling/managerial-accounting/periods-distribution), permite atribuirea, pe fiecare cont analitic, a logicii de distribuție specifice înregistrării contabile pe fiecare perioadă în faza elaborării închiderilor infrannuale.  
+**Distribuție perioade/Descrizione**: combo box asociat la tabelul [Distribuție perioade](/docs/configurations/tables/controlling/managerial-accounting/periods-distribution), permite atribuirea, pe fiecare cont analitic, a logicii de distribuție specifice înregistrării contabile pe fiecare perioadă în faza elaborării închiderilor infrannuale.  
 
-**Grupuri de regularizare**/**Descriere**: combo box asociat la tabelul [Grupuri regularizareconfigurations/tables/controlling/analytical-accounting/adjustments-groups) în care se pot codifica grupări de conturi care sunt utile pentru gestionarea rapoartelor specifice controlului. Câmpul nu are altă valoare operațională și nu generează automatisme suplimentare.
+**Grupuri de regularizare**/**Descriere**: combo box asociat la tabelul [Grupuri regularizare](/docs/configurations/tables/controlling/analytical-accounting/adjustments-groups) în care se pot codifica grupări de conturi care sunt utile pentru gestionarea rapoartelor specifice controlului. Câmpul nu are altă valoare operațională și nu generează automatisme suplimentare.
 
 **Descriere extinsă 1 / 2 / 3**: câmpuri suplimentare pentru descrieri alternative (de exemplu în limba). Ele pot fi, de exemplu, introduse ulterior în raportul bilanțului prin personalizarea acestuia.
 
@@ -111,7 +111,7 @@ Următoarele două câmpuri sunt utile acestei proceduri:
 
 Conexiunea se face selectând contul analitic de referință și inserând lista de CdC/CdP în cele două griduri laterale. Se poate asocia valorizarea pe diferite diviziunii, dar în mod normal, diviziunea nu este inserată. Nu se verifică dacă suma procentelor introduse este egală cu 100%.
 
-*Observație*: dacă se activează funcțiile avansate pentru controlling în tabelul  [Societățiconfigurations/tables/general-settings/company), utilizarea centrelor de profit nu mai este relevantă pentru că se utilizează CdC cărora le vor fi atribuite componentele negative sau pozitive pentru a trece apoi la elaborări avansate, cum ar fi inversări și comparații pentru a determina marjele, etc. 
+*Observație*: dacă se activează funcțiile avansate pentru controlling în tabelul  [Societăți](/docs/configurations/tables/general-settings/company), utilizarea centrelor de profit nu mai este relevantă pentru că se utilizează CdC cărora le vor fi atribuite componentele negative sau pozitive pentru a trece apoi la elaborări avansate, cum ar fi inversări și comparații pentru a determina marjele, etc. 
 
 Reamintim faptul că există puncte de codificare ulterioare ale centrelor de cost/profit: Registre client/furnizor/agent, Registre articole,Gestiuni, Mijloace fixe. Prioritatea de valorizare este definită în mod normal în parametrii de gestionare a fiecărui modul.
 
@@ -139,6 +139,6 @@ Reamintim faptul că există puncte de codificare ulterioare ale centrelor de co
 
 În acest fel, pot fi modificate în mod „dinamic” conturile analitice utilizate de șablonul secundar, în funcție de contul analitic care substituie contul generic (de obicei inserat în șablonul principal) la crearea înregistrării contabile.
 
-În plus față de Codul contului analitic, este necesar să se introducă și *Tipul sumei* și secțiunea *Debit/Credit* (vezi și  [Șabloane contabileconfigurations/tables/finance/ledger-records-templates/insert-ledger-records-templates/header)).
+În plus față de Codul contului analitic, este necesar să se introducă și *Tipul sumei* și secțiunea *Debit/Credit* (vezi și  [Șabloane contabile](/docs/configurations/tables/finance/ledger-records-templates/insert-ledger-records-templates)).
 
-Pentru detalii despre tab-ul cu **Extra Data** consultați documentația referitoare la  [Extra Dataconfigurations/utility/extra-data/extradata/new-extradata-simple). 
+Pentru detalii despre tab-ul cu **Extra Data** consultați documentația referitoare la  [Extra Data](/docs/configurations/utility/extra-data/extradata/new-extradata-simple). 

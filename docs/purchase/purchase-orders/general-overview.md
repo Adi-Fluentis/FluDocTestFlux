@@ -9,14 +9,14 @@ Il modulo si trova nell'area **Acquisti > Ordini fornitori** e rappresenta uno d
 
 Gli ordini di acquisto possono essere inseriti manualmente oppure creati automaticamente a partire da documenti preesistenti. Le modalità di generazione automatica comprendono:    
 
-- **Richieste di acquisto**: attraverso la procedura di [Creazione automatica ordinipurchase/purchase-orders/procedures/create-purchase-orders-from-purchase-requests) è possibile evadere le RDA autorizzate all'interno di un ordine di acquisto.    
-- **Richieste di offerta**: dopo aver selezionato l'offerta migliore tra quelle ricevute dai fornitori è possibile generare l'ordine di acquisto mediante la procedura di [Creazione Ordine fornitore da Offerta fornitore/procedures/order-creation).   
-- **Ordini clienti**: la procedura di *Creazione automatica ordini* permette anche la creazione di un *Ordine fornitore* a partire da un *Ordine cliente*. In alternativa, è possibile generare un ordine di acquisto dal filtro di [Ricerca Ordini clienti-orders/search-sales-orders) mediante il pulsante *Creazione ordini fornitori*.    
+- **Richieste di acquisto**: attraverso la procedura di [Creazione automatica ordini](/docs/purchase/purchase-orders/procedures/create-purchase-orders-from-purchase-requests) è possibile evadere le RDA autorizzate all'interno di un ordine di acquisto.    
+- **Richieste di offerta**: dopo aver selezionato l'offerta migliore tra quelle ricevute dai fornitori è possibile generare l'ordine di acquisto mediante la procedura di [Creazione Ordine fornitore da Offerta fornitore](/docs/purchase/offer-request/procedures/order-creation).   
+- **Ordini clienti**: la procedura di *Creazione automatica ordini* permette anche la creazione di un *Ordine fornitore* a partire da un *Ordine cliente*. In alternativa, è possibile generare un ordine di acquisto dal filtro di [Ricerca Ordini clienti](/docs/sales/sales-orders/create-new-sales-orders/search-sales-orders) mediante il pulsante *Creazione ordini fornitori*.    
 - **Commesse di acquisto**: l'ordine di acquisto può essere generato anche attraverso l'[evasione* totale o parziale di una commessa di acquisto, sulla base di contratti predefiniti e già negoziati con il fornitore.   
 
 Una volta confermato, l'ordine di acquisto può essere evaso tramite un DDT o una fattura. Questo permette la registrazione della merce in magazzino e la successiva contabilizzazione della fattura all'interno del sistema, mantenendo un controllo accurato delle scorte e dei flussi finanziari.
 
-Il modulo offre inoltre la possibilità di creare il [ricevimento della merce-reception/receipt-goods-form-settings-and-structure) permettendo all'operatore di evadere l'ordine fornitore, registrare l'arrivo dei beni, posizionarli nel magazzino o nelle ubicazioni predefinite, e procedere successivamente al carico ufficiale delle merci in magazzino.
+Il modulo offre inoltre la possibilità di creare il [ricevimento della merce](/docs/purchase/goods-reception/receipt-goods-form-settings-and-structure) permettendo all'operatore di evadere l'ordine fornitore, registrare l'arrivo dei beni, posizionarli nel magazzino o nelle ubicazioni predefinite, e procedere successivamente al carico ufficiale delle merci in magazzino.
 
 ### **Funzionalità principali**
 
@@ -28,7 +28,7 @@ Il modulo offre inoltre la possibilità di creare il [ricevimento della merce-re
 ### **Impostazioni**
 
 Prima di utilizzare il modulo, è necessario configurare correttamente i seguenti parametri e tabelle: 
-> - [Numerazioniconfigurations/tables/fluentis-numerations)    
-> - [Tipo ordini fornitoriconfigurations/tables/purchase/purchase-orders-type) 
-> - [Parametri ordini fornitoriconfigurations/parameters/purchase/purchase-orders-parameters)
+> - [Numerazioni](/docs/configurations/tables/fluentis-numerations)    
+> - [Tipo ordini fornitori](/docs/configurations/tables/purchase/purchase-orders-type) 
+> - [Parametri ordini fornitori](/docs/configurations/parameters/purchase/purchase-orders-parameters)
 

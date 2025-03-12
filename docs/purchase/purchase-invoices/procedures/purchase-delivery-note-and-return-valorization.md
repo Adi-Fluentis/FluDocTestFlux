@@ -11,7 +11,7 @@ Essa permette di eseguire/ripristinare la creazione di fatture di acquisto parte
 
 In questo tab, l'utente ha la possibilità di inserire filtri per cercare i DDT di acquisto e di rientro da valorizzare. È possibile filtrare per: fornitore, tipo bolla di acquisto, tipo rientro, numero, data, articolo e progetto.
 
-A differenza delle due procedure analoghe [Valorizzazione DDT di acquistopurchase/purchase-invoices/procedures/purchase-delivery-note-valorization) e [Valorizzazione DDT di Rientropurchase/purchase-invoices/procedures/return-delivery-notes-valorization), in questa form viene visualizzata una riga per ciascuna riga articolo contenuta nel documento. Di conseguenza è possibile valorizzare anche una sola riga articolo.
+A differenza delle due procedure analoghe [Valorizzazione DDT di acquisto](/docs/purchase/purchase-invoices/procedures/purchase-delivery-note-valorization) e [Valorizzazione DDT di Rientro](/docs/purchase/purchase-invoices/procedures/return-delivery-notes-valorization), in questa form viene visualizzata una riga per ciascuna riga articolo contenuta nel documento. Di conseguenza è possibile valorizzare anche una sola riga articolo.
 
 - **Numero e data fattura**: permette di specificare il numero e la data della fattura che sarà creata. 
 
@@ -32,7 +32,7 @@ A differenza delle due procedure analoghe [Valorizzazione DDT di acquistopurchas
 
 *Riferimenti DDT*
 
-- **Metti riferimenti DDT**: se questo flag è impostato, nel tab [Articolipurchase/purchase-invoices/insert-purchase-invoice/items) della fattura verrà visualizzato un *Articolo nota* che riprenderà i riferimenti del DDT dal quale è stata creata la fattura. Il contenuto di questa nota deve essere inserito nel campo *Descrizione*, secondo i parametri descritti nella label. 
+- **Metti riferimenti DDT**: se questo flag è impostato, nel tab [Articoli](/docs/purchase/purchase-invoices/insert-purchase-invoice/purchase-invoice) della fattura verrà visualizzato un *Articolo nota* che riprenderà i riferimenti del DDT dal quale è stata creata la fattura. Il contenuto di questa nota deve essere inserito nel campo *Descrizione*, secondo i parametri descritti nella label. 
     
     *Esempio*: ![](/img/it-it/purchase/purchase-invoices/procedures/purchase-delivery-note-valorization/image06.png). Se il DDT ha il numero 5 e la data 11.09.2024, l'articolo nota nella fattura sarà: 'DDT riferimento no 5 del 11.09.2024'.
 
@@ -45,11 +45,11 @@ A differenza delle due procedure analoghe [Valorizzazione DDT di acquistopurchas
 
 *Riferimenti rientro*
 
-- **Metti riferimenti rientri**: se questo flag è impostato, nel tab [Articolipurchase/purchase-invoices/insert-purchase-invoice/items) della fattura verrà visualizzato un *Articolo nota* che riprenderà i riferimenti del rientro dal quale è stata creata la fattura. Il contenuto di questa nota deve essere inserito nel campo *Descrizione*, secondo i parametri descritti nella label. 
+- **Metti riferimenti rientri**: se questo flag è impostato, nel tab [Articoli](/docs/purchase/purchase-invoices/insert-purchase-invoice/purchase-invoice) della fattura verrà visualizzato un *Articolo nota* che riprenderà i riferimenti del rientro dal quale è stata creata la fattura. Il contenuto di questa nota deve essere inserito nel campo *Descrizione*, secondo i parametri descritti nella label. 
 
 
 :::tip Ricorda
-Per la fatturazione riepilogativa è necessario impostare nei [Parametri raggruppamento fattureconfigurations/parameters/purchase/invoice-grouping/) le condizioni di raggruppamento da utilizzare. 
+Per la fatturazione riepilogativa è necessario impostare nei [Parametri raggruppamento fatture](/docs/configurations/parameters/purchase/invoice-grouping/) le condizioni di raggruppamento da utilizzare. 
 :::
 
 *Pulsanti specifici*: 

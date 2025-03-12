@@ -13,6 +13,6 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 
 *Câmpuri specifice*
 
-**Numerotare**: consultați [Numerotări Fluentisconfigurations/tables/fluentis-numerations).   
+**Numerotare**: consultați [Numerotări Fluentis](/docs/configurations/tables/fluentis-numerations).   
 **Calibrare internă**: dacă este activ, calibrarea înseamnă că este realizată în companie.         
 **Note**: informații care se pot completa în mod liber.

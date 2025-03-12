@@ -4,4 +4,4 @@ sidebar_position: 15
 ---
 
 Permite inserarea numerotării modelelor Intrastat. Pentru detalii clic 
-[**aici**configurations/tables/fluentis-numerations).
+[**aici**](/docs/configurations/tables/fluentis-numerations).

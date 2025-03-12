@@ -17,4 +17,4 @@ După inserarea datelor, efectuați clic pe butonul**Duplică ansamblu** care va
 
 > **Duplică ansamble**: activează procedura pentru duplicarea ansamblului.
 
-Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comune](/docs/guide/common).

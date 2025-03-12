@@ -6,7 +6,7 @@ tags: [Necesar materiale]
 
 Conține parametrii care se referă la setările principale din aria producției.
 
-**Prima zi din săptămână pentru calcul capacitate productivă**: reprezintă ziua care trebuie să fie considerată ca fiind prima zi din săptămână în [Calendarul Capacităților productiveconfigurations/tables/production/factory-calendar), deci în calendarul Centrelor de lucru. De obicei se inserează luni.
+**Prima zi din săptămână pentru calcul capacitate productivă**: reprezintă ziua care trebuie să fie considerată ca fiind prima zi din săptămână în [Calendarul Capacităților productive](/docs/configurations/tables/production/factory-calendar), deci în calendarul Centrelor de lucru. De obicei se inserează luni.
 
 **Ultimul ordin planificat utilizat în anul în curs**: reprezintă ultimul număr progresiv utilizat în anul în curs pentru ordinele planificate.
 

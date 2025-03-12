@@ -36,4 +36,4 @@ Collegato al listino fornitore c'è la possibilità di associare una lista di li
 > **Cancella listini**: per cancellare i listini selezionati.   
 > **Cancella sconti per listino**: per cancellare gli sconti selezionati del listino.  
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

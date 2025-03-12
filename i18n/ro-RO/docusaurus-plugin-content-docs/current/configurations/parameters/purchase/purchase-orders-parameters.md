@@ -35,7 +35,7 @@ Parametrii ordinelor furnizori permit setarea de bază pentru gestionarea corect
 
 **Propune marca cu prioritate ofertă furnizor/ordin client**: nu mai este utilizat 
 
-**Permite modificarea TVA**: dacă este activ, în cazul [Creării automate a ordinelor din Cereri de achiziţiepurchase/purchase-orders/procedures/create-purchase-orders-from-purchase-requests), codul TVA este propus din registrul furnizorului.   
+**Permite modificarea TVA**: dacă este activ, în cazul [Creării automate a ordinelor din Cereri de achiziţie](/docs/purchase/purchase-orders/procedures/create-purchase-orders-from-purchase-requests), codul TVA este propus din registrul furnizorului.   
 
 **Cod operator obligatoriu**: dacă este activ, devine obligatorie inserarea operatorului/angajatului în antetul ordinului. 
 

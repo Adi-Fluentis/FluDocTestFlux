@@ -15,7 +15,7 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 
 **Cod/Descriere**: reprezintă codul și descrierea resursei;
 
-**Tip resursă**: permite selectarea datelor predefinite în tabelul [Tip resursăconfigurations/tables/project-management/resource-type);
+**Tip resursă**: permite selectarea datelor predefinite în tabelul [Tip resursă](/docs/configurations/tables/project-management/resource-type);
 
 **Nume/Prenume**: reprezintă numele și prenumele operatorului;
 

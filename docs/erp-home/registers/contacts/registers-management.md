@@ -10,7 +10,7 @@ La parte generale definita **Contatto** accoglie solo i dati generali del sogget
 
 Questi dati costituiscono un serbatoio, una sorta di rubrica, a disposizione di tutte le aziende gestite nel database.
 
-Ogni azienda ha il proprio piano dei conti e pertanto, al fine di poter utilizzare l'anagrafica concretamente nel ciclo documentale e nelle registrazioni contabili e definire i vari dettagli d interesse, **è necessario, all'interno di ogni singola società coinvolta** (agendo dunque dopo aver selezionato la società attiva) [**associare il Contatto ad un Tipo conto**erp-home/registers/contacts/create-new-contact/accounting-data/accounting-data-intro) al fine di inizializzare l'anagrafica in dettaglio associandole appunto un conto contabile che identificherà anche ai fini della contabilità quel determinato cliente italiano o ad esempio quel determinato fornitore europeo, quell'agente o quella banca.
+Ogni azienda ha il proprio piano dei conti e pertanto, al fine di poter utilizzare l'anagrafica concretamente nel ciclo documentale e nelle registrazioni contabili e definire i vari dettagli d interesse, **è necessario, all'interno di ogni singola società coinvolta** (agendo dunque dopo aver selezionato la società attiva) [**associare il Contatto ad un Tipo conto**](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/accounting-data-intro) al fine di inizializzare l'anagrafica in dettaglio associandole appunto un conto contabile che identificherà anche ai fini della contabilità quel determinato cliente italiano o ad esempio quel determinato fornitore europeo, quell'agente o quella banca.
 :::
 
 ### Ricerca anagrafiche
@@ -33,11 +33,11 @@ La **Nuova anagrafica** si può inserire:
 
    oppure
 
-- cliccando sul pulsante **Nuovo**, all'interno della form **[Anagrafiche contattierp-home/registers/contacts/registers-management)**.
+- cliccando sul pulsante **Nuovo**, all'interno della form **[Anagrafiche contatti](/docs/erp-home/registers/contacts/registers-management)**.
 
 La form **Anagrafica** si compone di due tab:
-- **[Generaleerp-home/registers/contacts/create-new-contact/general)** in cui si troveranno le informazioni generali dell'anagrafica;
-- **[Dati Contabilierp-home/registers/contacts/create-new-contact/accounting-data/accounting-data-intro)** che a sua volta presenterà una serie di tab nei quali si potranno inserire informazioni più specifiche di tipo amministrativo, commerciale, logistico e che verranno dettagliate negli articoli successivi.
+- **[Generale](/docs/erp-home/registers/contacts/create-new-contact/general)** in cui si troveranno le informazioni generali dell'anagrafica;
+- **[Dati Contabili](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/accounting-data-intro)** che a sua volta presenterà una serie di tab nei quali si potranno inserire informazioni più specifiche di tipo amministrativo, commerciale, logistico e che verranno dettagliate negli articoli successivi.
  
 
 ## Riepilogo

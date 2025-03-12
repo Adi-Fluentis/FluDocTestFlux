@@ -14,7 +14,7 @@ se poate realiza o codificare a nivelurilor de autorizare după cum urmează:
 
 ! [](/img/it-it/configurations/tables/finance/authorization-levels.png)
 
-Nivelul *00–Blocare inițială* ar trebui să fie presetat în fiecare **Registru furnizor**, în tab [**Plăți**erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/payments/), pentru ca angajamentele sale să fie create create blocate, cu acest nivel de pornire.
+Nivelul *00–Blocare inițială* ar trebui să fie presetat în fiecare **Registru furnizor**, în tab [**Plăți**](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/payments/), pentru ca angajamentele sale să fie create create blocate, cu acest nivel de pornire.
 
 ! [](/img/it-it/configurations/tables/finance/authorization-levels-combo.png)
 
@@ -26,6 +26,6 @@ Apoi, din nou, angajamentul poate ajunge la nivelul final *03* numai de către u
 
 Fiecare pas poate necesita inserarea unei note de autorizare, dacă parametrul este setat pe nivel.
 
-Aceste modificări de stare pot fi efectuate în form [**Gestionare lichidităţi**/maturity-values/procedures/cash-management/), folosind  butonul *Autorizează angajament*. 
+Aceste modificări de stare pot fi efectuate în form [**Gestionare lichidităţi**](/docs/finance-area/maturity-values/procedures/cash-management/), folosind  butonul *Autorizează angajament*. 
 
 Dupa emiterea autorizației, tot din *Gestionare lichidităţi* se pot crea direct listele de plata ale modulului *Plăți furnizor*, pentru angajamentele autorizate (cele care nu sunt blocate) ca alternativa la procedura clasică de creare a borderoului de plata.

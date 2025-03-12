@@ -17,4 +17,4 @@ Per poter inserire nuovi record è necessario cliccare nella griglia sulla prima
 **Default per modelli**: flag per indicare quale sia la versione predefinita che deve essere proposta in automatico quando si utilizza la Prototipazione;  
 **Attiva**: flag per decidere se la versione sia utilizzabile o no.
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

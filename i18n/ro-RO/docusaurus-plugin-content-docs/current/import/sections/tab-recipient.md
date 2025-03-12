@@ -1,4 +1,4 @@
-Qui viene proposta l'informazione inserita nell' anagrafica fornitore, tab [Spedizionierp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/delivery), solo se esistono dati di default.
+Qui viene proposta l'informazione inserita nell' anagrafica fornitore, tab [Spedizioni](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/delivery), solo se esistono dati di default.
 
 Il combo box propone tutti i destinatari e le destinazioni inserite nell'anagrafica fornitore.
 

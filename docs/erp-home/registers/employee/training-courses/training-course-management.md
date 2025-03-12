@@ -160,4 +160,4 @@ L'elenco delle *Date corso dipendente selezionato* e relativo al *Dipendente* se
 La somma delle ore di teoria e di pratica svolte devono essere pari alla differenza degli orari effettivi di fine e inizio.   
 
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

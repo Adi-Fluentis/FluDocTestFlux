@@ -16,7 +16,7 @@ L'articolo può essere gestito in entrambe le unità di misura e creando delle r
 
 **Unità di misura** e **Descrizione**: si indicherà quindi l'unità di misura alternativa con la sua descrizione;
 
-**Fattore di conversione**: qui si va a definire il fattore di conversione tra l'unità di misura principale e l'unità di misura alternativa; la *quantità alternativa* nei documenti viene calcolata in base al settaggio effettuato nei [Parametri iniziali di magazzinoconfigurations/parameters/logistics/warehouse-initial-parameters/warehouse-parameters)
+**Fattore di conversione**: qui si va a definire il fattore di conversione tra l'unità di misura principale e l'unità di misura alternativa; la *quantità alternativa* nei documenti viene calcolata in base al settaggio effettuato nei [Parametri iniziali di magazzino](/docs/configurations/parameters/logistics/warehouse-initial-parameters/warehouse-parameters)
 
 **Default**: se attivo, questo flag indica qual'è l'unità di misura di riferimento tra N alternative possibili per articolo;
 

@@ -43,7 +43,7 @@ Permite inserarea informațiilor generale ale articolului.
 
 **În epuizare**: dacă este activ, înseamnă că articolul se epuizează.  
 Condițiile pentru obținerea notificării că articolul se epuizează, în documente (de ex. în comenzile de vânzare), sunt:
-- în [Parametri ordine cliențiconfigurations/parameters/sales/sales-orders-parameters) trebuie setat flag-ul **Verifică articole în epuizare**;
+- în [Parametri ordine clienți](/docs/configurations/parameters/sales/sales-orders-parameters) trebuie setat flag-ul **Verifică articole în epuizare**;
 - în registrul articolului trebuie să fie activat flag-ul **În epuizare** iar **Data epuizării** trebuie să fie mai mică sau egală cu data ordinului.
 
 **Dată în epuizare**: indică data la care articolul a fost setat **În epuizare**;

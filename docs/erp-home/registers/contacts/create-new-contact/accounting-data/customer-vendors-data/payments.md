@@ -9,7 +9,7 @@ In questa form si possono specificare le condizioni commerciali di default in me
 > Cancella banche: per cancellare la banca d'appoggio selezionata.  
 > Cancella tipo pagamento: per cancellare dalla griglia delle tipologie di pagamento.  
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).
 
 ### Tipi pagamento
 :::tip[ ]
@@ -43,7 +43,7 @@ In caso di percentuale inferiore a 100 vanno, pertanto, create tante righe con p
 > - se tipo pagamento è bonifico bancario sarà indicata la banca del fornitore;
 > - se tipo pagamento è ricevuta bancaria sarà indicata la banca della società.
 
-Il campo si compila tramite una combo box (**Banca**) collegata alla tabella [*Banca d'appoggio*configurations/tables/general-settings/reference-bank.md). All'interno di questa tabella è possibile inserire sia la banche della società, sia le banche della controparte (cliente o fornitore). Inoltre è possibile inserire sia righe complete di codice IBAN e/o SWIFT (consigliato per le banche della società) sia righe complete di soli codice ABI e CAB (consigliato per le banche di controparte per le quali IBAN e SWIFT possono essere indicati nei campi della griglia presente in anagrafica).
+Il campo si compila tramite una combo box (**Banca**) collegata alla tabella [*Banca d'appoggio*](/docs/configurations/tables/general-settings/reference-bank.md). All'interno di questa tabella è possibile inserire sia la banche della società, sia le banche della controparte (cliente o fornitore). Inoltre è possibile inserire sia righe complete di codice IBAN e/o SWIFT (consigliato per le banche della società) sia righe complete di soli codice ABI e CAB (consigliato per le banche di controparte per le quali IBAN e SWIFT possono essere indicati nei campi della griglia presente in anagrafica).
 
 Se la riga presente nella tabella Banca d'appoggio è completa di IBAN e/o SWIFT, oltre che di ABI e CAB, richiamando tale riga tramite la combobox i dati saranno riportati nella griglia in anagrafica, diversamente, saranno riportati solo ABI e CAB, ma sarà sempre possibile aggiungere i dati mancanti direttamente nella griglia. Ciò è consigliabile per le banche di controparte al fine di evitare di codificare nella tabella Banca d'appoggio troppe righe utilizzate solo per un unico cliente o fornitore. E' preferibile indicare solo i dati dello sportello bancario (ABI e CAB) presso il quale potrebbero avere il conto corrente diversi clienti o fornitori.
 
@@ -67,7 +67,7 @@ Tra queste, quella impostata come **Default** (con il flag omonimo) può essere 
 
 In questo caso la banca inserita in questa griglia verrà imposta nella distinta di bonifico, sostituendo quella presente nella registrazione contabile  (quest'ultima definita, nella registrazione contabile, manualmente o tramite il dato inserito in anagrafica nella griglia superiore Tipi Pagamento) e collegata alla partita aperta.
 
-*Attenzione*: per attivare la sostituzione della banca d'appoggio di cui sopra è necessario attivare il flag *Imponi la banca d'appoggio* presente in *Anagrafica fornitore > [Parametri Pagamenti Fornitoreconfigurations/parameters/treasury/vendor-payments-parameters)*.
+*Attenzione*: per attivare la sostituzione della banca d'appoggio di cui sopra è necessario attivare il flag *Imponi la banca d'appoggio* presente in *Anagrafica fornitore > [Parametri Pagamenti Fornitore](/docs/configurations/parameters/treasury/vendor-payments-parameters)*.
 
 Se il flag è attivo nella form *Parametri Pagamenti Fornitore* ma non sono inserite banche con flag default attivo nella griglia, sarà mantenuta la banca indicata nella registrazione contabile tramite il dato inserito in anagrafica nella griglia superiore *Tipi Pagamento* (o modificata manualmente nella registrazione).
 
@@ -93,7 +93,7 @@ In questa griglia è possibile impostare un automatismo che rinvia tutte le scad
 
 *Esempio*: compilando come nell'immagine tutte le scadenze del mese di agosto saranno posticipate al 5 settembre.
 
-Inserendo anche una riga Dicembre - 7 - Gennaio, le scadenze del mese di dicebre sarebbero posticipate al giorno 7 di gennaio.
+Inserendo anche una riga Dicembre - 7 - Gennaio, le scadenze del mese di dicembre sarebbero posticipate al giorno 7 di gennaio.
 
 ### Sezione inferiore
 
@@ -109,21 +109,21 @@ Nei parametri di configurazione delle causali contabili è possibile definire un
 
 **Raggr. scadenze in effetti**: permette di raggruppare più partite/scadenze in un unico effetto del modulo portafoglio effetti (saranno raggruppate in caso di uguale data scadenza e stesso appoggio bancario);
 
-**Raggr. note cred. in effetti**: consente di stornare, nella creazione effetti, anche le note di credito che hanno il tipo pagamento da gestire negli effetti. Se il flag non è attivo le partite aperte relative alle note di accredito non saranno visualizzate nella form di ricerca partite per la procedura [creazione effetti dalle partitetreasury/bills-holding/procedures/bills-acquisition-from-maturity-values/bills-acquisition-from-maturity-values-intro).
+**Raggr. note cred. in effetti**: consente di stornare, nella creazione effetti, anche le note di credito che hanno il tipo pagamento da gestire negli effetti. Se il flag non è attivo le partite aperte relative alle note di accredito non saranno visualizzate nella form di ricerca partite per la procedura [creazione effetti dalle partite](/docs/treasury/bills-holding/procedures/bills-acquisition-from-maturity-values).
 
-Il parametro di cui sopra deve essere abbinato con il flag **Raggruppa note credito per data scadenza** presente nei  [Parametri portafoglio effetticonfigurations/parameters/treasury/bills-portfolio-parameters) 
+Il parametro di cui sopra deve essere abbinato con il flag **Raggruppa note credito per data scadenza** presente nei  [Parametri portafoglio effetti](/docs/configurations/parameters/treasury/bills-portfolio-parameters) 
 
 Se si attiva il flag per il raggruppamento per data scadenza la partita (o partite) relativa alla nota di accredito con tipo pagamento coerente con l'emissione effetti sarà raggruppata (stornando le partite attive) soltanto se ha scadenza uguale rispetto alle partite selezionate per l'emissione dell' effetto. Diversamente, se il flag è disattivato la nota di accredito sarà raggruppata andando a stornare la partita scadente alla prima data utile (a patto ovviamente che il flag *Raggr. note cred. in effetti* nell'anagrafica sia attivo).
 
-**Controllo esposizione**: con questo flag si renderà visibile questo soggetto nelle maschere riepilogative dell'[esposizione clientitreasury/customer-risk/procedures/customer-statement).
+**Controllo esposizione**: con questo flag si renderà visibile questo soggetto nelle maschere riepilogative dell'[esposizione clienti](/docs/treasury/customer-risk/procedures/customer-statement).
 
-**Giorni ritardo** è un dato statistico calcolato nel modulo **rischio cliente** (procedura  [**controllo rimesse**treasury/customer-risk/procedures/remittances-management) ) e utilizzato nelle proiezioni di cash flow; rappresenta una **media dei giorni di ritardo nei pagamenti da parte dei clienti** non solo sulle partite scadute attuali, ma anche sullo storico. Il calcolo prevede una media pesata sull'importo della partita. Infatti il calcolo si basa sull'elaborazione dei "numeri creditori" (come in un estratto conto scalare bancario). All'interno della form **controllo rimesse**(nella ribbon bar in alto) è presente il comando **Aggiorna gg ritardo** che inserisce il risultato sdel calcolo nel campo Giorni ritardo in anagrafica cliente.
+**Giorni ritardo** è un dato statistico calcolato nel modulo **rischio cliente** (procedura  [**controllo rimesse**](/docs/treasury/customer-risk/procedures/remittances-check) e utilizzato nelle proiezioni di cash flow; rappresenta una **media dei giorni di ritardo nei pagamenti da parte dei clienti** non solo sulle partite scadute attuali, ma anche sullo storico. Il calcolo prevede una media pesata sull'importo della partita. Infatti il calcolo si basa sull'elaborazione dei "numeri creditori" (come in un estratto conto scalare bancario). All'interno della form **controllo rimesse**(nella ribbon bar in alto) è presente il comando **Aggiorna gg ritardo** che inserisce il risultato sdel calcolo nel campo Giorni ritardo in anagrafica cliente.
 
 **Imp. fido concesso**: è l'importo del fido che è concesso al cliente. Per la corretta gestione di questa funzionalità si deve gestire anche il flag **Fido** presente nelle tabelle relativi ai dipi documento del ciclo vendite (Tipo fatture; Tipi Bolla; Tipi Ordine cliente) il quale include o meno il tipo di documento in questione nel controllo dello sconfinamento rispetto al fido.
 
-**Tipo contr. fido**: si può definire se il cliente è soggetto ad un solo ‘**monitor fido**' (cioè sarà restituito un solo messaggio di segnalazione dello sforamento del fido) oppure un **blocco doc. e monitor fido** con il quale il documento che va a sforare il fido sarà bloccato e dovrà essere autorizzato all'interno del modulo Rischio cliente (procedura [Lock managertreasury/customer-risk/procedures/lock-manager/documents-authorization), oppure in un database multi societario la possibilità di impostare un **monitor di gruppo** o **blocco di gruppo** andando quindi a valutare la situazione complessiva del soggetto nei confronti di tutte le società gestite nella base dati e quindi sommando il monte documenti (si raccomanda di impostare l'importo fido uguale e attivo su tutte le società).**Blocco /monitor gruppo cliente** verifica per gruppo aziendale e quindi verificando il campo sottoconto capogruppo (legge il fido del capogruppo). Totalizza sempre i valori di tutte le aziende del gruppo sul fido della capogruppo. Ignora il valore del fido scritto sulle anagrafiche delle filiali.
+**Tipo contr. fido**: si può definire se il cliente è soggetto ad un solo ‘**monitor fido**' (cioè sarà restituito un solo messaggio di segnalazione dello sforamento del fido) oppure un **blocco doc. e monitor fido** con il quale il documento che va a sforare il fido sarà bloccato e dovrà essere autorizzato all'interno del modulo Rischio cliente (procedura [Lock manager](/docs/treasury/customer-risk/procedures/lock-manager), oppure in un database multi societario la possibilità di impostare un **monitor di gruppo** o **blocco di gruppo** andando quindi a valutare la situazione complessiva del soggetto nei confronti di tutte le società gestite nella base dati e quindi sommando il monte documenti (si raccomanda di impostare l'importo fido uguale e attivo su tutte le società).**Blocco /monitor gruppo cliente** verifica per gruppo aziendale e quindi verificando il campo sottoconto capogruppo (legge il fido del capogruppo). Totalizza sempre i valori di tutte le aziende del gruppo sul fido della capogruppo. Ignora il valore del fido scritto sulle anagrafiche delle filiali.
 
-Nel modulo Rischio cliente c'è una procedura di [gestione fiditreasury/customer-risk/credit-management) che consente di visualizzare l'elenco delle impostazioni di fido impostate su tutti i codici cliente, senza dover entrare nella singola anagrafica;
+Nel modulo Rischio cliente c'è una procedura di [gestione fidi](/docs/treasury/customer-risk/credit-management) che consente di visualizzare l'elenco delle impostazioni di fido impostate su tutti i codici cliente, senza dover entrare nella singola anagrafica;
 
 **Fido assicurato**: è un semplice campo indicativo dell'importo coperto da assicurazione, non influente sui calcoli del rischio;
 
@@ -141,10 +141,10 @@ La combo box è collegata alla tabella Tipi solleciti (Home>Tabelle>Amministrati
 
 **Tipo tasso di interesse**: è il tipo di tasso moratorio da applicare al soggetto sulla base dell'accordo concordato;
 
-La combo box è collegata alla tabella [Tipi Tassoconfigurations/tables/finance/rate-types) in Configurazione > Tabelle >Amministrativa).
+La combo box è collegata alla tabella [Tipi Tasso](/docs/configurations/tables/finance/rate-types) in Configurazione > Tabelle >Amministrativa).
 
 **Spread**: maggiorazione di tasso rispetto allo standard della sua tipologia.
 
-**Livello autorizzativo:** si rinvia all [**tabella collegata**configurations/tables/finance/authorization-levels/) alla combo box.
+**Livello autorizzativo:** si rinvia all [**tabella collegata**](/docs/configurations/tables/finance/authorization-levels/) alla combo box.
 
 

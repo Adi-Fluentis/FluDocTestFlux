@@ -38,9 +38,9 @@ Dacă avem un client cu codul 001 care este român, setarea este adecvată, lini
 
 Dar dacă vânzarea este către un client cu codul 002 intercompany sau către un client extern cu codu 003, pentru a evita ca utilizatorul să schimbe de fiecare dată facturarea vânzărilor (în B sau C) pe toate liniile documentului (facturii) pentru a contabiliza linia documentului cu contul potrivit, se poate defini completarea corectă pentru registrul în discuție, făcând astfel încât să aibă prioritate față de setarea generală.
 
-Completarea câmpului se realizează cu ajutorul combobox-ului asociat tabelului [Tip contab. articol:configurations/tables/finance/articles-accounting-types) în acest tabel vom crea, de exemplu, un tip de contabilizare cu codul 1 ‘Intercompany' și un tip de contabilizare cu codul 1 ‘Extern', și vom activa flag-ul ‘Client' ambilor, astfel încât aceste două înregistrări să fie vizibile în registrele clienților. Deci, în registrul 002 vom seta cod 1 'Intercompany' și în 003 cod 2 ‘Extern'.
+Completarea câmpului se realizează cu ajutorul combobox-ului asociat tabelului [Tip contab. articol:](/docs/configurations/tables/finance/articles-accounting-types) în acest tabel vom crea, de exemplu, un tip de contabilizare cu codul 1 ‘Intercompany' și un tip de contabilizare cu codul 1 ‘Extern', și vom activa flag-ul ‘Client' ambilor, astfel încât aceste două înregistrări să fie vizibile în registrele clienților. Deci, în registrul 002 vom seta cod 1 'Intercompany' și în 003 cod 2 ‘Extern'.
 
-Apoi, în tabelul [Facturare vânzări,configurations/tables/sales/sales-turnover) pentru linia 'A -  Venituri din vânzarea produselor finite' din primul grid va trebui să inserăm în gridul inferior:
+Apoi, în tabelul [Facturare vânzări,](/docs/configurations/tables/sales/sales-turnover) pentru linia 'A -  Venituri din vânzarea produselor finite' din primul grid va trebui să inserăm în gridul inferior:
 
 - o linie cu tipul contabilizării ‘Entercompany' și contul Venituri intercompany din vânzarea produselor finite;
 
@@ -50,7 +50,7 @@ Apoi, în tabelul [Facturare vânzări,configurations/tables/sales/sales-turno
 
 În acest mod utilizatorul va trebui apoi să seteze doar registrul și setările vor completa cu contul analitic adecvat. Contabilizarea va verifica pentru fiecare facturare vânzări inserată în factură dacă există un detaliu cu un cont particular pentru tipul inserat în client.
 
-Setarea operează similar și în furnizori, setând flag-ul *Furnizor* în tabelul [Tip contabilizare articolconfigurations/tables/finance/articles-accounting-types) și actualizând tabelul *Facturare achiziții*.
+Setarea operează similar și în furnizori, setând flag-ul *Furnizor* în tabelul [Tip contabilizare articol](/docs/configurations/tables/finance/articles-accounting-types) și actualizând tabelul *Facturare achiziții*.
 
 **Cont analitic societate mamă**: în analizele riscului client, permite unirea clienților care aparțin aceluiași grup de companii; 
 

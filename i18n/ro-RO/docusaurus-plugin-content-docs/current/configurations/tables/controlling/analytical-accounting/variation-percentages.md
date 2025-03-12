@@ -9,7 +9,7 @@ Form-ul se află în **Configurare > Tabele >Controlling > Contabilitate analiti
 *Exemplu*: pentru costurile fixe, în fiecare an, se stabilesc majorări de 5% , pentru semi-variabile, incrementul va fi de 3% pentru cota variabilă și de 3% pentru cota fixă și, în sfârșit, pentru costurile variabile majorarea va fi de 10%. 
 
 
-În [Planul de conturierp-home/registers/accounting/analytic-chart-of-accounts) se va atribui, pentru fiecare cont analitic, elementul relativ pentru variația automată și când este utilizată procedura care copie dintr-o arie de analiză în alta (de ex. din *Definitiv* în *Buget*) se fa putea spune aplicației să aplice sau nu aceste procente.
+În [Planul de conturi](/docs/erp-home/registers/accounting/analytic-chart-of-accounts) se va atribui, pentru fiecare cont analitic, elementul relativ pentru variația automată și când este utilizată procedura care copie dintr-o arie de analiză în alta (de ex. din *Definitiv* în *Buget*) se fa putea spune aplicației să aplice sau nu aceste procente.
 
 *Câmpuri specifice*
 

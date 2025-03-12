@@ -18,7 +18,7 @@ Pentru selectarea noului component se poate utiliza *Help articole*. Apoi va fi 
 
 *Alternative* și *Faze*: aceste opțiuni permit inserarea alternativelor și fazelor de lucru asociate noului component.
 
-Pentru detalii despre câmpuri vedeți [Gestionare structurierp-home/registers/production/bill-of-materials/assemblies/structure-management).
+Pentru detalii despre câmpuri vedeți [Gestionare structuri](/docs/erp-home/registers/production/bill-of-materials/assemblies/structure-management).
 
 Cu ajutorul aceste proceduri se poate insera, în parte inferioară a ferestrei, același component inserat în filtru. Astfel veți putea modifica datele componentului în listele din grid.
 
@@ -37,7 +37,7 @@ Pentru selectarea noului component se poate utiliza *Help articole*. Apoi va fi 
 
 *Alternative* și *Faze*: aceste opțiuni permit inserarea alternativelor și fazelor de lucru asociate noului component.
 
-Pentru detalii despre câmpuri vedeți [Gestionare structurierp-home/registers/production/bill-of-materials/assemblies/structure-management).
+Pentru detalii despre câmpuri vedeți [Gestionare structuri](/docs/erp-home/registers/production/bill-of-materials/assemblies/structure-management).
 
 - terminați operația de **Inserare** cu ajutorul butonului **Elaborare**.
 
@@ -54,4 +54,4 @@ Secțiunea inferioară a ferestrei va fi dezactivată în cazul **Anulării**.
 *Buton specific*  
 > **Elaborare**: permite activarea procedurii selectate în combo *Tip gestionare*.
 
-Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comune](/docs/guide/common).

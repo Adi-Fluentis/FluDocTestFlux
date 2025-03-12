@@ -50,12 +50,12 @@ Prototipul generat va fi afișat în următorul tab,  următoare **Prototipuri a
 
 Permite selectarea parametrilor care trebuie să reglementeze duplicarea articolului.
 
-Informațiile care pot fi duplicate sunt: costuri, greutăți și dimensiuni, loturi și S/N, achiziții, variante, furnizori preferențiali (în cazul articolelor de achiziție), clienți (în cazul articolelor de vânzare), U.M. alternativ, imagini, note, coduri de bare, informațiile conținute în fila Administrare, data suplimentară, ambalarea etc. Acestea sunt toate informațiile conținute în filele care alcătuiesc articolul și care au fost detaliate în articolele relevante (consultați [Creare articolerp-home/registers/items/create-new-items/create-new-item) și documentele asociate).
+Informațiile care pot fi duplicate sunt: costuri, greutăți și dimensiuni, loturi și S/N, achiziții, variante, furnizori preferențiali (în cazul articolelor de achiziție), clienți (în cazul articolelor de vânzare), U.M. alternativ, imagini, note, coduri de bare, informațiile conținute în fila Administrare, data suplimentară, ambalarea etc. Acestea sunt toate informațiile conținute în filele care alcătuiesc articolul și care au fost detaliate în articolele relevante (consultați [Creare articol](/docs/erp-home/registers/items/create-new-items/create-new-item) și documentele asociate).
 
-Se poate duplica și [Lista componentelorerp-home/registers/production/bill-of-materials/search-and-insert-assemblies) pentru producerea articolului, [Ciclul de lucruerp-home/registers/production/routes/new-route) și [Parametri MRPconfigurations/parameters/production/mrp-parameters/search-mrp-parameters) ai articolului.
+Se poate duplica și [Lista componentelor](/docs/erp-home/registers/production/bill-of-materials/search-and-insert-assemblies) pentru producerea articolului, [Ciclul de lucru](/docs/erp-home/registers/production/routes/new-route) și [Parametri MRP](/docs/configurations/parameters/production/mrp-parameters/search-mrp-parameters) ai articolului.
 
 Tot în acest tab, există o altă secțiune în care se poate defini o culoarea de umplere a celulei și culoarea textului pentru a-l putea identifica când sunt generate prototipurile: rândurile care conțin date lipsă (de exemplu, dacă una dintre informațiile pe care doriți să le duplicați este goală în articolul părinte, în articolul fiu va fi afișată linia corespunzătoare acelui element evidențiat în culoarea aleasă) și articolele care au fost deja codificate anterior (în cazul în care continuați cu crearea unui articol perfect identic unui articol deja existent în baza de date).
 
 După setarea parametrilor puteți continua duplicarea articolului.
 
-Pentru orice element care nu este detaliat în acest document privind funcționarea comună a formularelor, consultați următorul link [Caracteristici comune, butoane și câmpuriguide/common).
+Pentru orice element care nu este detaliat în acest document privind funcționarea comună a formularelor, consultați următorul link [Caracteristici comune, butoane și câmpuri](/docs/guide/common).

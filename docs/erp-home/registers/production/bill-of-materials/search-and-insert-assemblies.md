@@ -3,7 +3,7 @@ title: Assiemi
 sidebar_position: 2
 ---
 
-**Introduzione**: [Distinta baseerp-home/registers/production/bill-of-materials/bom-intro) 
+**Introduzione**: [Distinta base](/docs/erp-home/registers/production/bill-of-materials/bom-intro) 
 
 Consente di inserire nuovi record o di ricercare quelli già esistenti per visualizzarli, modificarli oppure cancellarli.
 
@@ -15,4 +15,4 @@ Nella griglia di risultato, cliccando sulla distinta che si vuole visualizzare/m
 
 **Calcola livello minimo**: è una procedura che calcola il livello minimo di ciascun articolo presente nelle distinte basi. Viene utilizzata dall'MRP. Lanciarla manualmente può essere solo utile in alcuni casi per effettuare dei test e capire se ci siano problemi in questo tipo di calcolo.
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

@@ -13,7 +13,7 @@ Pentru a modifica Parametri MRP:
 **Politica de gestionare** permite utilizatorului să aleagă gestionarea articolului pe baza:
 
 > **Prognoze**: articolul va fi gestionat prin intermediul generării previziunii de vânzare sau inserării unui plan principal de producție. Această politică este apoi considerată atât în *Definire MPS*, cât și în *MRP*;  
-> **Stoc**: articolul va fi gestionat pe baza informațiilor momentului de lansare al comenzii și al stocului minim inserate în tab [Aprovizionareerp-home/registers/items/create-new-items/item-registry/procurement) din registrul articolului. Acest lucru pentru că sunt articole pentru care cererea clienților ajunge mai târziu decât necesitatea de aprovzionare și/sau producție și deci aceste articole trebuie să fie gestionate pe stoc pentru a  aproviziona sau produce înainte de a ajunge cererea reală. Și în acest caz, generarea comenzii de producție a articolului va fi efectuată cu procedura *Definire MPS*;  
+> **Stoc**: articolul va fi gestionat pe baza informațiilor momentului de lansare al comenzii și al stocului minim inserate în tab [Aprovizionare](/docs/erp-home/registers/items/create-new-items/item-registry/procurement) din registrul articolului. Acest lucru pentru că sunt articole pentru care cererea clienților ajunge mai târziu decât necesitatea de aprovzionare și/sau producție și deci aceste articole trebuie să fie gestionate pe stoc pentru a  aproviziona sau produce înainte de a ajunge cererea reală. Și în acest caz, generarea comenzii de producție a articolului va fi efectuată cu procedura *Definire MPS*;  
 > **Comandă**: articole pentru care se va produce pe comandă, deci pentru care doriți să urmăriți fazele de producție; în acest caz, acest tip de politică de gestionare va fi efectuată în mod implicit numai prin *Definire MPS*, în tab **Ordine clienți**, deoarece prin gestionarea MPS sunt generate comenzile de producție. Acesta poate fi, de asemenea, gestionate cu MRP, dar numai dacă se specifică cu ajutorul parametrului *Consideră articolul în calculul MRP* care se află în acest form.  
 *Exemplu*: cu acest tip de gestionare, dacă aveți un ordin client pentru 6 bucăți din acest articol și un alt ordin client pentru 8 bucăți din același articol, pentru a urmări producția și legătura dintre ordinul clientului și ordinul de producție, se vor crea două comenzi de producție diferite, fiecare legată la un anumit ordin client.  
 > **Necesar**: în acest caz, sunt articole pe care nu doriți să le urmăriți și, prin urmare, pot fi grupate mai multe cereri din surse diferite (nu există nicio legătură cu comanda). În acest caz, articolul poate fi luat în considerare în cazul utilizării procedurii *MRP* în locul procedurii *Planificare generală* (implicită).  
@@ -40,7 +40,7 @@ Următoarele opțiuni pentru buffer și toleranță de timp pentru client sunt d
 > **Automat**: cu această setare, articolul va fi prelevat în timpul lansării ordinului de producție cu schimbarea ordinului de producție din *Lansat* > *În execuție*;  
 > **Cu listă**: cu această setare, articolul va fi prelevat cu generarea unei liste de ieșiri, cu ajutorul utilizării procedurii omonime prezente în *Producției > Ordine de producție > Rapoarte*.
 
-**Prioritate aprovizionare**: permite utilizatorului să aleagă tipul priorității de atribuit articolului. Aceasta va fi utilizată la crearea *Cererilor de achiziție* în faza de [Lansării ordinelor planificate/ms-master-scheduling/planned-orders/procedures/release-planned-orders/) dacă a fost activat parametrul **Prioritate aprovizionare din parametrii MRP articol**;
+**Prioritate aprovizionare**: permite utilizatorului să aleagă tipul priorității de atribuit articolului. Aceasta va fi utilizată la crearea *Cererilor de achiziție* în faza de [Lansării ordinelor planificate](/docs/planning/ms-master-scheduling/planned-orders/procedures/release-planned-orders/) dacă a fost activat parametrul **Prioritate aprovizionare din parametrii MRP articol**;
 
 **Com. producție**: dacă este activ, liniile ordinului client care au acest articol trebuie să fie afișate în filtrul ordinelor clienți în *Definire MPS*;
 
@@ -67,7 +67,7 @@ Următoarele opțiuni pentru buffer și toleranță de timp pentru client sunt d
 
 **Blocare pt. producție**: dacă este activ și dacă o comandă de producție pentru acest articol este elaborată din **Planificarea generală** este lansat mesajul *Planificare imposibilè, articolul XXXX este blocat pentru producție*. În acest caz, planificarea se blochează și utilizatorul trebuie să o relanseze, excluzând comanda relativă la acest articol.
 
-**Creare ordine planificate din calculul MRP**: dacă este activ, MRP-ul va crea ordinele planificate (doar dacă este activ și cu flagul omonim prezent în tab-ul [Parametri MRPconfigurations/parameters/production/mrp-parameters/mrp-parameters-intro)). Dacă nu este activ, MRP-ul va crea doar propunerile de ordine planificate (fără să le creeze efectiv).
+**Creare ordine planificate din calculul MRP**: dacă este activ, MRP-ul va crea ordinele planificate (doar dacă este activ și cu flagul omonim prezent în tab-ul [Parametri MRP](/docs/configurations/parameters/production/mrp-parameters/mrp-parameters-intro)). Dacă nu este activ, MRP-ul va crea doar propunerile de ordine planificate (fără să le creeze efectiv).
 
 **Listă componente de referință**  
 
@@ -81,7 +81,7 @@ Secțiunea este activă dacă politica gestională a articolul este *Producție*
 > **Unitate de capacitate productivă**: se inserează capacitatea productivă pentru care trebuie să fie considerat lead time-ul articolului;
 
 > **Lead Time Fix**: în acest câmp, utilizatorul poate decide să considere un timp de execuție fix și nu calculat pe baza ciclurilor de lucru (prin urmare, sistemul nu va considera lead time setat în ciclul de lucru, ci va lua în considerare această valoare), introducând valoarea în zile lucrătoare și activând această modalitate prin flag. 
-Dacă flagul este activ, timpul calculat va fi dat de suma valorii **Lead Time Fix** (introdusă lângă flag) și valoarea **Lead Time Analiză** din tabul [Calitateerp-home/registers/items/create-new-items/item-registry/quality) al *Registrului articolului*, deci în acest caz timpul pe faze nu este considerat, iar data de început este recalculată pe baza *Calendarului de Fabrică*. Dacă flagul nu este activ, data de început va fi recalculată luând în considerare fazele, fazele alternative și *Calendarul centrelor de lucru*.
+Dacă flagul este activ, timpul calculat va fi dat de suma valorii **Lead Time Fix** (introdusă lângă flag) și valoarea **Lead Time Analiză** din tabul [Calitate](/docs/erp-home/registers/items/create-new-items/item-registry/quality) al *Registrului articolului*, deci în acest caz timpul pe faze nu este considerat, iar data de început este recalculată pe baza *Calendarului de Fabrică*. Dacă flagul nu este activ, data de început va fi recalculată luând în considerare fazele, fazele alternative și *Calendarul centrelor de lucru*.
 
 > **Lot economic**: în acest câmp utilizatorul poate insera un lot economic de producție pentru articol, care va fi considerat de procedurile pentru **Definirea MPS** și **Planificarea generală** (doar în cazul parametrului **Consideră cantitatea pe baza lotului econimic**);
 
@@ -99,7 +99,7 @@ Dacă flagul este activ, timpul calculat va fi dat de suma valorii **Lead Time F
 
 > **Toleranță în zile/procent din lead time**: determină perioada de timp în care se poate anticipa sau posticipa (după această limită MRP propune eliminarea documentului) și până când se comunică eventuala depășire a unui articol. Se poate exprima în zile sau procent din leadtime. Dacă, de exemplu, pentru un articol sunt definite 90 de zile de toleranță, documentele relative acestui articol specific vor putea fi anticipate sau posticipate cu maxim 90 de zile, dacă excesul va depăși această limită, MRP va propune eliminarea documentului și crearea unuia nou în data în care a fost identificat excesul. În plus, pentru articolul specific, o eventuală disponibilitate în exces va putea fi disponibilă până la un maxim de 90 de zile.
 
-> **Declarare material manual obligatorie**: este utilizată în Fluentis MES. Dacă este activată, împreună cu **Declarare cantitate material obligatorie** din  [Resurse de producție/production-resources) prezent în MES, determină ca în tabul *Materiale* din Fluentis MES articolul să fie propus cu cantitatea zero, obligând astfel utilizatorul să introducă manual o valoare pentru a continua.
+> **Declarare material manual obligatorie**: este utilizată în Fluentis MES. Dacă este activată, împreună cu **Declarare cantitate material obligatorie** din  [Resurse de producție](/docs/production/mes/production-resources) prezent în MES, determină ca în tabul *Materiale* din Fluentis MES articolul să fie propus cu cantitatea zero, obligând astfel utilizatorul să introducă manual o valoare pentru a continua.
 
 **Citire liste/cicluri**  
 În secțiune utilizatorul poate insera versiunea listei și a ciclcului de producție care trebuie să fie considerată de procedura MRP pentru articolul ales.
@@ -127,7 +127,7 @@ Deci, în acest tab, se vor putea seta gestiunile relative la *Materii prime*,  
 
 Gestiunile **W.I.P.** sunt depozite de tranziție, prin care mărfurile trec și apoi se mută în următorul depozit *General*.
 
-Aceleași gestiuni sunt și în [Parametri ordine de producțieconfigurations/parameters/production/production-orders-parameters/production-orders-parameters-intro).
+Aceleași gestiuni sunt și în [Parametri ordine de producție](/docs/configurations/parameters/production/production-orders-parameters/production-orders-parameters-intro).
 
 
 

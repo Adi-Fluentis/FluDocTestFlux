@@ -13,7 +13,7 @@ Per poter inserire nuovi record è necessario cliccare nella griglia sulla prima
 
 > **Ricalcolo costi**: selezionando una o più righe prototipo e cliccando sul pulsante di ricalcolo costo il sistema andrà a ricalcolare i costi di quel prototipo basandosi sui costi che lo compongono.
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).
 
 
 

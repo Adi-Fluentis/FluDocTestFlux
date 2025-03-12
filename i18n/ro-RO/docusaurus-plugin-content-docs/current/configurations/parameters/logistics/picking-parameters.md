@@ -54,4 +54,4 @@ De asemenea, pot fi inserate șabloanele care vor fi utilizate pentru următoare
 
 - *Șablon descărcare gestiune sistem lohn*.
 
-Pentru informații generale despre form-uri consultați [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru informații generale despre form-uri consultați [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

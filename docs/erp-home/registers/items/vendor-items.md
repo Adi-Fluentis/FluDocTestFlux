@@ -20,4 +20,4 @@ In base ai filtri precedentemente selezionati, compariranno nella griglia i risu
 
 In questa griglia è possibile visualizzare, per ogni articolo fornitore, maggiori dettagli relativi al prezzo e alla quantità e UM collegate, la data di inizio e fine validità di quel prezzo, la categoria sconti e la sua descrizione.
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

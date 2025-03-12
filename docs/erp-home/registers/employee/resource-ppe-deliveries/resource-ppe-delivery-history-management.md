@@ -39,4 +39,4 @@ Le informazioni gestite sono:
 >> *Scheda consegna Dispositivi di Protezione Individuale*;   
 >> *Scheda reso Dispositivi di Protezione Individuale*.   
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

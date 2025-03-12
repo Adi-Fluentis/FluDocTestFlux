@@ -27,7 +27,7 @@ Griglia superiore:
 
 **Note**: sezione in cui si possono andare ad inserire eventuali note.
 
-La griglia inferiore può contenere delle informazioni sugli [Extra Dataconfigurations/utility/extra-data/extradata/search-extradata).
+La griglia inferiore può contenere delle informazioni sugli [Extra Data](/docs/configurations/utility/extra-data/extradata/search-extradata).
 
 *Pulsanti specifici*: 
 > **Inserisci clienti**: permette di inserire un nuovo cliente;    

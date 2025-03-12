@@ -20,4 +20,4 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 **Implicit**: dacă este setat, marchează tipul EDI implicit pentru crearea automată a documentelor EDI.  
 **Note**: note relative la tipul EDI.  
 
-Pentru detalii despre utilizarea form-urilor consultați [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea form-urilor consultați [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

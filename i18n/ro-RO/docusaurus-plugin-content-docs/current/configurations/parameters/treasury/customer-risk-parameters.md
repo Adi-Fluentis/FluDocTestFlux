@@ -21,7 +21,7 @@ Executate forțat = restul nu va fi livrat și ordinul este considerat închis c
 **De la dată calcul (solduri contabile, facturi, avize)**: este data de începere a calculului. Documentele cu o dată anterioară nu vor fi luate în considerare.  
 **Vizualizează efecte neîncasate contabilizate**: dacă este activ, permite vizualizarea sumelor restante contabilizate, indiferent de starea încasării. Are doar valoare informativă.  
 
-**Multiplicator evaluare credit**: valore utilizzato nella form [**Utilizare credit**treasury/customer-risk/use-credit) pentru a determina valoarea câmpului *Credit estimat*.
+**Multiplicator evaluare credit**: valore utilizzato nella form [**Utilizare credit**](/docs/treasury/customer-risk/use-credit) pentru a determina valoarea câmpului *Credit estimat*.
 
 *Baza de calcul pentru determinarea riscului client*  
 **Sold contabil**: cu această setare, calculul creditului va fi efectuat pe baza soldului contabil al clientului.  

@@ -31,13 +31,13 @@ import Link from '@docusaurus/Link';
 ## Per iniziare ad utilizzare   
 
 i **Corsi base**:
-- definire un [*Tipo corso base*configurations/tables/employee/training-courses/basic-course-type)   
-- inserire un nuovo [*Corso base*erp-home/registers/employee/training-courses/basic-course-management)   
+- definire un [*Tipo corso base*](/docs/configurations/tables/employee/training-courses/basic-course-type)   
+- inserire un nuovo [*Corso base*](/docs/erp-home/registers/employee/training-courses/basic-course-management)   
 
 i **Corsi di formazione**:
-- definire un [*Tipo corso di formazione*configurations/tables/employee/training-courses/course-type)   
-- per agevolare la gestione dei *Corsi di formazione* impostare i [*Parametri Gestione del personale*configurations/parameters/employees/staff-management) nella sessione *Corsi di formazione*   
-- inserire un nuovo [*Corso di formazione*erp-home/registers/employee/training-courses/training-courses-intro)   
+- definire un [*Tipo corso di formazione*](/docs/configurations/tables/employee/training-courses/course-type)   
+- per agevolare la gestione dei *Corsi di formazione* impostare i [*Parametri Gestione del personale*](/docs/configurations/parameters/employees/staff-management) nella sessione *Corsi di formazione*   
+- inserire un nuovo [*Corso di formazione*](/docs/erp-home/registers/employee/training-courses/training-courses-intro)   
 
 
 ## Collegamenti con altri moduli

@@ -15,7 +15,7 @@ All’inserimento dell' articolo contrassegnato nei documenti di vendita, solo p
 
 La configurazione del soggetto che detiene i diritti d’autore sui vari articoli si effettua tramite la definizione di una anagrafica di tipo agente. 
 
-Normalmente questi soggetti non sono soggetti a ritenuta d'acconto né a contribuzione Enasarco, pertanto sarà necessario creare una [**Categoria agenti**configurations/tables/sales/agent-category/) e un [**Tipo ritenuta**configurations/tables/finance/withholding-tax-types/) specifici che non prevedano né contribuzione né percentuali di ritenute.
+Normalmente questi soggetti non sono soggetti a ritenuta d'acconto né a contribuzione Enasarco, pertanto sarà necessario creare una [**Categoria agenti**](/docs/configurations/tables/sales/agent-category/) e un [**Tipo ritenuta**](/docs/configurations/tables/finance/withholding-tax-types/) specifici che non prevedano né contribuzione né percentuali di ritenute.
 
 Nella scheda **Liquidazione**  indicheremo il tipo ritenuta (da creare eventualmente o selezionare, come detto sopra, un tipo con percentuale zero) e poi il criterio di maturazione della provvigione come avviene per l'agente.
 

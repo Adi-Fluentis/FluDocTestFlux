@@ -18,7 +18,7 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 **Descriere**: reprezintă descrierea categoriei agentului.  
 **Min. Enasarco**: reprezintă valoarea trimestrială minimă pentru calcularea enasarco.  
 **Max. Enasarco**: reprezintă valoarea anuală maximă a enasarco. Dacă este depășită, enasarco nu se mai calculează.  
-**Tip reținere**: face referință la [Tipuri reținericonfigurations/tables/finance/withholding-tax-types). Se recomandă inserarea tipului reținerii în registrul agentului.  
+**Tip reținere**: face referință la [Tipuri rețineri](/docs/configurations/tables/finance/withholding-tax-types). Se recomandă inserarea tipului reținerii în registrul agentului.  
 **Proc. Enasarco**: reprezintă procentul pentru calcularea cotei Enasarco a agentului.  
 **Proc. Enasarco firmă**: reprezintă procentul pentru calcularea cotei Enasarco a firmei.  
 **Val. Enasarco**: reprezintă procentul (100%) de aplicare a procentelor Enasarco pe totalul comisioanelor.  

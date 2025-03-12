@@ -44,7 +44,7 @@ Cu ajutorul butonului ![](/img/neutral/common/new.png) **Stadiu nou** se poate i
 
 ### Activități
 
-Permite asocierea [Activitățilorconfigurations/tables/crm/activity/activity-type) cu starea pipeline.
+Permite asocierea [Activităților](/docs/configurations/tables/crm/activity/activity-type) cu starea pipeline.
 
 ! [](/img/it-it/configurations/tables/crm/pipeline-activity.png)
 

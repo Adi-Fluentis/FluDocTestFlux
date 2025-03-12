@@ -9,7 +9,7 @@ Articolul poate fi gestionat în ambele unități de măsură și prin stabilire
 
 *Câmpuri specifice*
 
-**Factor conversie**: reprezintă factorul de conversie între unitatea principală de măsură și unitatea de măsură alternativă; cantitatea alternativă din documente se calculează pe baza setării efectuate în [Parametri inițiali de gestiuneconfigurations/parameters/logistics/warehouse-initial-parameters/warehouse-parameters)
+**Factor conversie**: reprezintă factorul de conversie între unitatea principală de măsură și unitatea de măsură alternativă; cantitatea alternativă din documente se calculează pe baza setării efectuate în [Parametri inițiali de gestiune](/docs/configurations/parameters/logistics/warehouse-initial-parameters/warehouse-parameters)
 
 **Def.**: dacă este activ, indică unitatea de măsură de referință între N alternative posibile pentru fiecare articol;
 

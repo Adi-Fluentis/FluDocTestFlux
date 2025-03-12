@@ -31,6 +31,6 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 > **Propagare**: dacă este activ, programarea datelor este activă;   
 > **Obligatoriu**: dacă este activ, datele sunt obligatorii. 
 
-**Extra Data**: permite gestionarea extra datelor asociate clasei articolului. [Detalii aiciconfigurations/utility/extra-data/extradata/search-extradata).
+**Extra Data**: permite gestionarea extra datelor asociate clasei articolului. [Detalii aici](/docs/configurations/utility/extra-data/extradata/search-extradata).
 
 **Descriere în limba**: permite inserarea traducerii descrierii clasei în limba dorită.

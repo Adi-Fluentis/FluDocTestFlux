@@ -17,4 +17,4 @@ Conține: articolul furnizorului cu descrierea și varianta acestuia, descrierea
 **Detalii**
 
 Gridul conține detaliile articolului selectat în gridul superior.  
-Pentru mai multe detalii despre funcționarea comună a form-urilor, citiți [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru mai multe detalii despre funcționarea comună a form-urilor, citiți [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

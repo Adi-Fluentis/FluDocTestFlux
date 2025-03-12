@@ -13,4 +13,4 @@ Essa è composta da due sezioni:
 
 Per lanciare il report basterà cliccare su **Anteprima** (in questo caso si vedrà un'anteprima del report e si potrà decidere se stampare, quante pagine e copie stampare o se esportare il file) oppure cliccare su **Stampa** (in questo caso verrà lanciata direttamente la stampa del report).
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

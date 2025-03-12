@@ -47,4 +47,4 @@ La form si compone di una sezione principale, dove vengono inseriti i seguenti d
 
 Nella seconda sezione è possibile inserire delle eccezioni per quanto riguarda gli orari di lavoro del centro di lavoro selezionato.
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

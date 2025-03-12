@@ -19,4 +19,4 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 
 **Executare cantitate articol netotalizată**: dacă este activ, la executarea ordinelor de acest tip, cantitățile executate vor fi preluate în documentul de executare pe fiecare linie de executare.
 
-**Numerotare** și **Descriere**: mai multe detalii [aiciconfigurations/tables/fluentis-numerations).
+**Numerotare** și **Descriere**: mai multe detalii [aici](/docs/configurations/tables/fluentis-numerations).

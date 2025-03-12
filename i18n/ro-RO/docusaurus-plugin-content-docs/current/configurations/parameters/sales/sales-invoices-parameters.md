@@ -12,7 +12,7 @@ Parametrii Facturilor de vânzare permit setarea de bază pentru gestionarea co
 ### Generale
 
 **Propune comision pentru toate articolele**: această procedură nu mai este utilizată.  
-**Inserează comisioane în tipurile de linie 6 și 7(avans/storno)**: dacă este activ, permite inserarea și gestionarea comisioanelor și pentru tipurile de linii 6 și 7 ale facturilor. Detalii în [Inserare facturiinvoicing/invoicing-intro).   
+**Inserează comisioane în tipurile de linie 6 și 7(avans/storno)**: dacă este activ, permite inserarea și gestionarea comisioanelor și pentru tipurile de linii 6 și 7 ale facturilor. Detalii în [Inserare facturi](/docs/sales/sales-invoices/invoicing/sales-invoice).   
 **Gestionare unitate de măsură dublă**: dacă este activ, permite sistemului să gestioneze unitatea de măsură alternativă în factura de vânzare. Dacă nu este activ, în factură va fi raportată doar unitatea de măsură gestionară a articolului.  
 **Propune automat U.M. alternativă**: acest check se activează doar dacă *Gestionare unitate de măsură dublă*  este activ. când este inserat un articol care conţine în registrul său, în tab UM alternativă o UM alternativa implicită, această UM este automat propusă ca UM alternativa pentru articol şi este calculată şi cantitatea alternativă folosind factorul de conversie al acesteia.  
 **Recuperare din ziua curentă**: când este activ, recuperarea golurilor de numerotare se realizează automat doar pentru ziua curentă.  
@@ -54,7 +54,7 @@ Parametrii Facturilor de vânzare permit setarea de bază pentru gestionarea co
 
 **Creează înregistrarea cu data documentului**: când este setat, înregistrarea de gestiune este creată cu data egală cu data facturii, şi nu va fi necesară specificarea datei înregistrării în fereastra de descărcare.  
 **Prioritate gestiune şi şabloane de descărcare**: când acest parametru este setat, gestiunea şi şablonul de descărcare sunt citite din liniile facturii, iar dacă nu a fost setat sunt utilizate gestiunea şi şablonul inserate în acest  form de parametri.  
-**Încărcare/Descărcare automată**: dacă este activ, descărcarea facturii va fi efectuată automat la activarea flagului Listat. Dacă nu este activ, descărcarea se poate face cu butonul (vezi [Inserare facturi de vânzareinvoicing/header)) sau cu procedura relativă.  
+**Încărcare/Descărcare automată**: dacă este activ, descărcarea facturii va fi efectuată automat la activarea flagului Listat. Dacă nu este activ, descărcarea se poate face cu butonul (vezi [Inserare facturi de vânzare](/docs/sales/sales-invoices/invoicing/sales-invoice)) sau cu procedura relativă.  
 **Gestiune**: Specifică gestiunea care va fi utilizată pentru descărcarea facturii când parametrul Prioritate gestiune şi şablon de descărcare din liniile articol ale documentelor nu este activ.  
 **Şablon**: Specifică şablonul care va fi utilizat pentru descărcarea avizului când parametrul Prioritate gestiune şi şablon de descărcare din liniile articol ale documentelor nu este activ.  
 **Aviz articole fictive**: dacă este setat, în timpul descărcării facturii, programul controlează dacă în factură sunt prezente articole fictive; dacă acestea există, este lansat un mesaj pentru confirmarea descărcării facturii.  
@@ -68,7 +68,7 @@ Modificarea priorităților se poate face utilizând butoanele:
 > **Mută sus** ![](/img/neutral/common/move-up.png) și  
 > **Mută jos**![](/img/neutral/common/delete-cc.png).
 
-*Valori implicite*: CDC sau CDP este preluat din Tipul facturării, dacă există. Pentru informații suplimentare, consultați tabelul [Tip facturareconfigurations/tables/sales/sales-turnover).
+*Valori implicite*: CDC sau CDP este preluat din Tipul facturării, dacă există. Pentru informații suplimentare, consultați tabelul [Tip facturare](/docs/configurations/tables/sales/sales-turnover).
 
 Dacă nu este prezent în tipul facturării, sistemul îl va căuta în registrul clientului. Dacă nu este prezent nici aici, acesta va fi căutat în registrul articolului și ulterior în gestiune.
 

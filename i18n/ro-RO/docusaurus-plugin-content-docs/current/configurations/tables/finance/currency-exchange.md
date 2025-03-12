@@ -9,7 +9,7 @@ Tabelul poate fi completat manual, prin introducerea directă a cursului de schi
 După apăsarea butonului, apare un **pop-up** care solicită introducerea datelor **De la/La** în care pot fi căutate cursurile de schimb. Cu parametrul **Inserare automată** tabelul va fi completat direct (recomandăm să îl lăsați activ). 
 
 :::note Nota
-Cursurile de schimb sunt descărcate doar pentru monedele care au activ parametrul **Descarcă schimburi** în [**Devize**configurations/tables/general-settings/currencies).
+Cursurile de schimb sunt descărcate doar pentru monedele care au activ parametrul **Descarcă schimburi** în [**Devize**](/docs/configurations/tables/general-settings/currencies).
 :::
 
 **Schimb**: în mod normal se inserează deviză societății (euro);   

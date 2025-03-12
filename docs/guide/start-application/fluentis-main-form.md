@@ -43,19 +43,19 @@ Per informazioni dettagliate sulla form in uso, l'utente può consultare la docu
 
 ## Panello sinistro
 
-Contiene la [Form Navigatorform-navigator/data-grid-settings) con informazioni sulla form attiva.
+Contiene la [Form Navigator](/docs/form-navigator/data-grid-settings) con informazioni sulla form attiva.
 
 ## Panello destro
 
 Contiene:
 
-**[Strumentiapplications/applications-intro)** contiene diverse applicazioni complementari: ARM, Audit Trail, BizLink, Business Intelligence, CRM, Gestione Documentale, Applicazioni non supportate.
+**[Strumenti](/docs/applications/applications-intro)** contiene diverse applicazioni complementari: ARM, Audit Trail, BizLink, Business Intelligence, CRM, Gestione Documentale, Applicazioni non supportate.
 
-**[Object Navigatorobject-navigator/object-navigator-intro)** contiene informazioni sull'oggetto attivo, utile a personalizzare le form con l'aggiunta di ulteriori dati o informazioni.
+**[Object Navigator](/docs/object-navigator/object-navigator-intro)** contiene informazioni sull'oggetto attivo, utile a personalizzare le form con l'aggiunta di ulteriori dati o informazioni.
 
-**[Context Panelpanels/context-panel)** in base alle impostazioni, Fluentis permette di visualizzare informazioni contestuali al campo selezionato (esempio: se selezionate l'articolo l'applicazione mostra la sua disponibilità).
+**[Context Panel](/docs/panels/context-panel)** in base alle impostazioni, Fluentis permette di visualizzare informazioni contestuali al campo selezionato (esempio: se selezionate l'articolo l'applicazione mostra la sua disponibilità).
 
-**[Configurazioniconfigurations/configuration)** contiene informazioni che consentiranno la definizione della gestione dei moduli.
+**[Configurazioni](/docs/configurations/configuration)** contiene informazioni che consentiranno la definizione della gestione dei moduli.
 
 **Fluentis Chat** permette di interagire con gli utenti abilitati a tale servizio di comunicazione, sia interno nel contesto aziendale, sia esterno per accedere al supporto di Fluentis. La chat è uno strumento molto utile per condividere informazioni rapidamente con un altro l'operatore, condividere documenti digitali o addirittura documenti attivi del gestionale. 
 
@@ -83,7 +83,7 @@ A questo punto, spostandosi in **Calendario** (barra di stato), dopo aver *riavv
 ![](/img/it-it/guide/panels/status-bar/calendar-configuration/image04.png)
 
 
-Vedi anche [Pianificazione a calendario delle risorse/transverse-procedures).
+Vedi anche [Pianificazione a calendario delle risorse](/docs/project-management/transverse-procedures).
 :::
 
 

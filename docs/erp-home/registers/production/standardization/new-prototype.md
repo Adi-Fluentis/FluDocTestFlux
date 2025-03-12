@@ -43,7 +43,7 @@ Al di sotto sono presenti tab specifici per:
 
 In questo tab sono presenti una serie di informazioni, in sola lettura, relative all'articolo inserito in testata.
 
-**Nota articolo**: venogno riportate le note inserite all'interno del tab [Noteerp-home/registers/items/create-new-items/item-registry/notes) dell'anagrafica articolo.       
+**Nota articolo**: venogno riportate le note inserite all'interno del tab [Note](/docs/erp-home/registers/items/create-new-items/item-registry/notes) dell'anagrafica articolo.       
 
 **Pesi**: riporta l'unità di misura del peso ed i relativi valori di peso:lordi, netto e specifico.
 
@@ -75,7 +75,7 @@ Questi dati saranno poi utilizzati per generare in automatico l'anagrafica del r
 All'interno dei box relativo ai **Dati componente**, è possibile indicare:          
 > **Quantità**: indica la quantità del componente utilizzata per produrre la relativa *Quantità padre*;           
 > **Unità di misura alternativa**: indica l'unità di misura alternativa del componente;              
-> **Tipo costo materiale**: di default viene proposto il *Tipo costo materiale* che c'è nei [Parametri prototipazioneconfigurations/parameters/logistics/item-prototypes-parameters/), ovviamente può essere variato manualmente per ciascun componente. Nel caso in cui sia inserito un fornitore, la procedura per determinare il costo del componente, va in primo luogo a vedere se esiste un listino per quel fornitore ed inserisce il valore trovato indipendetemente dal *Tipo costo materiale* inserito. Quindi nel calcolo del costo del componente il valore de listino per il fornitore inserito ha sempre la priorità.           
+> **Tipo costo materiale**: di default viene proposto il *Tipo costo materiale* che c'è nei [Parametri prototipazione](/docs/configurations/parameters/logistics/item-prototypes-parameters/), ovviamente può essere variato manualmente per ciascun componente. Nel caso in cui sia inserito un fornitore, la procedura per determinare il costo del componente, va in primo luogo a vedere se esiste un listino per quel fornitore ed inserisce il valore trovato indipendetemente dal *Tipo costo materiale* inserito. Quindi nel calcolo del costo del componente il valore de listino per il fornitore inserito ha sempre la priorità.           
 > **Fornitore**: indica il fornitore del componente. In automatico viene riportato quello indicato come default nei fornitore preferenzile dell'articolo, ma può essere variato manualmente; se il componente è un articolo non codificato, il fornitore inserito, in fase di creazione dell'articolo, verrà utilizzato come fornitore di default nei fornitori preferenziali.       
 > **Costo materiale**: indica il costo del materiale del componente in base al **Tipo costo materiale** inserito;         
 > **Costo lavorazione**: indica il costo di lavorazione del componente dato dalla somma del costo manodopera e macchina;        
@@ -84,10 +84,10 @@ All'interno dei box relativo ai **Dati componente**, è possibile indicare:
 
 Se l'elemento seleziona nell'albero è un semilavorato nel tab **Componenti** è possibile visualizzare i componenti di primo livello da cui è costituito.
 
-Nei tab **Dati extra - modello** e **Dati extra - componente** è possibile inserire rispettivamente gli extra data relativi all'articolo padre e al componente; per una descrizione approfondita sugli extra data si rimanda all'articolo [Extra dataconfigurations/utility/extra-data/extradata/new-extradata-simple).     
+Nei tab **Dati extra - modello** e **Dati extra - componente** è possibile inserire rispettivamente gli extra data relativi all'articolo padre e al componente; per una descrizione approfondita sugli extra data si rimanda all'articolo [Extra data](/docs/configurations/utility/extra-data/extradata/new-extradata-simple).     
 
 Nella parte inferiore della form, all'interno del tab **Ciclo** è possibile inserire le fasi delle lavorazioni relative ai singoli elementi dell'albero con i relativi tempi e costi di attrezzaggio e lavorazione; è anche possibile inserire un costo manualmente nel campo **Costo fase manuale** che avrà un priorità più alta nella fase di calcolo dei costi, sovrascrivendo il costo calcolato in base ai tempi delle fasi e ai centri di costo.    
-Il tab **Ciclo** viene abilitato per gli articoli con **Tipo approvvigionamento** *Produzione* o *Conto lavoro* nei [Parametri MRPconfigurations/parameters/production/mrp-parameters/mrp-parameters-intro).       
+Il tab **Ciclo** viene abilitato per gli articoli con **Tipo approvvigionamento** *Produzione* o *Conto lavoro* nei [Parametri MRP](/docs/configurations/parameters/production/mrp-parameters/mrp-parameters-intro).       
 Inoltre, nel tab **Fasi di scarico** viene indicata la fase in cui il relativo elemento deve essere scaricato dal magazzino.
 
 *L'esportazione dei cicli è in fase di sviluppo.*
@@ -117,7 +117,7 @@ Nel tab **Costi** vengono riportati i prezzi del prototipo in generale (di utili
 Un prototipo può essere associato ad un'offerta cliente direttamente dal documento stesso, quindi posso creare un nuovo prototipo o associarne uno già esistente attraverso gli appossiti pulsanti *Crea nuovo prototipo* e *Associa prototipo*.
 
 Inoltre è possibile inserire eventuali *Costi diretti*, *Costi generali* e/o *Altri costi* che verranno presi in considerazione nel calcolo totale.      
-Tutti i costi delle seguenti categorie: **Costi diretti**, **Costi generali** e **Altri costi** sono gestiti all'interno della tabella [Voci costoconfigurations/tables/general-settings/cost-elements/) dove tramite il campo *Tipo costo* è possibile definire in quale categoria sarà contenuto.
+Tutti i costi delle seguenti categorie: **Costi diretti**, **Costi generali** e **Altri costi** sono gestiti all'interno della tabella [Voci costo](/docs/configurations/tables/general-settings/cost-elements/) dove tramite il campo *Tipo costo* è possibile definire in quale categoria sarà contenuto.
 
 Nello specifico i campi presi in considerazione sono i seguenti:
 
@@ -130,13 +130,13 @@ Nello specifico i campi presi in considerazione sono i seguenti:
 **Costo industriale**: totale dei *Costi materiale*, *Costo manodopera* e *Costo macchina*;     
 **Totale costi diretti**: totale dei costi inseriti nella sezione *Costi diretti*;    
 **Costo industriale + costi diretti**: totale del *Costo industriale* e *Costi diretti*;    
-**Ricarico**: permette di indicare il ricarico a percentuale o a valore; questo valore va ad incrementare il *Costo industriale* o il *Totale costi generali*, rispettivamente se nei [Parametri prototipazioneconfigurations/parameters/logistics/item-prototypes-parameters/) alla voce *Calcolo p. vendita con ricarico su:* sia indicato *Costi diretti* o *Costi totali*;      
+**Ricarico**: permette di indicare il ricarico a percentuale o a valore; questo valore va ad incrementare il *Costo industriale* o il *Totale costi generali*, rispettivamente se nei [Parametri prototipazione](/docs/configurations/parameters/logistics/item-prototypes-parameters/) alla voce *Calcolo p. vendita con ricarico su:* sia indicato *Costi diretti* o *Costi totali*;      
 **Totale costo ricaricato**: totale del *Costo industriale + costi diretti* e del ricarico;     
 **Totale costi generali**: totale dei costi inseriti nella sezione *Costi generali*;    
 **Totale altri costi**: totale dei costi inseriti nella sezione *Altri costi*;    
 **Correzione**: permette di inserire un valore per correggere il nuovo prezzo di vendita;      
 **Arrotondamento**: permette di decidere se arrotondare per eccesso o difetto e l'ordine di grandezza;      
-**Prezzo di vendita**: totale del *Costo industriale + costi diretti*, *Costi generali*, *Totale altri costi*, *Correzione* e *Arrotondamento*; se nei [Parametri prototipazioneconfigurations/parameters/logistics/item-prototypes-parameters/) è attivo il flag *Nuovo prezzo di vendita* questo campo è calcolato automaticamente e non modificabile manualmente, mentre se è disabilitato il campo è editabile anche manualmente;         
+**Prezzo di vendita**: totale del *Costo industriale + costi diretti*, *Costi generali*, *Totale altri costi*, *Correzione* e *Arrotondamento*; se nei [Parametri prototipazione](/docs/configurations/parameters/logistics/item-prototypes-parameters/) è attivo il flag *Nuovo prezzo di vendita* questo campo è calcolato automaticamente e non modificabile manualmente, mentre se è disabilitato il campo è editabile anche manualmente;         
 **Lotto di produzione**: permette di indicare il valore del lotto di produzione, il quale determina un aumento o una diminuzione dei costi manodopera e macchina, inoltre incide sul costo unitario di attrezzaggio;    
 **Totale lotto di produzione**: totale del *Prezzo di vendita* calcolato per il *Lotto di produzione* indicato;     
 **Scostamento da listino**: indica lo scostamente rispetto al listino di vendita;            

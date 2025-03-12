@@ -15,7 +15,7 @@ Pentru a insera datele, efectuați clic pe butonul **Nou**.
 
 **Tip** și **Descriere**: reprezintă tipul și descrierea documentului.   
 
-**Numerotare**: consultați [Numerotări Fluentisconfigurations/tables/fluentis-numerations).   
+**Numerotare**: consultați [Numerotări Fluentis](/docs/configurations/tables/fluentis-numerations).   
 
 **Creare automată proiecte**: dacă este setat, în momentul inserării ordinului clinet, aplicația va crea antetul comenzii de vânzare cu același număr al ordinului client și îl va asocia în antetul aceluiași ordin. Dacă nu este setat, aplicația nu va crea antetul comenzii.  
 
@@ -33,17 +33,17 @@ Pentru a insera datele, efectuați clic pe butonul **Nou**.
 
 **Credit acordat**: dacă este activ, ordinul de acest tip va suporta controlul creditului acordat;
 
-**Cash flow**: dacă este activ, ordinul de acest tip va suporta calculul [cash flow-uluitreasury/cash-flow/cash-flow/search-cash-flow);
+**Cash flow**: dacă este activ, ordinul de acest tip va suporta calculul [cash flow-ului](/docs/treasury/cash-flow/cash-flow/search-cash-flow);
 
-**Gestiune** și **Descriere gestiune**: reprezintă [gestiuneaconfigurations/tables/logistics/warehouses) articolelor prezente în acest tip de ordin; 
+**Gestiune** și **Descriere gestiune**: reprezintă [gestiunea](/docs/configurations/tables/logistics/warehouses) articolelor prezente în acest tip de ordin; 
 
 **Șablon** și **Descriere șablon gestiune**: reprezintă *șablonul pentru înregistrarea* articolelor utilizate în acest tip de ordin;
 
 **Executare cantitate articol netotalizată**: dacă este activ, în momentul executării ordinului, cantitățile în executare sunt preluate în documentul de destinație pentru fiecare linie de articol (de exemplu, când cantitatea este împărțită pe mai multe linii) fără însumarea cantităților;
 
-**Control disponibilitate**: dacă este activ, tipul ordinului va fi considerat la [calcularea disponibilitățiierp-home/registers/items/calculate-availability);
+**Control disponibilitate**: dacă este activ, tipul ordinului va fi considerat la [calcularea disponibilității](/docs/erp-home/registers/items/calculate-availability);
 
-**Agr. vânz. TVA**: dacă este activ, în momentul creării ordinului, aplicația va verifica, dacă pentru articolul utilizat, este prezent un cod TVA agricol. Dacă nu este prezent, este utilizat codul TVA prezent în [registrul articoluluierp-home/registers/items/create-new-items/item-registry/generality);
+**Agr. vânz. TVA**: dacă este activ, în momentul creării ordinului, aplicația va verifica, dacă pentru articolul utilizat, este prezent un cod TVA agricol. Dacă nu este prezent, este utilizat codul TVA prezent în [registrul articolului](/docs/erp-home/registers/items/create-new-items/item-registry/generality);
 
 **Tip comandă producție**: reprezintă tipul comenzii de producție care va fi generată din acest tip de ordin client în *Definire MPS*;
 

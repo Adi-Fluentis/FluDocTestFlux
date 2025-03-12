@@ -15,4 +15,4 @@ De exemplu, filtrând după clasa articolului, raportul va verifica diferențele
 
 **Valorizare la**: permite alegerea costului care trebuie să fie afișat în raport lângă linia articolului vizualizat. Opțiunile de cost provin din tab-ul *Costuri* din *Registrul articol*.
 
-Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comune](/docs/guide/common).

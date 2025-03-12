@@ -11,24 +11,24 @@ In questa tab vendono inseriti dati e parametri di tipo prevalentemente fiscale.
 
 **Escludi da dich. black list**: campo obsoleto presente per retro-compatibilità. L'adempimento fiscale è attualmente abrogato.
 
-**CIG**: il flag attiva il campo apposito all'interno dei documenti di vendita per indicare il codice identificativo di gara (esempio per gli appalti pubblici). Il codice deve essere poi inserito [**nell'apposita tabella**configurations/tables/finance/CIG-and-CUP) per poterlo richiamare.
+**CIG**: il flag attiva il campo apposito all'interno dei documenti di vendita per indicare il codice identificativo di gara (esempio per gli appalti pubblici). Il codice deve essere poi inserito [**nell'apposita tabella**](/docs/configurations/tables/finance/CIG-and-CUP) per poterlo richiamare.
 
-Per la corretta gestione dei codici CIG e CUP nei tracciati della fattura elettronica, essendo il relativo tag un figlio dei dati ordine, vedere [**qui**/e-invoice/configuration_einvoice#codici-cig-e-cup-tag-2126-codicecup-e-2127-codicecig)
+Per la corretta gestione dei codici CIG e CUP nei tracciati della fattura elettronica, essendo il relativo tag un figlio dei dati ordine, vedere [**qui**](/docs/finance-area/e-invoice/configuration_einvoice#codici-cig-e-cup-tag-2126-codicecup-e-2127-codicecig)
 
-**CUP**: il flag attiva il campo apposito all'interno dei documenti di vendita per indicare il codice unico progetto (per la fatturazione ad enti pubblici) Il codice deve essere poi inserito [**nell'apposita tabella**configurations/tables/finance/CIG-and-CUP) per poterlo richiamare.
+**CUP**: il flag attiva il campo apposito all'interno dei documenti di vendita per indicare il codice unico progetto (per la fatturazione ad enti pubblici) Il codice deve essere poi inserito [**nell'apposita tabella**](/docs/configurations/tables/finance/CIG-and-CUP) per poterlo richiamare.
 
-Per la corretta gestione dei codici CIG e CUP nei tracciati della fattura elettronica, essendo il relativo tag un figlio dei dati ordine, vedere [**qui**/e-invoice/configuration_einvoice#codici-cig-e-cup-tag-2126-codicecup-e-2127-codicecig)
+Per la corretta gestione dei codici CIG e CUP nei tracciati della fattura elettronica, essendo il relativo tag un figlio dei dati ordine, vedere [**qui**](/docs/finance-area/e-invoice/configuration_einvoice#codici-cig-e-cup-tag-2126-codicecup-e-2127-codicecig)
 
-**Ritenuta d'acconto**: il flag, da associare al successivo campo Tipo ritenuta, attiva, per l'anagrafica di tipo fornitore in uso, la gestione della ritenuta d'acconto sul compenso percipiente. Con questo tipo di gestione attiva lato fornitore, l'inserimento dei documenti e la contabilizzazione della fattura ricevuta e del pagamento effettuato avverrà dal modulo  [**Percipienti**/professional-men/general-overview)  al fine di poter gestire correttamente ed in modo automatico la ritenuta d'acconto e valorizzare le CU.
+**Ritenuta d'acconto**: il flag, da associare al successivo campo Tipo ritenuta, attiva, per l'anagrafica di tipo fornitore in uso, la gestione della ritenuta d'acconto sul compenso percipiente. Con questo tipo di gestione attiva lato fornitore, l'inserimento dei documenti e la contabilizzazione della fattura ricevuta e del pagamento effettuato avverrà dal modulo  [**Percipienti**](/docs/finance-area/professional-men/general-overview)  al fine di poter gestire correttamente ed in modo automatico la ritenuta d'acconto e valorizzare le CU.
 
-**Tipo ritenuta**: il campo (menu a discesa) è collegato alla tabella  [**Tipi ritenuta**configurations/tables/finance/withholding-tax-types)  all'interno della quale vengono definite le tipologie di ritenuta a titolo d'acconto (o a titolo d'imposta) da utilizzare. Per ogni riga, corripondente ad un tipo ritenuta, devono essere compilati i campi che permettono la gestione automatica del calcolo e della contabilizzazione da parte del  [**modulo Percipienti.**/professional-men/general-overview) 
+**Tipo ritenuta**: il campo (menu a discesa) è collegato alla tabella  [**Tipi ritenuta**](/docs/configurations/tables/finance/withholding-tax-types)  all'interno della quale vengono definite le tipologie di ritenuta a titolo d'acconto (o a titolo d'imposta) da utilizzare. Per ogni riga, corripondente ad un tipo ritenuta, devono essere compilati i campi che permettono la gestione automatica del calcolo e della contabilizzazione da parte del  [**modulo Percipienti.**](/docs/finance-area/professional-men/general-overview) 
 
 ***UTILIZZO DEI CAMPI Ritenuta e Tipo Ritenuta NELLE FATTURE ATTIVE***
-E' possibile attivare il flag per le ritenute d'acconto e la relativa tipologia anche ai fini dell'emissione di fattura attiva nel caso in cui sia l'azienda emittente ad essere sottoposta alla ritenuta d'acconto (ritenute d'acconto subite). **Vedere anche** [**qui**/e-invoice/configuration_einvoice#ritenuta-dacconto-e-enasarco-tag-2115-datiritenuta)
+E' possibile attivare il flag per le ritenute d'acconto e la relativa tipologia anche ai fini dell'emissione di fattura attiva nel caso in cui sia l'azienda emittente ad essere sottoposta alla ritenuta d'acconto (ritenute d'acconto subite). **Vedere anche** [**qui**](/docs/finance-area/e-invoice/configuration_einvoice#ritenuta-dacconto-e-enasarco-tag-2115-datiritenuta)
 
 
 :::tip Vedi anche...
-Per la gestione nella fattura elettronica della ritenuta d'acconto ed in particolare anche del contributo **ENASARCO** vedere [**qui**/e-invoice/configuration_einvoice#ritenuta-dacconto-e-enasarco-tag-2115-datiritenuta)
+Per la gestione nella fattura elettronica della ritenuta d'acconto ed in particolare anche del contributo **ENASARCO** vedere [**qui**](/docs/finance-area/e-invoice/configuration_einvoice#ritenuta-dacconto-e-enasarco-tag-2115-datiritenuta)
 :::
 
 ### Pubblica amministrazione / Fatturazione elettronica
@@ -39,7 +39,7 @@ Il Flag **Fatturazione elettronica** determina l'adattamento dei campi di dettag
 
 **Nome ufficio / Descrizione destinatario**: descrizione del campo codice ufficio / codice destinatario da compilare con il nome dell'ufficio pubblico o del soggetto privato
 
-**Ragione sociale**: in questo campo è possibile collegare un'anagrafica già codificata in Fluentis e riferita, ad esempio, all'uffico pubblico che dipende dall'anagrafica principale che stiamo utilizzando (esempio: ufficio lavori pubblici del comune di ..., oppure Azienda sanitaria ....... che dipende dall'anagrafica principale "Comune di ....") Tale anagrafica collegata **dovrà** essere impostata come **destinazione** per l'anagrafica principale nel tab  [**consegna**erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/delivery), in questo modo la destinazione (esempio ufficio lavori pubblici ....) sarà riportata nel tracciato del file .xml completa di codice ufficio e degli altri dati quale indirizzo ecc...
+**Ragione sociale**: in questo campo è possibile collegare un'anagrafica già codificata in Fluentis e riferita, ad esempio, all'uffico pubblico che dipende dall'anagrafica principale che stiamo utilizzando (esempio: ufficio lavori pubblici del comune di ..., oppure Azienda sanitaria ....... che dipende dall'anagrafica principale "Comune di ....") Tale anagrafica collegata **dovrà** essere impostata come **destinazione** per l'anagrafica principale nel tab  [**consegna**](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/delivery), in questo modo la destinazione (esempio ufficio lavori pubblici ....) sarà riportata nel tracciato del file .xml completa di codice ufficio e degli altri dati quale indirizzo ecc...
 
 :::danger[ATTENZIONE: campo Ragione sociale, anagrafica semplice con singolo codice]
 Per la corretta gestione di **più codici** ufficio / codici SDI (e quindi più soggetti) riferiti alla stessa anagrafica principale è quindi **necessario** compilare anche questo campo. 
@@ -47,8 +47,6 @@ Per la corretta gestione di **più codici** ufficio / codici SDI (e quindi più 
 **ATTENZIONE:**  nel caso di **singolo codice** ufficio / codice SDI direttamente legato all'anagrafica in questione (senza la presenza di destinazioni collegate e riferite a specifici codici ufficio / codici SDI) **il campo NON DEVE essere compilato**. 
 Diversamente verrà restituito un messaggio di errore in fase di generazione del file xml. (Messaggio: la fattura... non può essere generata perchè... il codice destinatario non è stato valorizzato, oppure la data inizio servizio....) da interpretare come "non è stato valorizzato *correttamente*".
 :::
-
-
 
 **Data inizio servizio**: definisce la data di inserimento della riga o comunque la data dalla quale è attivo il rapporto di fornitura con la pubblica amministrazione in questione.
 
@@ -85,9 +83,9 @@ Con l’introduzione di tale norma, è stata prevista la possibilità, per le im
 > **Sol. inf. 60 gg**: NON GESTITO / DISATTIVATO
 
 Vi sono altre impostazioni riguardanti la **gestione merci deperibili**:  
-> **GG Pag. merce deperibile** all'interno dell'[Anagrafica articolo > tab Generalierp-home/registers/items/create-new-items/item-registry/generality) dove viene definita la scadenza da applicare;  
-> **GG ricev. fattura** in *Anagrafica cliente/fornitore > tab Generale > tab Indirizzi alternativi* utile per ottemperare alla data certa di ricevimento della fattura (affinché si abiliti il campo, il tipo indirizzo collegato all'indirizzo alternativo utilizzato e definito nella tabella [Tipi indirizziconfigurations/tables/general-settings/address-types) deve avere il flag *Email Fatt.C.* settato)
-> **Giorni trasporto** nella tabella *Zone*, campo che può essere inserita nell'*Anagrafica cliente/fornitore > tab [Consegna*erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/delivery) 
+> **GG Pag. merce deperibile** all'interno dell'[Anagrafica articolo > tab Generali](/docs/erp-home/registers/items/create-new-items/item-registry/generality) dove viene definita la scadenza da applicare;  
+> **GG ricev. fattura** in *Anagrafica cliente/fornitore > tab Generale > tab Indirizzi alternativi* utile per ottemperare alla data certa di ricevimento della fattura (affinché si abiliti il campo, il tipo indirizzo collegato all'indirizzo alternativo utilizzato e definito nella tabella [Tipi indirizzi](/docs/configurations/tables/general-settings/address-types) deve avere il flag *Email Fatt.C.* settato)
+> **Giorni trasporto** nella tabella *Zone*, campo che può essere inserita nell'*Anagrafica cliente/fornitore > tab [Consegna*](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/delivery) 
 
 ### Logica di calcolo della scadenza di pagamento
 

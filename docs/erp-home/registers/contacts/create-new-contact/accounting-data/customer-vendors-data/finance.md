@@ -10,8 +10,8 @@ In questa form troviamo i seguenti campi:
 **Posizione IVA**: è l'aliquota iva da proporre nel ciclo documentale attivo/passivo e nelle registrazioni contabili. 
 
 :::note Attenzione
-La priorità di valorizzazione del campo [IVAinvoicing/items) nei documenti prevede nell'ordine:  
-1. verifica delle [Dichiarazioni di intento/declarations/declarations/intent-declaration), se presenti, e sostituzione del codice iva in esse contenuto;  
+La priorità di valorizzazione del campo [IVA](/docs/sales/sales-invoices/invoicing/sales-invoice) nei documenti prevede nell'ordine:  
+1. verifica delle [Dichiarazioni di intento](/docs/finance-area/declarations/declarations/intent-declaration), se presenti, e sostituzione del codice iva in esse contenuto;  
 2. anagrafica cliente/fornitore;  
 3. anagrafica articolo.
 :::
@@ -42,9 +42,9 @@ Ma se la vendita è ad un cliente cod 002 intercompany, o ad un cliente cod. 003
 
  ![](/img/it-it/erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/finance/image03.png)
 
-La compilazione del campo si effettua tramite una combo-box collegata alla tabella [Tipo contab. articolo:configurations/tables/finance/articles-accounting-types) in questa tabella creeremo, ad esempio, un tipo Contabilizzazione cod. 1 ‘Intercompany' e un tipo contabilizzazione cod. 2 ‘Estero', e metteremo su entrambi il flag ‘Cliente' in modo che questi due record siano visibili nelle anagrafiche clienti. Quindi nell'anagrafica di 002 imposteremo tipo contabilizzazione cod. 1 'Intercompany' e in 003 cod. 2 ‘Estero'.
+La compilazione del campo si effettua tramite una combo-box collegata alla tabella [Tipo contab. articolo:](/docs/configurations/tables/finance/articles-accounting-types) in questa tabella creeremo, ad esempio, un tipo Contabilizzazione cod. 1 ‘Intercompany' e un tipo contabilizzazione cod. 2 ‘Estero', e metteremo su entrambi il flag ‘Cliente' in modo che questi due record siano visibili nelle anagrafiche clienti. Quindi nell'anagrafica di 002 imposteremo tipo contabilizzazione cod. 1 'Intercompany' e in 003 cod. 2 ‘Estero'.
 
-Poi sarà necessario inserire nella tabella [Fatturato vendite,configurations/tables/sales/sales-turnover) in corrispondenza della riga 'A - Ricavi prodotti finiti' (nella griglia in basso)
+Poi sarà necessario inserire nella tabella [Fatturato vendite,](/docs/configurations/tables/sales/sales-turnover) in corrispondenza della riga 'A - Ricavi prodotti finiti' (nella griglia in basso)
 
 - una riga tipo contabilizzazione ‘intercompany' e conto 400-001 Ricavi intercompany prodotti finiti;
 
@@ -54,11 +54,13 @@ Poi sarà necessario inserire nella tabella [Fatturato vendite,configurations/ta
 
 In questo modo l'utente dovrà poi impostare soltanto l'anagrafica e le impostazioni faranno valorizzare il sottoconto opportuno; la contabilizzazione verificherà per ogni fatturato vendite inserito in fattura se esiste un dettaglio con un conto particolare per il tipo inserito nel cliente.
 
-Specularmente il settaggio opera sulla parte fornitori, mettendo il flag *Fornitori* nella tabella [Tipo contab. articoloconfigurations/tables/finance/articles-accounting-types) ed aggiornando la tabella **Fatturato acquisti**.
+Specularmente il settaggio opera sulla parte fornitori, mettendo il flag *Fornitori* nella tabella [Tipo contab. articolo](/docs/configurations/tables/finance/articles-accounting-types) ed aggiornando la tabella **Fatturato acquisti**.
 
 
-**Sottoconto fatture da ricevere**: indicare in questo campo il sottoconto patrimoniale (prioritario rispetto al default inserito nei parametri di contabilità) da utilizzare nella procedura dell'area acquisti **Contabilizzazione fatture da ricevere**, ma anche nelle procedure di calcolo degli assestamenti di bilancio o delle simulazioni di bilancio infrannuale nel caso in cui tutto il costo sia da inserire nel bilancio di periodo.
+**Sottoconto fatture da ricevere / emettere**: indicare in questo campo il sottoconto patrimoniale (prioritario rispetto al default inserito nei parametri di contabilità) da utilizzare nella procedura dell'area acquisti **Contabilizzazione fatture da ricevere**, ma anche nelle procedure di calcolo degli assestamenti di bilancio o delle simulazioni di bilancio infrannuale nel caso in cui tutto il costo sia da inserire nel bilancio di periodo. I campi sono alternativi e visibili a seconda se il tipo conto è *Fornitore* (fatture da *ricevere*) o *Cliente* (fatture da *emettere*)
 
+
+**Sottoconto della Nota d accredito da ricevere / emettere**: indicare in questo campo il sottoconto patrimoniale (prioritario rispetto al default inserito nei parametri di contabilità) da utilizzare nella procedura dell'area acquisti **Contabilizzazione fatture da ricevere**, ma anche nelle procedure di calcolo degli assestamenti di bilancio o delle simulazioni di bilancio infrannuale nel caso in cui tutto il costo sia da inserire nel bilancio di periodo. I campi sono alternativi e visibili a seconda se il tipo conto è *Fornitore* (note di accredito da *ricevere*) o *Cliente* (note di accredito da *emettere*)
 
 **Sottoconto di fatturazione**: il campo, gestito esclusivamente per le anagrafiche clienti, consente di definire per il sottoconto di anagrafica in uso, quale sia il sottoconto sul quale intestare la fattura nel corso della creazione delle fatture da DDT;
 
@@ -68,7 +70,7 @@ Cliente X negozio filiale con sede a Sacile, che ha nella sua anagrafica compila
 
 La nostra società consegna con DDT al negozio X di Sacile, poi, quando emette fattura, questa va intestata alla casa madre cliente Y di Milano.
 
-Un metodo alternativo (consigliato) consiste nel gestire sempre l'anagrafica del cliente Y casa madre di Milano e nella sua anagrafica codificare la ** [destinazione merceerp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/delivery) ** = cliente X negozio di Sacile. In questo modo ddt e fatture sono intestate allo stesso soggetto con maggior chiarezza.
+Un metodo alternativo (consigliato) consiste nel gestire sempre l'anagrafica del cliente Y casa madre di Milano e nella sua anagrafica codificare la ** [destinazione merce](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/delivery) ** = cliente X negozio di Sacile. In questo modo ddt e fatture sono intestate allo stesso soggetto con maggior chiarezza.
 
 **Sottoconto Capogruppo**: nell'analisi dei rischio cliente, consente di unire clienti che appartengono allo stesso gruppo aziendale; 
 
@@ -79,7 +81,7 @@ Un metodo alternativo (consigliato) consiste nel gestire sempre l'anagrafica del
 
 
 *Priorità di valorizzazione* dei campi conto, sottoconto, descrizione nella sezione **Estremi IVA** del documento della **Registrazione contabile**:  
-1. Valorizzazione del [Fatturato Venditeconfigurations/tables/sales/sales-turnover)/ **Fatturato Acquisti** presente nella fattura che viene contabilizzata e codice di conto, sottoconto e descrizione collegato ad ogni tipologia  nelle tabelle Fatturato acquisti  / Fatturato vendite.   
+1. Valorizzazione del [Fatturato Vendite](/docs/configurations/tables/sales/sales-turnover)/ **Fatturato Acquisti** presente nella fattura che viene contabilizzata e codice di conto, sottoconto e descrizione collegato ad ogni tipologia  nelle tabelle Fatturato acquisti  / Fatturato vendite.   
 2. Anagrafica Cliente/Fornitore  
 
 **Costo/Ricavo di contropartita alternativo**: questa griglia consente di predefinire la lista dei sottoconti e la relativa aliquota iva da proporre nelle registrazioni iva intestate al soggetto; per utilizzare l'opzione è necessario che sia impostata una ‘Posizione IVA‘ di default e non sia inserito nessun costo/ricavo di contropartita predefinito;

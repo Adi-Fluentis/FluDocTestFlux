@@ -7,7 +7,7 @@ Form-ul se deschide din **Parametri > Producție > Parametri ordine de producți
 
 ### General
 
-**Gestionare automată loturi și numere de serie**: dacă este activ, propune automat loturile și/sau numerele de serie ale materialelor utilizate în producției, direct în tabelele relaționate cu tabelul materialor utilizate de semnalarea de producție. În caz contrar, utilizatorul va trebui să seteze manual atât loturile, cât și numerele de serie ale articolelor utilizate care au acest tip de gestionare; reamintim că gestionarea lotului sau SN este setată în *Registrul articolului* în tab [Loturi și SNerp-home/registers/items/create-new-items/item-registry/lots-and-serial-number) selectând tipul de gestionare dorit.
+**Gestionare automată loturi și numere de serie**: dacă este activ, propune automat loturile și/sau numerele de serie ale materialelor utilizate în producției, direct în tabelele relaționate cu tabelul materialor utilizate de semnalarea de producție. În caz contrar, utilizatorul va trebui să seteze manual atât loturile, cât și numerele de serie ale articolelor utilizate care au acest tip de gestionare; reamintim că gestionarea lotului sau SN este setată în *Registrul articolului* în tab [Loturi și SN](/docs/erp-home/registers/items/create-new-items/item-registry/lots-and-serial-number) selectând tipul de gestionare dorit.
 
 **Determinare automată timpi în semnalări**: dacă este activ, calculează automat timpul mașină și timpul operator pe baza orarelor semnalărilor. În caz contrar, utilizatorul va trebui să seteze manual orele menționate pe linia semnalării de producție; 
 
@@ -41,7 +41,7 @@ Form-ul se deschide din **Parametri > Producție > Parametri ordine de producți
 
 ### Gestiuni
 
-Form-ul este dedicat inserării gestiunilor și șabloanelor aferente care reglementează circulația articolelor prin procedurile legate de producție; același form este în *Parametrii MRP* ai articolului din [Gestiuniconfigurations/parameters/production/mrp-parameters/search-mrp-parameters), cu diferența că depozitele setate în *Parametrii de producție* sunt considerate date generale valabile în mod implicit pentru articole; dacă sunt setați pentru un anumit articol din depozite diferite în *Parametrii MRP* ai articolului, sistemul va da <u>prioritate parametrilor</u> care sunt setați în această ultima fereastră pentru încărcările și descărcările de materiale legate de producerea acestui articol.
+Form-ul este dedicat inserării gestiunilor și șabloanelor aferente care reglementează circulația articolelor prin procedurile legate de producție; același form este în *Parametrii MRP* ai articolului din [Gestiuni](/docs/configurations/parameters/production/mrp-parameters/search-mrp-parameters), cu diferența că depozitele setate în *Parametrii de producție* sunt considerate date generale valabile în mod implicit pentru articole; dacă sunt setați pentru un anumit articol din depozite diferite în *Parametrii MRP* ai articolului, sistemul va da <u>prioritate parametrilor</u> care sunt setați în această ultima fereastră pentru încărcările și descărcările de materiale legate de producerea acestui articol.
 
 Prin urmare, în acest tab, pot fi configurate depozitele relative la *Materii prime*, *Produse semifinite*, *Produse finite* și orice *Deșeuri* cu șabloanele relative pentru încărcare și descărcare.
 
@@ -54,4 +54,4 @@ Pentru a putea configura unul dintre aceste depozite, va fi suficient să select
 
 În caz contrar, dacă tipul de ieșire a materialului este **Cu listă**,  tranzitarea materialului în depozitul W.I.P. are loc în același mod ca tipul de ieșire manual, descărcarea din W.I.P. are loc prin procedura listei de ieșiri.
 
-Pentru generalități despre funcționarea form-urilor consultați [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru generalități despre funcționarea form-urilor consultați [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

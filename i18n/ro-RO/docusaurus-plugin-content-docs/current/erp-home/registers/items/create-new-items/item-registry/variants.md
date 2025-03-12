@@ -10,4 +10,4 @@ Uneori, dacă un nou articol pe care trebuie să îl creați diferă numai print
 
 Aceste informații sunt singurele care diferențiază varianta de articolul principal. Toate celelalte informații care nu sunt prezente aici, le găsiți în diferitele tab-uri ale articolui.
 
-În grid-urile inferioare se pot insera: Codul de bare al variantei și [Extra Dataconfigurations/utility/extra-data/extradata/search-extradata).
+În grid-urile inferioare se pot insera: Codul de bare al variantei și [Extra Data](/docs/configurations/utility/extra-data/extradata/search-extradata).

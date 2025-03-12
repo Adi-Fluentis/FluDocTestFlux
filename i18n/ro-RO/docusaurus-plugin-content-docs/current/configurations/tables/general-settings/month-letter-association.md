@@ -11,4 +11,4 @@ Conține o zonă de filtrare și una de rezultate. După ce ați setat toate fil
 
 Pentru a insera înregistrările, efectuați clic pe primul rând gol din tabel sau apăsați butonul **Nou**.
 
-Pentru mai multe detalii consultați [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru mai multe detalii consultați [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

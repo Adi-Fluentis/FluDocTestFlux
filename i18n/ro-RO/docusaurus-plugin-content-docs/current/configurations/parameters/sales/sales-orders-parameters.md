@@ -67,7 +67,7 @@ Modificarea priorităților se poate face utilizând butoanele:
 > **Mută sus** ![](/img/neutral/common/move-up.png) și  
 > **Mută jos**![](/img/neutral/common/delete-cc.png).
 
-*Valori implicite*: CDC sau CDP este preluat din Tipul facturării, dacă există. Pentru informații suplimentare, consultați tabelul [Tip facturareconfigurations/tables/sales/sales-turnover).
+*Valori implicite*: CDC sau CDP este preluat din Tipul facturării, dacă există. Pentru informații suplimentare, consultați tabelul [Tip facturare](/docs/configurations/tables/sales/sales-turnover).
 
 Dacă nu este prezent în tipul facturării, sistemul îl va căuta în registrul clientului. Dacă nu este prezent nici aici, acesta va fi căutat în registrul articolului și ulterior în gestiune.
 

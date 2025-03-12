@@ -17,7 +17,7 @@ Tipurile compatibile sunt: *Clienți/Furnizori*, *Agenți* și *Bănci*. *Liber 
 
 După ce ați selectat tipul contului, apăsând tasta Tab pentru a trece la câmpurile următoare, vom observa că Fluentis atribuie automat un cont sintetic și unul analitic. În momentul salvării, se încărcă și tab-urile cu informațiile detaliate.
 
-Asocierea dintre tipul de cont (ex. de client) și contul din planul de conturi este setată în [Parametrii contabiliconfigurations/parameters/finance/accounting-parameters). Asocierea se realizează când anul din *Parametri contabili* coincide cu anul când a fost creat contactul.
+Asocierea dintre tipul de cont (ex. de client) și contul din planul de conturi este setată în [Parametrii contabili](/docs/configurations/parameters/finance/accounting-parameters). Asocierea se realizează când anul din *Parametri contabili* coincide cu anul când a fost creat contactul.
 
 Contul analitic este atribuit automat, în mod progresiv. 
 
@@ -31,8 +31,8 @@ Este de preferat să lăsați gestionarea atribuirii contului analitic în sarci
 
 Pentru fiecare registru este posibil **să se aloce mai multe conturi analitice** simultan. Cele mai frecvente cazuri în practică sunt cele ale unui furnizor care este și client sau al unui client care este și agent în același timp. În aceste cazuri, pe baza rândului selectat, se modifică și taburile cu detalii:
 
-### [Registru clienți/furnizorierp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/finance)
+### [Registru clienți/furnizori](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/finance)
 
-### [Registru băncierp-home/registers/contacts/create-new-contact/accounting-data/bank-registry/references)
+### [Registru bănci](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/bank-registry/references)
 
-### [Registru agențierp-home/registers/contacts/create-new-contact/accounting-data/agent-registry/analytic)
+### [Registru agenți](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/agent-registry/analytic)

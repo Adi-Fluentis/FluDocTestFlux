@@ -19,6 +19,6 @@ Formularul este compus dintr-o zonă de filtrare și una de rezultate. Odată ce
 
 Tot în form-ul de căutare, utilizați butonul **Nou** pentru a insera o locație nouă.
 
-În secțiunea superioară se inserează **Codul** și **Descrierea** locației, iar în cel inferior sunt prezenți parametrii relativelor gestiuni, aceeași din [Parametri Ordini di Produzioneconfigurations/parameters/production/production-orders-parameters/production-orders-parameters-intro).
+În secțiunea superioară se inserează **Codul** și **Descrierea** locației, iar în cel inferior sunt prezenți parametrii relativelor gestiuni, aceeași din [Parametri Ordini di Produzione](/docs/configurations/parameters/production/production-orders-parameters/production-orders-parameters-intro).
 
-Pentru generalități despre funcționarea form-urilor consultați [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru generalități despre funcționarea form-urilor consultați [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

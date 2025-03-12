@@ -13,7 +13,7 @@ Questa funzionalità non solo facilita il monitoraggio delle scorte, ma supporta
 
 La finestra relativa al calcolo della disponibilità si apre tramite il percorso **Home > Articoli > Calcolo disponibilità**.
 
-Attraverso questa form, si inseriscono i magazzini su cui si desidera calcolare la disponibilità e che poi verranno riportati nella form [Analisi della disponibilitàerp-home/registers/items/availability-analysis).
+Attraverso questa form, si inseriscono i magazzini su cui si desidera calcolare la disponibilità e che poi verranno riportati nella form [Analisi della disponibilità](/docs/erp-home/registers/items/availability-analysis).
 
 La form si compone da una griglia, in cui si inseriscono il codice del **Magazzino** e la relativa **Descrizione** per tutti i magazzini su cui si vuole venga calcolata la disponibilità (aggiungendo o togliendo un magazzino all'interno di questa griglia, questo verrà aggiunto o tolto anche dalla griglia dei magazzini presente nell'*Analisi della disponibilità*).
 
@@ -23,4 +23,4 @@ Infine c'è la possibilità di indicare il periodo che il sistema deve tenere in
 
 Attualmente questi campi non vengono più gestiti perché sono stati implementati all'interno della schermata di Analisi della disponibilità. L'unica parte ancora attiva resta la griglia dei Magazzini.
 
-Una volta che i parametri sono stati settati, si può procedere all'[Analisi della disponibilitàerp-home/registers/items/availability-analysis) attraverso la stampa *Analisi disponibilità*.
+Una volta che i parametri sono stati settati, si può procedere all'[Analisi della disponibilità](/docs/erp-home/registers/items/availability-analysis) attraverso la stampa *Analisi disponibilità*.

@@ -13,7 +13,7 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 
 *Câmpuri specifice*
 
-**Numerotare**: consultați [Numerotări Fluentisconfigurations/tables/fluentis-numerations).  
+**Numerotare**: consultați [Numerotări Fluentis](/docs/configurations/tables/fluentis-numerations).  
 **Autoexecutare**: dacă este activ, ordinul poate fi executat din documentele: avize de achiziţie, recepţie mărfuri şi facturi de achiziţie.  
 **Cash Flow**: dacă este activ, tipul ordinului participă la calcularea cash flowului.  
 **Gestiune/Descriere**: reprezintă gestiunea de sosire a mărfii conţinute în ordine de acest tip.  

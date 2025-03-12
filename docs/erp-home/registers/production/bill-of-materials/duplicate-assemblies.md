@@ -17,4 +17,4 @@ Una volta impostati tutti i dati cliccando sull'icona posta sulla ribbon bar chi
 
 > **Duplica assiemi**: pulsante che attiva la procedura che consente di duplicare un assieme. 
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

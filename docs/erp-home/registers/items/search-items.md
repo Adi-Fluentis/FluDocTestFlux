@@ -3,7 +3,7 @@ title: Ricerca articoli
 sidebar_position: 1
 ---
 
-**Introduzione**: [Identificazione dei prodotti e relative partierp-home/registers/items/master-item-intro) 
+**Introduzione**: [Identificazione dei prodotti e relative parti](/docs/erp-home/registers/items/master-item-intro) 
 
 :::important A cosa serve
 Il filtro dell'anagrafica articoli di Fluentis è una funzione chiave che consente di cercare, visualizzare e gestire gli articoli all'interno del sistema.     

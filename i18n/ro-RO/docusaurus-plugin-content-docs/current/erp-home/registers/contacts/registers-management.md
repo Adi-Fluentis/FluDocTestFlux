@@ -24,8 +24,8 @@ Noul registru poate fi introdus:
 
 sau
 
-- făcând clic pe  butonul **Nou**, în form-ul [Registre partenerierp-home/registers/contacts/registers-management).
+- făcând clic pe  butonul **Nou**, în form-ul [Registre parteneri](/docs/erp-home/registers/contacts/registers-management).
 
 Form-ul **Registru** este format din două taburi:
-- [Generalerp-home/registers/contacts/create-new-contact/general) unde veți găsi informațiile generale ale registrului;
-- [Date contabileerp-home/registers/contacts/create-new-contact/accounting-data/accounting-data-intro) care conține o serie de taburi în care puteți introduce informații mai specifice de natură administrativă, comercială, logistică și care vor fi detaliate în articolele ulterioare.
+- [General](/docs/erp-home/registers/contacts/create-new-contact/general) unde veți găsi informațiile generale ale registrului;
+- [Date contabile](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/accounting-data-intro) care conține o serie de taburi în care puteți introduce informații mai specifice de natură administrativă, comercială, logistică și care vor fi detaliate în articolele ulterioare.

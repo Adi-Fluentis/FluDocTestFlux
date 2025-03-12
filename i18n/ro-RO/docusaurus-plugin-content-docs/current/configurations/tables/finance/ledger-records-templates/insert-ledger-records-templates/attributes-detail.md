@@ -8,13 +8,13 @@ sidebar_position: 2
 *Câmpuri specifice*
 
 **Șablon automat**: la salvarea înregistrării care conține șablonul principal, programul va crea automat o a doua înregistrare care conține șablonul inserat în acest câmp. Pentru ca a doua înregistrare să fie completată corect trebuie să fie respectate următoarele relații logice între cele două înregistrări. De exemplu, prima înregistrare deschide un angajament, în timp ce a doua operează închiderea imediată.  
-**Tip autofactură automată**: consultați [**configurare autofacturi automate**/e-invoice/auto-invoice/ledger-templates).  
+**Tip autofactură automată**: consultați [**configurare autofacturi automate**](/docs/finance-area/e-invoice/auto-invoice/ledger-templates).  
 **Inversează coloane dacă suma este mai mică decât zero**: programul poate inversa coloanele debit/credit pe baza semnului mișcării TVA (recomandăm selectarea acestui câmp pentru toate înregistrările cu TVA).  
 **Aviz**: câmpul este activ doar dacă precedentul câmp a fost activat; utilizatorul va fi avizat de inversarea semnului. Flag-ul este irelevant pentru șabloanele utilizate în procedurile automate de contabilizare.  
 **Permite analitice cu valori zero**: dacă este activ, procedura:  
 a) va permite inserarea manuală a liniilor cu valoarea atât debit, cât și credit egală cu zero;  
 b) în momentul salvării înregistrării, NU va șterge liniile preluate din șablon și nevalorizate de utilizator în înregistrare;  
-c) liniile care valorizează în registrul jurnal debitul/creditul TVA, cu acest flag va șterge oricum valoarea zero, numai dacă nu a fost activiată opțiunea *Permite TVA 0 în registru jurnal* din tabelul [Cote TVAconfigurations/tables/finance/vat-rates).  
+c) liniile care valorizează în registrul jurnal debitul/creditul TVA, cu acest flag va șterge oricum valoarea zero, numai dacă nu a fost activiată opțiunea *Permite TVA 0 în registru jurnal* din tabelul [Cote TVA](/docs/configurations/tables/finance/vat-rates).  
 
 ### Detaliu cont sintetic/analitic -Prototip înregistrare  
 

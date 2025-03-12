@@ -11,4 +11,4 @@ I reports predefiniti sono:
 > **Scheda consegna Dispositivi di Protezione Individuale** - scheda della *Consegna D.P.I.* effettuata per data consegna;   
 > **Scheda reso Dispositivi di Protezione Individuale** - scheda del *Reso D.P.I.* effettuata per data reso.   
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

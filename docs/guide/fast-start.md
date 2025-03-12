@@ -24,7 +24,7 @@ Il **Fast Start** è una funzionalità progettata per rendere rapida e semplice 
 
 
 :::tip[Dove si attiva]
-**Per lanciare la procedura**, accedere alla [**tabella Società**configurations/tables/general-settings/company#pulsante-impostazioni-generali), entrare nella specifica società interessata e premere il tasto *Impostazioni Generali* presente nella ribbon bar.
+**Per lanciare la procedura**, accedere alla [**tabella Società**](/docs/configurations/tables/general-settings/company#pulsante-impostazioni-generali), entrare nella specifica società interessata e premere il tasto *Impostazioni Generali* presente nella ribbon bar.
 :::
 
 
@@ -78,16 +78,16 @@ Tabelle coinvolte (Stored Procedure Fluentis.SH_CreateNewYear_IT):
  - > Numerazione liquidazioni agenti
  - > Numerazione distinte di presentazione effetti
  - > Numerazione effetti
- - > [Numerazione documenti di venditaconfigurations/tables/fluentis-numerations)
- - > [Numerazione documenti di acquistoconfigurations/tables/fluentis-numerations)
- - > Tipi fattura ([acquistoconfigurations/tables/purchase/purchase-invoices-type) e [venditaconfigurations/tables/sales/invoices-type)) con collegamento alle causali contabili
- - > Tipi DDT ([acquistoconfigurations/tables/purchase/purchase-delivery-notes-type) e [venditaconfigurations/tables/sales/delivery-notes-type)) con collegamento ai tipi fattura
- - > Tipi Ordine ([acquistoconfigurations/tables/purchase/purchase-orders-type) e [venditaconfigurations/tables/sales/sales-order-types)) con collegamento ai tipi DDT
- - > [Tipi offertaconfigurations/tables/sales/sales-offer-type)
- - > [Parametri fattureconfigurations/parameters/sales/sales-invoices-parameters) e relativi [raggruppamenticonfigurations/parameters/sales/invoice-grouping) 
- - > [Parametri DDTconfigurations/parameters/sales/dn-parameters) e relativi [raggruppamenticonfigurations/parameters/sales/dn-grouping) 
- - > [Parametri ordiniconfigurations/parameters/sales/sales-orders-parameters) e relativi [raggruppamenticonfigurations/parameters/sales/orders-grouping)
- - > [Parametri offerteconfigurations/parameters/sales/offer-parameters)
+ - > [Numerazione documenti di vendita](/docs/configurations/tables/fluentis-numerations)
+ - > [Numerazione documenti di acquisto](/docs/configurations/tables/fluentis-numerations)
+ - > Tipi fattura ([acquisto](/docs/configurations/tables/purchase/purchase-invoices-type) e [vendita](/docs/configurations/tables/sales/invoices-type)) con collegamento alle causali contabili
+ - > Tipi DDT ([acquisto](/docs/configurations/tables/purchase/purchase-delivery-notes-type) e [vendita](/docs/configurations/tables/sales/delivery-notes-type)) con collegamento ai tipi fattura
+ - > Tipi Ordine ([acquisto](/docs/configurations/tables/purchase/purchase-orders-type) e [vendita](/docs/configurations/tables/sales/sales-order-types)) con collegamento ai tipi DDT
+ - > [Tipi offerta](/docs/configurations/tables/sales/sales-offer-type)
+ - > [Parametri fatture](/docs/configurations/parameters/sales/sales-invoices-parameters) e relativi [raggruppamenti](/docs/configurations/parameters/sales/invoice-grouping) 
+ - > [Parametri DDT](/docs/configurations/parameters/sales/dn-parameters) e relativi [raggruppamenti](/docs/configurations/parameters/sales/dn-grouping) 
+ - > [Parametri ordini](/docs/configurations/parameters/sales/sales-orders-parameters) e relativi [raggruppamenti](/docs/configurations/parameters/sales/orders-grouping)
+ - > [Parametri offerte](/docs/configurations/parameters/sales/offer-parameters)
  - > Tipi progetto (sales job order)
  - > Tipi intervento
  - > Numerazione progetti
@@ -579,7 +579,7 @@ Verifcare nelle varie tabelle dei documenti (Ordini, DDT, RDA ecc..) quali tipol
 
   <summary> PARAMETRI  Click to expand!</summary>
 
-  Definire i [parametriconfigurations/parameters/sales/offer-parameters) generali da utilizzare nelle offerte. 
+  Definire i [parametri](/docs/configurations/parameters/sales/offer-parameters) generali da utilizzare nelle offerte. 
 
 </details>
 
@@ -589,10 +589,10 @@ Verifcare nelle varie tabelle dei documenti (Ordini, DDT, RDA ecc..) quali tipol
 
   <summary> Tabella TIPI ORDINE  Click to expand!</summary>
 
-  Inserire le [tipologie di ordineconfigurations/tables/sales/sales-order-types) utilizzate; i dati obbligatori sono: *Tipo*, *Descrizione* e *[Numerazioneconfigurations/tables/fluentis-numerations)*.     
+  Inserire le [tipologie di ordine](/docs/configurations/tables/sales/sales-order-types) utilizzate; i dati obbligatori sono: *Tipo*, *Descrizione* e *[Numerazione](/docs/configurations/tables/fluentis-numerations)*.     
   I criteri di creazione delle varie tipologie possono essere diversi, per esempio:      
   - creazione tipologia ORDINE CLIENTI ITALIA, ORDINE CLIENTE UE, ORDINE CLIENTE EXTRA UE.       
-  - creazione tipologia in base al [Tipo DDTconfigurations/tables/sales/delivery-notes-type) o al [Tipo fatturaconfigurations/tables/sales/invoices-type) da creare.     
+  - creazione tipologia in base al [Tipo DDT](/docs/configurations/tables/sales/delivery-notes-type) o al [Tipo fattura](/docs/configurations/tables/sales/invoices-type) da creare.     
   - creazione tipologia in base al Magazzino da movimentare
 
 </details>
@@ -601,7 +601,7 @@ Verifcare nelle varie tabelle dei documenti (Ordini, DDT, RDA ecc..) quali tipol
 
   <summary> PARAMETRI  Click to expand!</summary>
 
-  Definire i [parametriconfigurations/parameters/sales/sales-orders-parameters) generali da utilizzare negli ordini cliente. 
+  Definire i [parametri](/docs/configurations/parameters/sales/sales-orders-parameters) generali da utilizzare negli ordini cliente. 
 
 </details>
 
@@ -611,10 +611,10 @@ Verifcare nelle varie tabelle dei documenti (Ordini, DDT, RDA ecc..) quali tipol
 
   <summary> Tabella TIPI DDT  Click to expand!</summary>
 
-  Inserire le [tipologie di DDTconfigurations/tables/sales/delivery-notes-type) utilizzate; i dati obbligatori sono: *Tipo*, *Descrizione* e *[Numerazioneconfigurations/tables/fluentis-numerations)*.     
+  Inserire le [tipologie di DDT](/docs/configurations/tables/sales/delivery-notes-type) utilizzate; i dati obbligatori sono: *Tipo*, *Descrizione* e *[Numerazione](/docs/configurations/tables/fluentis-numerations)*.     
   I criteri di creazione delle varie tipologie possono essere diversi, per esempio:      
   - creazione tipologia DDT CLIENTI ITALIA, DDT CLIENTE UE, DDT CLIENTE EXTRA UE.       
-  - creazione tipologia in base al [Tipo fatturaconfigurations/tables/sales/invoices-type) da creare.     
+  - creazione tipologia in base al [Tipo fattura](/docs/configurations/tables/sales/invoices-type) da creare.     
   - creazione tipologia in base al Magazzino da movimentare
   
 </details>
@@ -623,7 +623,7 @@ Verifcare nelle varie tabelle dei documenti (Ordini, DDT, RDA ecc..) quali tipol
 
   <summary> PARAMETRI  Click to expand!</summary>
 
-  Definire i [parametriconfigurations/parameters/sales/dn-parameters) generali da utilizzare nei DDT cliente. 
+  Definire i [parametri](/docs/configurations/parameters/sales/dn-parameters) generali da utilizzare nei DDT cliente. 
   
 </details>
 
@@ -633,7 +633,7 @@ Verifcare nelle varie tabelle dei documenti (Ordini, DDT, RDA ecc..) quali tipol
 
   <summary> Tabella TIPI FATTURA  Click to expand!</summary>
 
-  Inserire le [tipologie di fatturaconfigurations/tables/sales/invoices-type) utilizzate; i dati obbligatori sono: *Tipo*, *Descrizione* e *[Numerazioneconfigurations/tables/fluentis-numerations)*.     
+  Inserire le [tipologie di fattura](/docs/configurations/tables/sales/invoices-type) utilizzate; i dati obbligatori sono: *Tipo*, *Descrizione* e *[Numerazione](/docs/configurations/tables/fluentis-numerations)*.     
   I criteri di creazione delle varie tipologie possono essere diversi, per esempio:      
   - creazione tipologia FATTURA CLIENTI ITALIA, FATTURA CLIENTE UE, FATTURA CLIENTE EXTRA UE.     
   - creazione tipologia in base alla Natura fattura (fattura, nota di credito, ecc.)  
@@ -645,7 +645,7 @@ Verifcare nelle varie tabelle dei documenti (Ordini, DDT, RDA ecc..) quali tipol
 
   <summary> PARAMETRI  Click to expand!</summary>
 
-  Definire i [parametriconfigurations/parameters/sales/sales-invoices-parameters) generali da utilizzare nelle fatture cliente. 
+  Definire i [parametri](/docs/configurations/parameters/sales/sales-invoices-parameters) generali da utilizzare nelle fatture cliente. 
 
 </details>
   
@@ -658,10 +658,10 @@ Verifcare nelle varie tabelle dei documenti (Ordini, DDT, RDA ecc..) quali tipol
 
   <summary> Tabella TIPI ORDINE  Click to expand!</summary>
 
-  Inserire le [tipologie di ordineconfigurations/tables/purchase/purchase-orders-type) utilizzate; i dati obbligatori sono: *Tipo*, *Descrizione* e *[Numerazioneconfigurations/tables/fluentis-numerations)*.     
+  Inserire le [tipologie di ordine](/docs/configurations/tables/purchase/purchase-orders-type) utilizzate; i dati obbligatori sono: *Tipo*, *Descrizione* e *[Numerazione](/docs/configurations/tables/fluentis-numerations)*.     
   I criteri di creazione delle varie tipologie possono essere diversi, per esempio:      
   - creazione tipologia ORDINE FORNITORE ITALIA, ORDINE FORNITORE UE, ORDINE FORNITORE EXTRA UE.       
-  - creazione tipologia in base al [Tipo DDTconfigurations/tables/purchase/purchase-delivery-notes-type) o al [Tipo fatturaconfigurations/tables/purchase/purchase-invoices-type) da creare.     
+  - creazione tipologia in base al [Tipo DDT](/docs/configurations/tables/purchase/purchase-delivery-notes-type) o al [Tipo fattura](/docs/configurations/tables/purchase/purchase-invoices-type) da creare.     
   - creazione tipologia in base al Magazzino da movimentare
 
 </details>
@@ -670,7 +670,7 @@ Verifcare nelle varie tabelle dei documenti (Ordini, DDT, RDA ecc..) quali tipol
 
   <summary> PARAMETRI  Click to expand!</summary>
 
-  Definire i [parametriconfigurations/parameters/purchase/purchase-orders-parameters) generali da utilizzare negli ordini fornitore. 
+  Definire i [parametri](/docs/configurations/parameters/purchase/purchase-orders-parameters) generali da utilizzare negli ordini fornitore. 
 
 </details>
 
@@ -680,10 +680,10 @@ Verifcare nelle varie tabelle dei documenti (Ordini, DDT, RDA ecc..) quali tipol
 
   <summary> Tabella TIPI DDT  Click to expand!</summary>
 
-  Inserire le [tipologie di DDTconfigurations/tables/purchase/purchase-delivery-notes-type) utilizzate; i dati obbligatori sono: *Tipo*, *Descrizione* e *[Numerazioneconfigurations/tables/fluentis-numerations)*.     
+  Inserire le [tipologie di DDT](/docs/configurations/tables/purchase/purchase-delivery-notes-type) utilizzate; i dati obbligatori sono: *Tipo*, *Descrizione* e *[Numerazione](/docs/configurations/tables/fluentis-numerations)*.     
   I criteri di creazione delle varie tipologie possono essere diversi, per esempio:      
   - creazione tipologia DDT FORNITORE ITALIA, DDT FORNITORE UE, DDT FORNITORE EXTRA UE.       
-  - creazione tipologia in base al [Tipo fatturaconfigurations/tables/purchase/purchase-invoices-type) da creare.     
+  - creazione tipologia in base al [Tipo fattura](/docs/configurations/tables/purchase/purchase-invoices-type) da creare.     
   - creazione tipologia in base al Magazzino da movimentare
   
 </details>
@@ -692,7 +692,7 @@ Verifcare nelle varie tabelle dei documenti (Ordini, DDT, RDA ecc..) quali tipol
 
   <summary> PARAMETRI  Click to expand!</summary>
 
-  Definire i [parametriconfigurations/parameters/purchase/purchase-delivery-note-parameters) generali da utilizzare nei DDT di acquisto. 
+  Definire i [parametri](/docs/configurations/parameters/purchase/purchase-delivery-note-parameters) generali da utilizzare nei DDT di acquisto. 
   
 </details>
 
@@ -702,7 +702,7 @@ Verifcare nelle varie tabelle dei documenti (Ordini, DDT, RDA ecc..) quali tipol
 
   <summary> Tabella TIPI FATTURA  Click to expand!</summary>
 
-  Inserire le [tipologie di fatturaconfigurations/tables/purchase/purchase-invoices-type) utilizzate; i dati obbligatori sono: *Tipo*, *Descrizione* e *[Numerazioneconfigurations/tables/fluentis-numerations)*.     
+  Inserire le [tipologie di fattura](/docs/configurations/tables/purchase/purchase-invoices-type) utilizzate; i dati obbligatori sono: *Tipo*, *Descrizione* e *[Numerazione](/docs/configurations/tables/fluentis-numerations)*.     
   I criteri di creazione delle varie tipologie possono essere diversi, per esempio:      
   - creazione tipologia FATTURA FORNITORE ITALIA, FATTURA FORNITORE UE, FATTURA FORNITORE EXTRA UE.     
   - creazione tipologia in base alla Natura fattura (fattura, nota di debito, ecc.)  
@@ -714,7 +714,7 @@ Verifcare nelle varie tabelle dei documenti (Ordini, DDT, RDA ecc..) quali tipol
 
   <summary> PARAMETRI  Click to expand!</summary>
 
-  Definire i [parametriconfigurations/parameters/purchase/purchase-invoices-parameters) generali da utilizzare nelle fatture di acquisto. 
+  Definire i [parametri](/docs/configurations/parameters/purchase/purchase-invoices-parameters) generali da utilizzare nelle fatture di acquisto. 
 
 </details>
   

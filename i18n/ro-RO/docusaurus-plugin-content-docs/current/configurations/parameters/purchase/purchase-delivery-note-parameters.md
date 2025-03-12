@@ -29,9 +29,9 @@ Parametrii avizelor de achiziţie permit setarea de bază pentru gestionarea cor
 
 **Utilizează articolul furnizor**: dacă este activ, în tabelul articolelor avizului este propus și câmpul pentru inserarea codului articolului furnizorului. 
 
-**Verifică articole în epuizare**: dacă este activ, sistemul verifică disponibilitatea articolelor inserate în aviz și avertizează dacă articolul se epuizează, și anume dacă în [registrul articoluluierp-home/registers/items/create-new-items/item-registry/generality) parametrul *In epuizare* este activ.
+**Verifică articole în epuizare**: dacă este activ, sistemul verifică disponibilitatea articolelor inserate în aviz și avertizează dacă articolul se epuizează, și anume dacă în [registrul articolului](/docs/erp-home/registers/items/create-new-items/item-registry/generality) parametrul *In epuizare* este activ.
 
-**Contabilizare ambalaje**: permite contabilizarea, în contabilitatea generală, și a liniilor cu articole cu natura *Ambalaj* care, de obicei, sunt gestionare pentru a verifica stocurile ambalajelor care se returnează [Ambalaje de returnatconfigurations/tables/logistics/package-to-be-returned).
+**Contabilizare ambalaje**: permite contabilizarea, în contabilitatea generală, și a liniilor cu articole cu natura *Ambalaj* care, de obicei, sunt gestionare pentru a verifica stocurile ambalajelor care se returnează [Ambalaje de returnat](/docs/configurations/tables/logistics/package-to-be-returned).
 
 **Menține prețurile din ordine pentru eșalone**: este utilizat la executarea ordinelor în avize în cazul în care cantitatea executată este diferită (de obicei parțială) față de cantitatea comandată pentru care a fost inserat un preț sau un discount pe eșalon de cantitate. Dacă prețul sau discountul nu depind de cantitatea livrată, ci doar de cantitatea din ordin, acest parametru trebuie să fie activat. Dacă prețul sau discountul pe eșalon nu trebuie să fie inserat în documentul de livrare, în cazul executării nu trebuie să fie pentru cantitatea totală a ordinului, parametrul nu trebuie activat. 
 
@@ -44,9 +44,9 @@ Parametrii avizelor de achiziţie permit setarea de bază pentru gestionarea cor
 ### Încărcare
 
 **Creează înregistrarea cu data documentului**: când este activ, înregistrarea de gestiune este creată cu aceeași dată a avizului.  
-Dacă nu este activ, înregistrarea este efectuată cu *Data încărcării* indicată în antetul avizului, dacă este prezentă; dacă nu cu *Data înregistrării gestiune* indicată în procedura de [Înregistrare avize de achiziție în gestiunepurchase/purchase-delivery-note/procedures/load-delivery-notes-on-warehouse). Dacă înregistrarea este efectuată din aviz cu butonul *Încărcare automată în gestiune* iar *Data încărcării* nu este inserată, va fi utilizată data curentă.
+Dacă nu este activ, înregistrarea este efectuată cu *Data încărcării* indicată în antetul avizului, dacă este prezentă; dacă nu cu *Data înregistrării gestiune* indicată în procedura de [Înregistrare avize de achiziție în gestiune](/docs/purchase/purchase-delivery-note/procedures/load-delivery-notes-on-warehouse). Dacă înregistrarea este efectuată din aviz cu butonul *Încărcare automată în gestiune* iar *Data încărcării* nu este inserată, va fi utilizată data curentă.
 
-**Prioritate gestiune şi şablon de încărcare**: dacă este activ, în momentul înregistrării avizului în gestiune, sunt utilizate valorile setate în câmpurile următoare: **Gestiune** și **Șablon**. Dacă parametrul nu este activ, gestiunea și șablonul de încărcare sunt citite din aviz. În cazul în care acestea nu sunt prezente în aviz, nu va fi posibilă efectuarea Încărcării automate din avizul de achiziție, dar se va putea efectua înregistrarea avizului prin procedura [Înregistrare avize de achiziție în gestiunepurchase/purchase-delivery-note/procedures/load-delivery-notes-on-warehouse) selectând în tabul *Parametri* flag-ul *Acceptă ca geestiune și șablon următoarele date:*" și indicând *Gestiunea* și *Șablon* de utilizat.  
+**Prioritate gestiune şi şablon de încărcare**: dacă este activ, în momentul înregistrării avizului în gestiune, sunt utilizate valorile setate în câmpurile următoare: **Gestiune** și **Șablon**. Dacă parametrul nu este activ, gestiunea și șablonul de încărcare sunt citite din aviz. În cazul în care acestea nu sunt prezente în aviz, nu va fi posibilă efectuarea Încărcării automate din avizul de achiziție, dar se va putea efectua înregistrarea avizului prin procedura [Înregistrare avize de achiziție în gestiune](/docs/purchase/purchase-delivery-note/procedures/load-delivery-notes-on-warehouse) selectând în tabul *Parametri* flag-ul *Acceptă ca geestiune și șablon următoarele date:*" și indicând *Gestiunea* și *Șablon* de utilizat.  
 
 **Încărcare/Descărcare automată**: dacă este activ, în momentul activării parametrului *Controlat* în antetul documentului, aplicația va lansa un mesaj care reamintește că parametrul de încărcare/descărcare automată este activ și va solicita confirmarea. Apăsând *Da*, avizul va fi încărcat în depozit. Același lucru se obține utilizând butonul *Încărcare automată în gesiune* situat în ribbon bar.
 
@@ -61,7 +61,7 @@ Modificarea priorităților se poate face utilizând butoanele:
 > **Mută sus** ![](/img/neutral/common/move-up.png) și  
 > **Mută jos**![](/img/neutral/common/delete-cc.png).
 
-*Valori implicite*: centrul de cost/profit este preluat din [Tip facturare achizițiiconfigurations/tables/purchase/purchase-invoices-type), dacă este prezent.   Când nu este prezent aici, aplicația îl va căuta în *Registru furnizor*. Dacă nici aici nu este prezent, îl va căuta în *Registru articol* și apoi în *Gestiune*.
+*Valori implicite*: centrul de cost/profit este preluat din [Tip facturare achiziții](/docs/configurations/tables/purchase/purchase-invoices-type), dacă este prezent.   Când nu este prezent aici, aplicația îl va căuta în *Registru furnizor*. Dacă nici aici nu este prezent, îl va căuta în *Registru articol* și apoi în *Gestiune*.
 
 **Recalculează**: dacă este setat, centrele de cost sau de profit sunt inserate sau actualizate cu ajutorul priorităţii alese.
 

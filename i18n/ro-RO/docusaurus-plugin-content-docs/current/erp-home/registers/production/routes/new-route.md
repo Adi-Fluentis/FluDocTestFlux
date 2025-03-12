@@ -89,4 +89,4 @@ Conține fazele de lucru ale ciclului. Fiecare ciclu poate avea mai multe faze d
 > **Inserează/Șterge echipament**: apare în ribbon bar când sunteți în tab *Echipament*. Permite inserarea/ștergerea echipamentelor;  
 > **Inserează/Șterge ustensile**: apare în ribbon bar când sunteți în tab *Ustensile*. Permite inserarea/ștergerea ustensilelelor. 
 
-Pentru detalii despre utilizarea comună a form-urilor vezi [Funcționlități, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea comună a form-urilor vezi [Funcționlități, butoane și câmpuri comune](/docs/guide/common).

@@ -3,7 +3,7 @@ title: Nuova Distinta Base
 sidebar_position: 1
 ---
 
-**Introduzione**: [Distinta baseerp-home/registers/production/bill-of-materials/bom-intro) 
+**Introduzione**: [Distinta base](/docs/erp-home/registers/production/bill-of-materials/bom-intro) 
 
 La procedura di creazione di un **Nuovo** si apre tramite il percorso:
 

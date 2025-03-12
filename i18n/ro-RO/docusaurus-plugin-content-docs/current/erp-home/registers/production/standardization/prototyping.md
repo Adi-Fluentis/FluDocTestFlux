@@ -15,4 +15,4 @@ Pentru a insera noi prototipuri apăsați butonul **Nou** sau efectuați clic î
 
 > **Recalculare costuri**: selectând una sau mai multe linii prototip și apăsând acest buton, aplicația va recalcula costurile acelui prototip bazându-se pe costurile care îl compun.
 
-Pentru mai multe detalii despre funcționarea comună a form-urilor, citiți [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru mai multe detalii despre funcționarea comună a form-urilor, citiți [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

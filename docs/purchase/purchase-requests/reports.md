@@ -15,4 +15,4 @@ Per lanciare la stampa, una volta impostati i filtri desiderati, sarà sufficien
 
 Il risultato della stampa è un elenco delle RDA presenti a sistema; per ogni articolo contenuto nella richiesta di acquisto vengono riportati quantità, fornitore preferenziale, prezzo e data richiesta.
 
-Vedi il documento generale per l' [anteprima e stampa guide/common/operations-with-data/reports) documenti.
+Vedi il documento generale per l' [anteprima e stampa ](/docs/guide/common/operations-with-data/reports) documenti.

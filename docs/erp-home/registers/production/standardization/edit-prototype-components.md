@@ -21,7 +21,7 @@ Per selezionare questo nuovo componente è possibile utilizzare l'*Help articoli
 
 Tramite l'utilizzo dei flag *Alternative* è possibile decidere se inserire nel nuovo legame anche le alternative legate al nuovo componente.
 
-E' possibile anche attivare, se necessario, il flag *Movimentabile* e il flag *Fittizio* (per la spiegazione dettagliata dei vari campi da compilare si rimanda all'articolo [Gestione struttureerp-home/registers/production/bill-of-materials/assemblies/structure-management).
+E' possibile anche attivare, se necessario, il flag *Movimentabile* e il flag *Fittizio* (per la spiegazione dettagliata dei vari campi da compilare si rimanda all'articolo [Gestione strutture](/docs/erp-home/registers/production/bill-of-materials/assemblies/structure-management).
 
 Tramite questa procedura è possibile inserire, nella sezione in basso, lo stesso componente inserito nella sezione di filtro: in questo caso verrà semplicemente eseguita una modifica delle informazioni già presenti per quel componente all'interno delle distinte selezionate nella griglia.
 
@@ -39,7 +39,7 @@ Selezionare, nella sezione in basso della finestra, il nuovo componente da inser
 
 Tramite l'utilizzo dei flag *Alternative* è possibile decidere se inserire nel nuovo legame anche le alternative legate al nuovo componente.
 
-E' possibile attivare, se necessario, il flag *Movimentabile* e il flag *Fittizio* (per la spiegazione dettagliata dei vari campi da compilare si rimanda all'articolo [Gestione struttureerp-home/registers/production/bill-of-materials/assemblies/structure-management).
+E' possibile attivare, se necessario, il flag *Movimentabile* e il flag *Fittizio* (per la spiegazione dettagliata dei vari campi da compilare si rimanda all'articolo [Gestione strutture](/docs/erp-home/registers/production/bill-of-materials/assemblies/structure-management).
 
 Terminato l'inserimento delle informazioni, eseguire la procedura di **Inserimento** tramite l'utilizzo del pulsante di *Esegui*.
 
@@ -59,4 +59,4 @@ Una volta selezionato il componente da eliminare è possibile, tramite l'utilizz
 
 > **Esegui**: pulsante che permette di attivare la procedura selezionata nella combo iniziale della finestra (quindi o la procedura di *Sostituzione/Modifica*, o la procedura di *Inserimento* oppure la procedura di *Annullamento*).
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

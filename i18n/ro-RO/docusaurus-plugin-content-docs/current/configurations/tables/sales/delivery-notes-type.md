@@ -14,17 +14,17 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 *Câmpuri specifice*
 
 **Tip** și **Descriere**: reprezintă codul și descrierea tipului avizului de vânzare.   
-**Numerotare**: consultați [Numerotări Fluentisconfigurations/tables/fluentis-numerations). 
+**Numerotare**: consultați [Numerotări Fluentis](/docs/configurations/tables/fluentis-numerations). 
 **Natură aviz de vânzare**: reprezintă natura avizului de vânzare: livrare, restituire, pentru vizionare, restituit după vizionare.  
 **Ordin**: dacă este activ, avizul de vânzare poate fi creat executând un ordin client.  
 **Valori**: dacă este activ, în raportul avizului de vânzare sunt afișate valorile liniilor articol din document.  
-**Tip factură/Descriere**: reprezintă Tipul facturii utilizat pentru crearea facturilor din avize de vânzare cu ajutorul [proceduriiprocedures/create-invoices-from-delivery-notes). Factura poate fi creată din avizul de vânzare doar dacă acest câmp este valorizat cu tipul facturii.  
+**Tip factură/Descriere**: reprezintă Tipul facturii utilizat pentru crearea facturilor din avize de vânzare cu ajutorul [procedurii](/docs/sales/sales-invoices/procedures/create-invoices-from-delivery-notes). Factura poate fi creată din avizul de vânzare doar dacă acest câmp este valorizat cu tipul facturii.  
 **Șablon transport**: permite alegerea șablonului de transport care va fi apoi propus în aviz.  
 **Control client**: dacă este activ, în momentul inserării contului analitic titular al ordinului, aplicația verifică dacă tipul contului este obligatoriu client. Dacă nu este activ, aplicația avizează utilizatorul prin lansarea unui mesaj. Recomandăm activarea sa pentru toate tipurile de avize de vânzare.  
 **Blochează doc. listat**: dacă este activ, nu permite modificarea unui aviz de vânzare deja listat (are activat parametrul *Listat* în antetul său). 
 **Credit**: dacă este activ, avizul de vânzare cu acest tip este considerat la calcularea creditului.  
 **Exclude blocare**: dacă este activ, înseamnă că dacă depășește creditul și documentul este blocat, permite oricum inserarea și listarea lui.  
-**Cash flow**: dacă este activ, tipul avizului de vânzare este considerat la calcularea [cash flow-uluitreasury/cash-flow/cash-flow/search-cash-flow).  
+**Cash flow**: dacă este activ, tipul avizului de vânzare este considerat la calcularea [cash flow-ului](/docs/treasury/cash-flow/cash-flow/search-cash-flow).  
 **Gestiune/Descriere**: reprezintă gestiunea de sosire a mărfii din avizul de vânzare. Această valoare va fi utilizată implicit de aplicație.   
 **Șablon/Descriere**: reprezintă șablonul pentru înregistrarea mărfurilor din avizele de vânzare de acest tip.  
 **Nu aduna cantitățile**: dacă este activ, în executarea ordinelor de acest tip, cantitățile executate sunt preluate în documentul de executare pentru fiecare linie din executare.  

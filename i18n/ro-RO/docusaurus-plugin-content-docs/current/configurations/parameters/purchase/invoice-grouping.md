@@ -4,8 +4,8 @@ sidebar_position: 7
 ---
 
 Cu acești parametri se stabilesc regulile de grupare pentru procedurile:  
--  [**Valorizare avize de achiziție**purchase/purchase-invoices/procedures/purchase-delivery-note-valorization);  
--  [**Valorizare avize reintrate**purchase/purchase-invoices/procedures/return-delivery-notes-valorization). 
+-  [**Valorizare avize de achiziție**](/docs/purchase/purchase-invoices/procedures/purchase-delivery-note-valorization);  
+-  [**Valorizare avize reintrate**](/docs/purchase/purchase-invoices/procedures/return-delivery-notes-valorization). 
 
 Este necesar să activați coloanele care prevăd grupările pe care doriți să le includeți în aceste operațiuni.  
 
@@ -27,7 +27,7 @@ Când factura este creată dintr-un singur aviz, sunt prelute toate datele din a
 
 **Grupare pe schimb valutar**: dacă este activ, documentele cu aceeași monedă și același schimb valutar vor fi grupate într-o singură factură.
 
-**Grupare pe ordin**: acest parametru este utilizat doar pentru *Crearea avizelor și facturilor de vânzare din dispoziția de livrare* (vezi [Parametri de grupare avizconfigurations/parameters/sales/dn-grouping) și [facturiconfigurations/parameters/sales/invoice-grouping)).
+**Grupare pe ordin**: acest parametru este utilizat doar pentru *Crearea avizelor și facturilor de vânzare din dispoziția de livrare* (vezi [Parametri de grupare aviz](/docs/configurations/parameters/sales/dn-grouping) și [facturi](/docs/configurations/parameters/sales/invoice-grouping)).
 
 **Grupare pe proiect**: dacă este activ, va fi realizată o grupare pe proiect. Gruparea funcționează și pentru proiectele introduse la nivelul rândului articolului. Dacă există rânduri de articol fără un proiect asociat, va fi creată o factură diferită pentru toate articolele care nu îl conțin.
 

@@ -13,8 +13,8 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 
 *Câmpuri specifice*
 
-**Numerotare**: consultați [Numerotări Fluentisconfigurations/tables/fluentis-numerations).      
+**Numerotare**: consultați [Numerotări Fluentis](/docs/configurations/tables/fluentis-numerations).      
 
-**Tip ordin furnizro**: indică *[Tipul de ordin furnizorconfigurations/tables/purchase/purchase-orders-type)* care va fi creat pornind de la *cererea de ofertă* în procedura de *Creare ordin furnizor din ofertă furnizor*;         
+**Tip ordin furnizro**: indică *[Tipul de ordin furnizor](/docs/configurations/tables/purchase/purchase-orders-type)* care va fi creat pornind de la *cererea de ofertă* în procedura de *Creare ordin furnizor din ofertă furnizor*;         
 
 **Preț cu TVA**: dacă este activ, indică faptul că documentul va conține prețul cu TVA.

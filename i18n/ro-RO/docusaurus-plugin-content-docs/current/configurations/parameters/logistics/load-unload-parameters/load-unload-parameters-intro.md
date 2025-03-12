@@ -7,6 +7,6 @@ Form-ul permite atribuirea drepturilor unui utilizator pentru a efectua unele î
 
 **Inserare parametru nou**
 
-Pentru a insera un *Nou parametru de încărcare/descărcare* trebuie să vă poziționați pe o nouă linie sau să apăsați butonul **Inserează** din ribbon bar. Inserați apoi utilizatorul, [tipul mișcăriiconfigurations/parameters/logistics/load-unload-parameters/movement-types), gestiunea și șablonul utilizat în înregistrările de gestiune.
+Pentru a insera un *Nou parametru de încărcare/descărcare* trebuie să vă poziționați pe o nouă linie sau să apăsați butonul **Inserează** din ribbon bar. Inserați apoi utilizatorul, [tipul mișcării](/docs/configurations/parameters/logistics/load-unload-parameters/movement-types), gestiunea și șablonul utilizat în înregistrările de gestiune.
 
-Pentru informații generale despre form-uri consultați [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru informații generale despre form-uri consultați [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

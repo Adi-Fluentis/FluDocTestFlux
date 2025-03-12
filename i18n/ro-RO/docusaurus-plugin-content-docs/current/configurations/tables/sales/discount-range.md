@@ -23,4 +23,4 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 **Caracteristică**: dacă este activ, se vor putea insera intervalele de scont pentru fiecare caracteristică articol.  
 **Cat. merceologică**: dacă este activ, se vor putea insera intervalele de scont pentru fiecare categorie merceologică a articolelor.  
 
-Pentru detalii despre utilizarea form-urilor consultați [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea form-urilor consultați [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

@@ -21,4 +21,4 @@ Se compune din următoarele secțiuni:
 
 **Grid rezultate**: afișează rezultatele în baza filtrelor inserate.  
 
-Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea comună a form-urilor vezi [Caracteristici, butoane și câmpuri comune](/docs/guide/common).

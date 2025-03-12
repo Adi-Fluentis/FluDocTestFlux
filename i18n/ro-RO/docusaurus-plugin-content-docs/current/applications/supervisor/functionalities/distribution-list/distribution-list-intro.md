@@ -8,4 +8,4 @@ O *Listă de distribuție* este o listă de membri adăugată de utilizator care
 
 Form-ul se află pe calea **Instrumente > Fluentis Supervisor > Liste de Distribuție**.
 
-Pentru detalii despre utilizarea standard a acestui form clic [aiciguide/common).
+Pentru detalii despre utilizarea standard a acestui form clic [aici](/docs/guide/common).

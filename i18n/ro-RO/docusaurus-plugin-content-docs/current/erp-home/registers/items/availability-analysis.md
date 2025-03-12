@@ -45,4 +45,4 @@ Clicând pe linia cu gestiunea dorită, se afișează toate documentele asociate
 *Buton specific*:
 > **Expandează/comprimă grid articole**: permite vizualizarea detaliată sau nu a rezultatelor.
 
-Pentru detalii despre funcționarea generală a form-urilor: [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru detalii despre funcționarea generală a form-urilor: [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

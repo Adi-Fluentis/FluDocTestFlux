@@ -21,7 +21,7 @@ In questo tab l'utente ha la possibilità di configurare i parametri per la crea
 *Dati obbligatori*:
 
 - **Tipo fattura acquisto**: indica il tipo documento da usare per la creazione della fattura.
-- **IVA**: indica l'[Aliquota IVAconfigurations/tables/finance/vat-rates) da inserire sulle righe articolo della fattura.
+- **IVA**: indica l'[Aliquota IVA](/docs/configurations/tables/finance/vat-rates) da inserire sulle righe articolo della fattura.
 - **Tipo fatturato acquisti**: da impostare sulle righe articolo della fattura.
 
 *Dati opzionali*:

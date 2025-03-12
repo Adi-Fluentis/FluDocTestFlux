@@ -15,7 +15,7 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 
 **Structură ierarhică**: dacă este activ, afișarea articolelor în comandă va fi de tip ierarhic.
 
-**Numerotare**: consultați [Numerotări Fluentisconfigurations/tables/fluentis-numerations). 
+**Numerotare**: consultați [Numerotări Fluentis](/docs/configurations/tables/fluentis-numerations). 
 
 **Raport**: permite inserarea modelului de raport care va fi utilizat în momentul listării comenzii.
 

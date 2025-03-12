@@ -34,4 +34,4 @@ Per poter duplicare un *Corso di formazione* esistente in un nuovo *Corso di for
 Premere successivamente il pulsante **OK** o il pulsante **Cancel** se si desidera proseguire nell'attività di duplica o meno.   
 Al termine dell'elaborazione il nuovo *Corso di formazione* viene visualizzato.
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

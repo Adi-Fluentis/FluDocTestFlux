@@ -7,11 +7,11 @@ Nu există tabele specifice pentru acest modul, dar semnalăm faptul că diverse
 
 *Credit acordat clientului* extrage datele din următoarele documente de vânzare:
 
-**[Tip ordin clientconfigurations/tables/sales/sales-order-types)**: parametrul *Control client* activat indică faptul că documentul (listat și confirmat) este considerat la calcularea creditului acordat clientului. Parametrul *Exclude blocare* exclude documentul din blocare client.
+**[Tip ordin client](/docs/configurations/tables/sales/sales-order-types)**: parametrul *Control client* activat indică faptul că documentul (listat și confirmat) este considerat la calcularea creditului acordat clientului. Parametrul *Exclude blocare* exclude documentul din blocare client.
 
 **Tipuri avize**: parametrul *Control client* activat indică faptul că documentul (listat și confirmat) este considerat la calcularea creditului acordat clientului. Parametrul *Exclude blocare* exclude documentul din blocare client.
 
-**[Tipuri facturiconfigurations/tables/purchase/purchase-invoices-type)**: parametrul *Control client* activat indică faptul că documentul (listat și confirmat) este considerat la calcularea creditului acordat clientului. Parametrul *Exclude blocare* exclude documentul din blocare client.
+**[Tipuri facturi](/docs/configurations/tables/purchase/purchase-invoices-type)**: parametrul *Control client* activat indică faptul că documentul (listat și confirmat) este considerat la calcularea creditului acordat clientului. Parametrul *Exclude blocare* exclude documentul din blocare client.
 
 Fiecare *Registru client* prezintă două setări asociate la modul:
 

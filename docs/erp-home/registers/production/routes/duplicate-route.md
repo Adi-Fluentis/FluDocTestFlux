@@ -15,4 +15,4 @@ Una volta impostati tutti i dati cliccando sull'icona posta sulla ribbon bar chi
 
 > **Duplica cicli di lavoro**: pulsante che attiva la procedura che consente di duplicare un ciclo di lavoro. 
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

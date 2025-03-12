@@ -13,7 +13,7 @@ Queste memorizzano anche il posizionamento delle colonne, la loro dimensione, ma
 
 **Procedura**
 
-**1.** Aprire il **[Form navigatorform-navigator/form-navigator-intro)** a sinistra della form scelta: 
+**1.** Aprire il **[Form navigator](/docs/form-navigator/form-navigator-intro)** a sinistra della form scelta: 
 
 <p align="center">
 
@@ -37,7 +37,7 @@ Queste memorizzano anche il posizionamento delle colonne, la loro dimensione, ma
 
 </p>
 
-**2.** A quel punto il filtro o la form sarà bordata in rosso e si potranno selezionare i campi per spostarli, cancellarli o aggiungerne di nuovi prelevandoli dall' **[Object navigatorobject-navigator/object-navigator-intro)** che è presente a destra.  
+**2.** A quel punto il filtro o la form sarà bordata in rosso e si potranno selezionare i campi per spostarli, cancellarli o aggiungerne di nuovi prelevandoli dall' **[Object navigator](/docs/object-navigator/object-navigator-intro)** che è presente a destra.  
 
 <p align="center">
 

@@ -12,7 +12,7 @@ Formurile de căutare de citire/scriere se împart în două sau mai multe secț
 
 De obicei filtrele sunt în condiția 'AND' pentru a putea insera simultan mai multe criterii de filtrare.
 
-Clic pe săgeți ![](/img/neutral/common/arrow.png) pentru a deschide [Expander-intro#expander) și pentru a filtra și în baza datelor din ele.
+Clic pe săgeți ![](/img/neutral/common/arrow.png) pentru a deschide [Expander](/docs/guide/common/glossary/glossary-intro#expander) și pentru a filtra și în baza datelor din ele.
 
 După inserarea filtrelor dorite apăsați butonul ![](/img/ro-RO/guide/operations-with-data/data-search-in-read-only-forms/image01.png) pentru a obține lista datelor.
 

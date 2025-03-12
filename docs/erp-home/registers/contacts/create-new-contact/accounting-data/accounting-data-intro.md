@@ -11,11 +11,11 @@ Le anagrafiche di dettaglio sono suddivise in tre categorie: **Clienti/Fornitori
 Ogni categoria ha dei campi di dettaglio differenti a fronte di scopi differenti, pertanto viene affrontata in dettaglio (link alle sezioni specifiche)
 
 
-### [Anagrafica clienti/fornitorierp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/finance)
+### [Anagrafica clienti/fornitori](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/customer-vendors-data/finance)
 
-### [Anagrafica bancheerp-home/registers/contacts/create-new-contact/accounting-data/bank-registry/references)
+### [Anagrafica banche](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/bank-registry/references)
 
-### [Anagrafica agentierp-home/registers/contacts/create-new-contact/accounting-data/agent-registry/detail)
+### [Anagrafica agenti](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/agent-registry/detail)
 
 
 ---
@@ -38,7 +38,7 @@ Le tipologie compatibili sono: *Clienti/Fornitori*, *Agenti* e *Banche*. I *Perc
 
 Una volta selezionato il tipo conto, premendo il tasto tab per spostarsi ai campi successivi, noteremo che **Fluentis** assegna automaticamente un conto ed un sottoconto. Al salvataggio verranno inoltre caricati i tab con le informazioni di dettaglio.
 
-L'associazione tra il tipo conto (esempio clienti, oppure, in caso di diversa impostazione del piano conti, clienti Italia) ed il conto contabile del piano conti è definita dai [**Parametri di contabilità**configurations/parameters/finance/accounting-parameters). L'associazione avviene quando l'anno dei *Parametri contabili* coincide con l'anno di creazione del contatto.
+L'associazione tra il tipo conto (esempio clienti, oppure, in caso di diversa impostazione del piano conti, clienti Italia) ed il conto contabile del piano conti è definita dai [**Parametri di contabilità**](/docs/configurations/parameters/finance/accounting-parameters). L'associazione avviene quando l'anno dei *Parametri contabili* coincide con l'anno di creazione del contatto.
 
 Il sottoconto viene attribuito automaticamente in modo progressivo.
 
@@ -51,8 +51,8 @@ E' preferibile lasciare a **Fluentis** la gestione dell'assegnazione sottoconto.
 :::
 
 :::danger[Attenzione]
-Se una volta selezionato il *Tipo Conto* dalla prima colonna della griglia *Sottoconti Assegnati* non viene compilato automaticamente un codice di Conto e sottoconto (e si è certi di aver richiamato un Tipo conto compatibile con le anagrafiche), questo indica che probabilmente non sono stati inizializzati (o non sono compilati correttamente) i [**Parametri di contabilità**configurations/parameters/finance/accounting-parameters) nella sezione che definisce il corretto abbinamento dei tipi conti relativi alle anagrafiche con il piano dei conti.
-L'errata configurazione potrebbe anche risiedere, più a monte, nella [**Tabella Tipi Conto**configurations/tables/finance/account-types)
+Se una volta selezionato il *Tipo Conto* dalla prima colonna della griglia *Sottoconti Assegnati* non viene compilato automaticamente un codice di Conto e sottoconto (e si è certi di aver richiamato un Tipo conto compatibile con le anagrafiche), questo indica che probabilmente non sono stati inizializzati (o non sono compilati correttamente) i [**Parametri di contabilità**](/docs/configurations/parameters/finance/accounting-parameters) nella sezione che definisce il corretto abbinamento dei tipi conti relativi alle anagrafiche con il piano dei conti.
+L'errata configurazione potrebbe anche risiedere, più a monte, nella [**Tabella Tipi Conto**](/docs/configurations/tables/finance/account-types)
 :::
 
 :::tip
@@ -67,7 +67,7 @@ Questo possibile abbinamento multiplo ottimizza e razionalizza la gestione dei d
 ## VIDEO TUTORIALS SULLE ANAGRAFICHE
 
 :::important Vedi Anche
-[**VIDEO TUTORIALS SULLE ANAGRAFICHE**/finance/intro.md)
+[**VIDEO TUTORIALS SULLE ANAGRAFICHE**](/docs/video/finance/intro.md)
 :::
  
 

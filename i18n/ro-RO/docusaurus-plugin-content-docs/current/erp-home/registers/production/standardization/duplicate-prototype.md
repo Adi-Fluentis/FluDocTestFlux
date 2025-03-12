@@ -14,4 +14,4 @@ După inserarea filtrelor, efectuați clic pe butonul **Caută** pentru a obțin
 3. dacă activați opțiunile **Materiale**, **Extra data**, **Faze ciclu**, **Elemente de cost** și **Documente anexate** vor fi duplicate și datele relative, prezente în prototipul sursă.
 4. clic pe butonul **Duplică** pentru a activa procedura care generează, pentru articolul inserat, un prototip identic cu prototipul sursă.
 
-Pentru detalii despre utilizarea comună a form-urilor vezi [Funcționlități, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea comună a form-urilor vezi [Funcționlități, butoane și câmpuri comune](/docs/guide/common).

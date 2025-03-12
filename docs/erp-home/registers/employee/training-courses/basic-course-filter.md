@@ -62,4 +62,4 @@ Il nuovo *Corso di formazione* creato avrà le seguenti informazioni precaricate
 
 Al termine dell'elaborazione il nuovo *Corso di formazione* viene visualizzato.
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuniguide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).

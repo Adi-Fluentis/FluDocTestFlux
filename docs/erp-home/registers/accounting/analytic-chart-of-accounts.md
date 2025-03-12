@@ -3,7 +3,7 @@ title: Piano dei conti
 sidebar_position: 1
 ---
 :::tip[FAst Start]
-La tabella è interessata dalla procedura di [**Fast Start**guide/fast-start)
+La tabella è interessata dalla procedura di [**Fast Start**](/docs/guide/fast-start)
 
 Nel caso in cui si intenda configurare manualmente fare riferimento alla check list della pagina linkata
 :::
@@ -35,7 +35,7 @@ Nel caso in cui si intenda configurare manualmente fare riferimento alla check l
 ---
 
 ### Collegamento con altre tabelle
-La codifica del piano dei conti coinvolge il completamento di una serie di tabelle:  [Tipi contoconfigurations/tables/finance/account-types) ,  [Anagrafiche contattierp-home/registers/contacts/registers-management), [Voce di spesaconfigurations/tables/finance/charge-item), Tipi periodicità budget, Centri di costo, Centri di profitto, Divisioni, Scritture di rettifica/integrazione, Scritture da diff. budget,  [Causali automaticheconfigurations/tables/finance/ledger-records-templates/insert-ledger-records-templates/attributes-detail) , Tipo importo
+La codifica del piano dei conti coinvolge il completamento di una serie di tabelle:  [Tipi conto](/docs/configurations/tables/finance/account-types) ,  [Anagrafiche contatti](/docs/erp-home/registers/contacts/registers-management), [Voce di spesa](/docs/configurations/tables/finance/charge-item), Tipi periodicità budget, Centri di costo, Centri di profitto, Divisioni, Scritture di rettifica/integrazione, Scritture da diff. budget,  [Causali automatiche](/docs/configurations/tables/finance/ledger-records-templates/insert-ledger-records-templates) , Tipo importo
 
 
 ### Inserimento della struttura del piano dei conti
@@ -101,7 +101,7 @@ Il flag si abilita automaticamente nella fase di inserimento di una nuova anagra
 
 **Ulteriore descrizione**: vedere Descr. alternativa sopra;
 
-**Ratei / Risconti - attivi / passivi - Conto / Sottoconto / Descrizione**: Campi che permettono di inserire, rispettivamente per ratei e risconti attivi e passivi, un sottoconto specifico sul quale saranno contabilizzate, con priorità rispetto ai sottoconti generici per ratei e risconti attivi e passivi ineriti nei [parametri di contabilitàconfigurations/parameters/finance/accounting-parameters), le scritture di rettifica ed integrazione relative al sottoconto di costo o ricavo che stiamo compilando. Si ricorda che per la gestione automatica dei ratei e risconti il conto di costo o ricavo oggetto di rettifiche deve avere un particolare tipo conto (es. "da rettificare") avente il flag servizio attivo nella tabella [Tipo contoconfigurations/tables/finance/account-types).
+**Ratei / Risconti - attivi / passivi - Conto / Sottoconto / Descrizione**: Campi che permettono di inserire, rispettivamente per ratei e risconti attivi e passivi, un sottoconto specifico sul quale saranno contabilizzate, con priorità rispetto ai sottoconti generici per ratei e risconti attivi e passivi ineriti nei [parametri di contabilità](/docs/configurations/parameters/finance/accounting-parameters), le scritture di rettifica ed integrazione relative al sottoconto di costo o ricavo che stiamo compilando. Si ricorda che per la gestione automatica dei ratei e risconti il conto di costo o ricavo oggetto di rettifiche deve avere un particolare tipo conto (es. "da rettificare") avente il flag servizio attivo nella tabella [Tipo conto](/docs/configurations/tables/finance/account-types).
 
 
 **Conto / sottoconto / descrizione Non Deducibile**: Gestito prevalentemente per localizzazioni non italiane dove c'è la necessità di contabilizzare la quota di iva non detraibile su un conto separato
@@ -110,7 +110,7 @@ Il flag si abilita automaticamente nella fase di inserimento di una nuova anagra
 **Percentuale indetraibilità**: Gestito prevalentemente per localizzazioni non italiane dove c'è la necessità di contabilizzare la quota di iva non detraibile su un conto separato Campo connesso all'utilizzo del precedente. Permette la definizione della percentuale di indetraibilità IVA direttamente sul conto contabile anzichè sul codice iva utilizzato.
 
 
-**Voci di spesa / Descrizione**: combo box collegato alla tabella ** [Voci di spesaconfigurations/tables/finance/charge-item) **; permette il collegamento ad un dato statistico utile nel controllo di gestione.
+**Voci di spesa / Descrizione**: combo box collegato alla tabella ** [Voci di spesa](/docs/configurations/tables/finance/charge-item) **; permette il collegamento ad un dato statistico utile nel controllo di gestione.
 
 **Variabilità**: questo campo, collegato alle griglie, presenti sulla destra della form, *Attribuzione Cdc* e *Variabilità Cdc* (necessarie per l'inserimento dei legami tra sottoconti contabili e centri aziendali al fine di ripartire automaticamente i movimenti contabili sui centri) viene **movimentato in particolare quando il movimento contabile è collegato a più di un centro aziendale**. Così come l'omonimo campo presente nella griglia Variabilità Cdc accoglie un valore in percentuale che **definisce se il costo è un costo fisso** (variabilità 0%) **oppure un costo** totalmente **variabile** (variabilità 100%) o parzialmente variabile (es. 70%). Si veda immagine sosttostante per una corretta compilazione.
 
@@ -138,11 +138,11 @@ I successivi due campi sono funzionali a questa manovra:
 
    - **Differenze analitica**: parte dalla contabilità gestionale (controlling) e lo riallinea al dato contabile inserendo le rettifiche con segno positivo o negativo.
 
-**Percentuali di variazione / descrizione**: la combo box, collegata alla tabella [Percentuali di variazioneconfigurations/tables/controlling/analytical-accounting/variation-percentages), permette di definire, per ogni sottoconto, delle percentuali (predefinitite e categorizzate all'interno della tabella collegata) da applicare in varie elaborazione del controlling, quali ad esempio il budget preventivo a partire dal consuntivo dell'anno precedente, applicando degli incrementi o decrementi.
+**Percentuali di variazione / descrizione**: la combo box, collegata alla tabella [Percentuali di variazione](/docs/configurations/tables/controlling/analytical-accounting/variation-percentages), permette di definire, per ogni sottoconto, delle percentuali (predefinitite e categorizzate all'interno della tabella collegata) da applicare in varie elaborazione del controlling, quali ad esempio il budget preventivo a partire dal consuntivo dell'anno precedente, applicando degli incrementi o decrementi.
 
-**Distribuzione periodi / Descrizione**: la combo box, collegata alla tabella [Distribuzione periodiconfigurations/tables/controlling/managerial-accounting/periods-distribution), permette di assegnare, ad ogni sottoconto, una logica di ripartizione specifica del movimento contabile sui singoli periodi in fase di elaborazione delle chiusure infrannuali.
+**Distribuzione periodi / Descrizione**: la combo box, collegata alla tabella [Distribuzione periodi](/docs/configurations/tables/controlling/managerial-accounting/periods-distribution), permette di assegnare, ad ogni sottoconto, una logica di ripartizione specifica del movimento contabile sui singoli periodi in fase di elaborazione delle chiusure infrannuali.
 
-**Gruppi di conguaglio / Descrizione**: la combo box è collegata alla tabella [Gruppi di conguaglioconfigurations/tables/controlling/analytical-accounting/adjustments-groups), all'interno della quale è possibile codificare dei raggruppamenti di conti utili per la gestione della reportistica specifica per il controlling. Il campo non ha altra valenza operativa e non genera ulteriori automatismi.
+**Gruppi di conguaglio / Descrizione**: la combo box è collegata alla tabella [Gruppi di conguaglio](/docs/configurations/tables/controlling/analytical-accounting/adjustments-groups), all'interno della quale è possibile codificare dei raggruppamenti di conti utili per la gestione della reportistica specifica per il controlling. Il campo non ha altra valenza operativa e non genera ulteriori automatismi.
 
 **Descrizione estesa 1 / 2 / 3**: ulteriori campi per accogliere descrizioni alternative (ad esempio in lingua). Possono essere, ad esempio, successivamente inserite nella stampa del bilancio mediante personalizzazione della stessa.
 
@@ -155,7 +155,7 @@ Poiché gli indicatori per la crisi di impresa fanno alcune considerazioni e cal
 
 Il collegamento viene effettuato semplicemente selezionando il sottoconto di riferimento e inserendo la lista dei cdc/cdp nelle due griglie apposite: è possibile collegare la valorizzazione su divisioni aziendali differenti, ma normalmente la divisione non viene compilata. Non c'è alcun controllo che la somma delle percentuali inserite sia uguale al 100%.
 
-NOTA: Attivando le funzioni avanzate per il controlling nella tabella [societàconfigurations/tables/general-settings/company) , si opererà secondo le nuove logiche in cui non ha più rilevanza l'utilizzo dei centri di profitto ma si utilizzano i cdc (nella loro denominazione di centri Aziendali) sui quali si attribuiranno componenti negativi o positivi per procedere poi ad elaborazioni evolute quali reversioni e confronti per determinare margini ecc...
+NOTA: Attivando le funzioni avanzate per il controlling nella tabella [società](/docs/configurations/tables/general-settings/company) , si opererà secondo le nuove logiche in cui non ha più rilevanza l'utilizzo dei centri di profitto ma si utilizzano i cdc (nella loro denominazione di centri Aziendali) sui quali si attribuiranno componenti negativi o positivi per procedere poi ad elaborazioni evolute quali reversioni e confronti per determinare margini ecc...
 
 Per questo motivo la griglia dei **centri di profitto** (mantenuta per utilizzare le logiche standard) è stata spostata nella tab **Altro** (relativa alla griglia Attribuzione Cdc).
 
@@ -206,12 +206,12 @@ In particolare la logica di funzionamento prevede:
 ---
 
 ### Extra Data: 
-si rinvia alla documentazione relativa agli [Extra Dataconfigurations/utility/extra-data/extradata/search-extradata)
+si rinvia alla documentazione relativa agli [Extra Data](/docs/configurations/utility/extra-data/extradata/search-extradata)
 
 ---
 
 ### VIDEO TUTORIALS
 
 :::important Vedi Anche
-[**VIDEO TUTORIALS SUL PIANO DEI CONTI**/finance/intro.md)
+[**VIDEO TUTORIALS SUL PIANO DEI CONTI**](/docs/video/finance/intro.md)
 :::

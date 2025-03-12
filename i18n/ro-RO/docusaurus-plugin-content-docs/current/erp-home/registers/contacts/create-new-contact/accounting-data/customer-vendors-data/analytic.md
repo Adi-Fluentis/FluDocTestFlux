@@ -7,7 +7,7 @@ sidebar_position: 9
 
 Această asociere țiine cont și interacționează cu alte opțiuni de valorizare a centrelor de cost și profit (în baza articolului, a planului de conturi general, și al gestiunii) și va putea fi definită pe fiecare modul, pe baza priorității.
 
-Prioritatea valorizării centrelor de cost/profit se setează anual în [Parametrii contabilitateconfigurations/parameters/finance/accounting-parameters#center-proposal).
+Prioritatea valorizării centrelor de cost/profit se setează anual în [Parametrii contabilitate](/docs/configurations/parameters/finance/accounting-parameters#center-proposal).
 
 Prioritatea este citită de sus in jos. Dacă doriți să modificați, utilizați butoanele din ribbon bar.
 

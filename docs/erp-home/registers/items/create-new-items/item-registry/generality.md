@@ -34,7 +34,7 @@ All'interno di questo tab possono essere definiti i seguenti dati generali:
 
 **Fatturato vendite**: come per il fatturato acquisti, questa combo serve per la gestione dei sottoconti di ricavo per la vendita dell'articolo; 
 
-**Natura articolo**: è un campo che viene utilizzato per attribuire all'articolo alcune caratteristiche specifiche per poi essere utilizzato in alcune procedure particolari. Nella combo troviamo la lista delle varie nature che possiamo attribuire all'articolo (click per il [glossario-intro#item-nature));
+**Natura articolo**: è un campo che viene utilizzato per attribuire all'articolo alcune caratteristiche specifiche per poi essere utilizzato in alcune procedure particolari. Nella combo troviamo la lista delle varie nature che possiamo attribuire all'articolo (click per il [glossario](/docs/guide/common/glossary/glossary-intro#item-nature));
 
 > **Attrezzatura/Utensile**: l’articolo di questa natura è associabile all’anagrafica degli strumenti di misura e delle attrezzature presenti nelle fasi dei cicli di lavorazione.
 > **Macchina/Impianto**: questa natura è associabile all’anagrafica delle macchine;
@@ -55,7 +55,7 @@ Infine, troviamo una serie di flag:
 
 **In esaurimento**: se attivo, questo flag indica che l'articolo è In esaurimento.         
 Le condizioni per ottenere l'avviso che l'articolo sta per esaurire, nei documenti, per esempio negli Ordini cliente, sono:
-- nei [parametri Ordini clienteconfigurations/parameters/sales/sales-orders-parameters) deve essere settato il flag "Verifica articoli in esaurimento";             
+- nei [parametri Ordini cliente](/docs/configurations/parameters/sales/sales-orders-parameters) deve essere settato il flag "Verifica articoli in esaurimento";             
 - in anagrafica articolo deve essere settato il flag "In esaurimento" e inoltre la "Data esaurimento" deve essere minore o uguale alla data dell'ordine.          
 
 **Data in esaurimento**: indica da quando l'articolo è stato messo in esaurimento;
@@ -64,6 +64,6 @@ Le condizioni per ottenere l'avviso che l'articolo sta per esaurire, nei documen
 
 **Archiviato**: se attivo, l'articolo non comparirà più nella lista degli articoli che si possono utilizzare, in quanto diventato obsoleto;
 
-**Diritti d'autore**: se attivo, indica che l'articolo è soggetto a diritti d’autore/royalties e sarà considerato nella [Gestione royaltieserp-home/registers/contacts/create-new-contact/accounting-data/agent-registry/royalties/).       
+**Diritti d'autore**: se attivo, indica che l'articolo è soggetto a diritti d’autore/royalties e sarà considerato nella [Gestione royalties](/docs/erp-home/registers/contacts/create-new-contact/accounting-data/agent-registry/royalties/).       
 
-Per maggiori informazioni sulle modalità di inserimento e selezione dati all'interno delle form si rimanda all'articolo [Inserimento e selezione datiguide/common/operations-with-data/manual-entry-or-help-and-data-selection).
+Per maggiori informazioni sulle modalità di inserimento e selezione dati all'interno delle form si rimanda all'articolo [Inserimento e selezione dati](/docs/guide/common/operations-with-data/manual-entry-or-help-and-data-selection).

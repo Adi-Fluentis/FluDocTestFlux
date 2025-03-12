@@ -11,10 +11,10 @@ Le fatture di acquisto sono documenti fiscali emessi dai fornitori a fronte dell
 
 Le fatture di acquisto possono essere inserite manualmente o generate automaticamente evadendo documenti esistenti, come:
 
-- **Ordini di acquisto**: la fattura può essere generata automaticamente dall'evasione di uno o più ordini di acquisto, cliccando il pulsante [Evasione da ordinepurchase/purchase-invoices/insert-purchase-invoice/header-procedures/execution-from-purchase-order) dall'interno di una nuova fattura.   
-- **DDT di acquisto**: l'evasione da DDT può essere effettuata sia dall'interno della fattura, mediante il pulsante *Evasione DDT*, sia dalla procedura di [valorizzazione DDT di Acquistopurchase/purchase-invoices/procedures/purchase-delivery-note-valorization) da cui è possibile effettuare anche un ripristino delle operazioni. 
+- **Ordini di acquisto**: la fattura può essere generata automaticamente dall'evasione di uno o più ordini di acquisto, cliccando il pulsante [Evasione da ordine](/docs/purchase/purchase-invoices/insert-purchase-invoice/purchase-invoice) dall'interno di una nuova fattura.   
+- **DDT di acquisto**: l'evasione da DDT può essere effettuata sia dall'interno della fattura, mediante il pulsante *Evasione DDT*, sia dalla procedura di [valorizzazione DDT di Acquisto](/docs/purchase/purchase-invoices/procedures/purchase-delivery-note-valorization) da cui è possibile effettuare anche un ripristino delle operazioni. 
 - **Rientro di conto lavoro**: la procedura di *Valorizzazione DDT di rientro* consente di generare la fattura evadendo uno o più rientri di conto lavoro.   
-- **Ricevimento merce**: la fattura può essere creata anche da un *Ricevimento merci* attraverso la [Creazione fatture da Ricevimento mercipurchase/purchase-invoices/procedures/create-purchase-invoices-from-goods-receipt).    
+- **Ricevimento merce**: la fattura può essere creata anche da un *Ricevimento merci* attraverso la [Creazione fatture da Ricevimento merci](/docs/purchase/purchase-invoices/procedures/create-purchase-invoices-from-goods-receipt).    
 
 La gestione delle fatture è strettamente integrata con il magazzino e i DDT, consentendo di caricare automaticamente gli articoli e di generare fatture raggruppando uno o più DDT a seconda delle esigenze. La contabilizzazione automatica delle fatture permette poi di aggiornare i registri contabili e finanziari e garantendo la coerenza con il bilancio aziendale. 
 
@@ -32,8 +32,8 @@ La gestione delle fatture è strettamente integrata con il magazzino e i DDT, co
 ### **Impostazioni**
 
 Prima di utilizzare il modulo, è necessario compilare i seguenti parametri e tabelle: 
-> - [Numerazioniconfigurations/tables/fluentis-numerations)    
-> - [Fatturato acquisticonfigurations/tables/purchase/purchase-turnover/)
-> - [Tipi fatture acquistoconfigurations/tables/purchase/purchase-invoices-type)
-> - [Parametri fatture di acquistoconfigurations/parameters/purchase/purchase-invoices-parameters)
-> - [Parametri di raggruppamento fatture di acquistoconfigurations/parameters/purchase/invoice-grouping/)
+> - [Numerazioni](/docs/configurations/tables/fluentis-numerations)    
+> - [Fatturato acquisti](/docs/configurations/tables/purchase/purchase-turnover/)
+> - [Tipi fatture acquisto](/docs/configurations/tables/purchase/purchase-invoices-type)
+> - [Parametri fatture di acquisto](/docs/configurations/parameters/purchase/purchase-invoices-parameters)
+> - [Parametri di raggruppamento fatture di acquisto](/docs/configurations/parameters/purchase/invoice-grouping/)

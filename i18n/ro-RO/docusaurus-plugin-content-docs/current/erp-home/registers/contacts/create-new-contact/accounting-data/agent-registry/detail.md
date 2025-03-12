@@ -7,9 +7,9 @@ După inserarea datelor puteți să inserați tipul contului **Agenți** în gri
 
 **Utilizare cu angajamente deschise**: activează gestionearea angajamentelor deschise pentru agent;
 
-**Categoria agent**: este elementul fundamental pentru calculul Enasarco, așa cum este definit în tabelul [Categorie agențiconfigurations/tables/sales/agent-category).
+**Categoria agent**: este elementul fundamental pentru calculul Enasarco, așa cum este definit în tabelul [Categorie agenți](/docs/configurations/tables/sales/agent-category).
 
-**Caracteristica agent**: element statistic util, de exemplu, la crearea grupărilor. Comboboxul este asociat tabelului [Categorie agențiconfigurations/tables/sales/agent-category).
+**Caracteristica agent**: element statistic util, de exemplu, la crearea grupărilor. Comboboxul este asociat tabelului [Categorie agenți](/docs/configurations/tables/sales/agent-category).
 
 **TVA**: cota TVA implicită care se propune la crearea compensării agentului, atât manual cât și cu procedura de calcul al lichidării comisioanelor;
 

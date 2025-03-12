@@ -13,6 +13,6 @@ Pentru a insera datele, efectuați clic pe butonul **Nou**.
 
 **Tip** și **Descriere**: reprezintă tipul și descrierea documentului.
 
-**Numerotare**: consultați [Numerotări Fluentisconfigurations/tables/fluentis-numerations).
+**Numerotare**: consultați [Numerotări Fluentis](/docs/configurations/tables/fluentis-numerations).
 
-Pentru detalii despre utilizarea form-urilor consultați [Funcționalități, butoane și câmpuri comuneguide/common).
+Pentru detalii despre utilizarea form-urilor consultați [Funcționalități, butoane și câmpuri comune](/docs/guide/common).

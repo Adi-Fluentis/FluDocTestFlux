@@ -15,7 +15,7 @@ La introducerea articolului marcat în documentele de vânzare, numai pentru art
 
 Configurarea agentului care deține drepturile de autor asupra diferitelor articole se realizează prin definirea unui registru de tip agent. 
 
-În mod normal, acești subiecți nu sunt supuși impozitului reținut la sursă sau contribuții, deci va fi necesar să creați o [Categorie agentconfigurations/tables/sales/agent-category/) și un [Tip de reținereconfigurations/tables/finance/withholding-tax-types/) care nu prevăd contribuții sau procente de reținere la sursă.
+În mod normal, acești subiecți nu sunt supuși impozitului reținut la sursă sau contribuții, deci va fi necesar să creați o [Categorie agent](/docs/configurations/tables/sales/agent-category/) și un [Tip de reținere](/docs/configurations/tables/finance/withholding-tax-types/) care nu prevăd contribuții sau procente de reținere la sursă.
 
 În tab **Lichidare** se va indica tipul reținerii (care urmează să fie creat sau selectat, așa cum am menționat mai sus, un tip cu procent zero) și apoi criteriul de acumulare al comisionului așa cum se procedează pentru agent.
 

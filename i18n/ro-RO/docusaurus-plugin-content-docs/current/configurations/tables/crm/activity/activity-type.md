@@ -14,13 +14,13 @@ De asemenea, pot fi adăugate noi tipuri de activități cu ajutorul butonului !
 
 **Descriere detaliată**: reprezintă descrierea detaliată a activității;
 
-**Activitate**: permite definirea naturii activității și se referă la tabelul [Natură activitateconfigurations/tables/crm/activity/activity-nature/);
+**Activitate**: permite definirea naturii activității și se referă la tabelul [Natură activitate](/docs/configurations/tables/crm/activity/activity-nature/);
 
 **Descriere activitate**: reprezintă descrierea asociată naturii activității selectate;
 
 **Expiră în**: în acest câmp puteți indica numărul de zile pe care Fluentis va trebui să le stabilească automat pentru termenul limită al activității;
 
-**Obligatoriu**: dacă este activ, activitatea va fi considerată obligatorie în cadrul unui [Pipeline fluxconfigurations/tables/crm/pipeline-flux/new-pipeline-flux);
+**Obligatoriu**: dacă este activ, activitatea va fi considerată obligatorie în cadrul unui [Pipeline flux](/docs/configurations/tables/crm/pipeline-flux/new-pipeline-flux);
 
 **În evidență**: dacă este activ, activitatea va fi evidențiată în comparație cu celelalte dintr-un pipeline flux;
 

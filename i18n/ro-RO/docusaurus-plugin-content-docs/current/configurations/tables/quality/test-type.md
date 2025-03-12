@@ -25,10 +25,10 @@ Acestea pot fi utilizate în **Fișe tehnice** ca proprietate articol, în **Pla
 **Generic**: dacă este activ, acest test va trebui întodeauna să fie propus în planurile de control. Dacă nu este activ, în câmpul succesiv,**Tip document**, va fi posibilă inserarea documentelor în care va fi activat acest test.
 
 Tab **Atribute tip test**    
-Permite inserarea [Extra Dataconfigurations/utility/extra-data/extradata/search-extradata) generale pentru tipul de test corespondent.
+Permite inserarea [Extra Data](/docs/configurations/utility/extra-data/extradata/search-extradata) generale pentru tipul de test corespondent.
 
 Tab **Parametri configurare test și instrument de măsură**  
-Conține [Extra Dataconfigurations/utility/extra-data/extradata/search-extradata) necesari operatorilor pentru pregătirea tuturor instrumentelor necesare pentru a începe un anumit test. Pot fi luate în considerare configurările necesare, informațiile operaționale pregătitoare pentru efectuarea testului.
+Conține [Extra Data](/docs/configurations/utility/extra-data/extradata/search-extradata) necesari operatorilor pentru pregătirea tuturor instrumentelor necesare pentru a începe un anumit test. Pot fi luate în considerare configurările necesare, informațiile operaționale pregătitoare pentru efectuarea testului.
 
 Tab **Rezultate posibile**  
 Se poate personaliza, pentru fiecare test, rezultatele posibile dintr-o listă Rezultate. Când este detectat un singur test, în baza conformității sale, aplicația va propune rezultatul cu **Implicit pozitiv** sau **Implicit negativ**.

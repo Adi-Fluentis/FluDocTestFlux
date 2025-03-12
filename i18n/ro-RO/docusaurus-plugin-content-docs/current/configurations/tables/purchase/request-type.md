@@ -13,7 +13,7 @@ Pentru a insera datele, efectuați clic pe primul rând gol din tabel sau apăsa
 
 *Câmpuri specifice*
 
-**Numerotare**: consultați [Numerotări Fluentisconfigurations/tables/fluentis-numerations).   
+**Numerotare**: consultați [Numerotări Fluentis](/docs/configurations/tables/fluentis-numerations).   
 **CdC**: centrul de cost care va fi propus la crearea cererii de achiziţie. Poate rămâne necompletat dacă nu se utilizează modulul *Control de gestiune*.  
 **Gestiune/Descriere gestiune**: gestiunea care va fi utilizată pentru crearea cererii de achiziţie.  
 **Control disponibilitate**: dacă este activ, cererile de achiziţie create cu acest tip vor fi utilizate pentru calcularea disponibilităţii.  

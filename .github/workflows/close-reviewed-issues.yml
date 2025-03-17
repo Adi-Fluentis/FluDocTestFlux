@@ -18,8 +18,28 @@ jobs:
             const issueBody = issue.body;
             const repo = context.repo;
 
+            console.log("🔹 Issue Body Content:");
+            console.log(issue.body);
+      
             // Check if the last checkbox is marked ✅
             const allChecked = issueBody.includes("- [x] Mark as \"Reviewed\"");
+
+            console.log("🔹 Issue Number:", issueNumber);
+            console.log("🔹 Issue Body:", issueBody);
+
+            // Count total checkboxes and completed ones
+            const allCheckboxes = issueBody.match(/- \[[ x]\]/g) || [];
+            const completedCheckboxes = issueBody.match(/- \[x\]/g) || [];
+
+            console.log("✅ Total Checkboxes Found:", allCheckboxes.length);
+            console.log("✅ Completed Checkboxes:", completedCheckboxes.length);
+
+            const progress = allCheckboxes.length > 0 
+                ? Math.round((completedCheckboxes.length / allCheckboxes.length) * 100)
+                : 0;
+
+            console.log("📊 Progress Calculated:", progress, "%");
+
             
             if (allChecked) {
               github.rest.issues.update({

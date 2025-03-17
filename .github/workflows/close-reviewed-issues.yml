@@ -1,0 +1,31 @@
+name: Auto-Close Reviewed Issues
+
+on:
+  issues:
+    types: [edited]
+
+jobs:
+  close_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if all tasks are completed
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.payload.issue;
+            const issueNumber = issue.number;
+            const issueBody = issue.body;
+            const repo = context.repo;
+
+            // Check if the last checkbox is marked ✅
+            const allChecked = issueBody.includes("- [x] Mark as \"Reviewed\"");
+            
+            if (allChecked) {
+              github.rest.issues.update({
+                owner: repo.owner,
+                repo: repo.repo,
+                issue_number: issueNumber,
+                state: "closed"
+              });
+            }

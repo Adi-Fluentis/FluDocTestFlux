@@ -4,6 +4,10 @@ on:
   issues:
     types: [edited]
 
+concurrency:
+  group: auto-close-reviewed-issues
+  cancel-in-progress: true
+
 jobs:
   close_issue:
     runs-on: ubuntu-latest

@@ -1,0 +1,165 @@
+name: Update Project Progress
+
+on:
+  issues:
+    types: [edited]
+
+concurrency:
+  group: auto-close-reviewed-issues
+  cancel-in-progress: true
+
+jobs:
+  update_project_and_close_issue:
+    if: contains(github.event.issue.labels.*.name, 'review')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Progress Field & Move to Done
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.payload.issue;
+            const issueNumber = issue.number;
+            const issueBody = issue.body;
+            const repo = context.repo;
+            const owner = repo.owner;
+            const repoName = repo.repo;
+
+            console.log("🔹 Issue Number:", issueNumber);
+
+            // Count total checkboxes and completed ones
+            const allCheckboxes = issueBody.match(/- \[[ x]\]/g) || [];
+            const completedCheckboxes = issueBody.match(/- \[x\]/g) || [];
+
+            console.log("✅ Total Checkboxes Found:", allCheckboxes.length);
+            console.log("✅ Completed Checkboxes:", completedCheckboxes.length);
+
+            const progress = allCheckboxes.length > 0 
+                ? Math.round((completedCheckboxes.length / allCheckboxes.length) * 100)
+                : 0;
+
+            console.log("📊 Progress Calculated:", progress, "%");
+
+            // Fetch all projects linked to this issue
+            const projectsResponse = await github.graphql(`
+              query($owner: String!, $repo: String!, $issueNumber: Int!) {
+                repository(owner: $owner, name: $repo) {
+                  issue(number: $issueNumber) {
+                    projectItems(first: 1) {
+                      nodes {
+                        id
+                        project {
+                          id
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `, { owner, repo: repoName, issueNumber });
+
+            const projectItems = projectsResponse.repository.issue.projectItems.nodes;
+
+            if (projectItems.length === 0) {
+              console.log("❌ No project found for this issue.");
+              return;
+            }
+
+            // Use the first project linked to the issue
+            const projectId = projectItems[0].project.id;
+            const itemId = projectItems[0].id;
+            console.log("🔹 Project ID:", projectId);
+            console.log("🔹 Project Item ID:", itemId);
+
+            // Get the project fields (Progress & Status)
+            const fieldsResponse = await github.graphql(`
+              query($projectId: ID!) {
+                node(id: $projectId) {
+                  ... on ProjectV2 {
+                    fields(first: 10) {
+                      nodes {
+                        id
+                        name
+                        ... on ProjectV2SingleSelectField {
+                          options {
+                            id
+                            name
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `, { projectId });
+
+            let progressFieldId = null;
+            let statusFieldId = null;
+            let doneStatusValueId = null;
+
+            fieldsResponse.node.fields.nodes.forEach(field => {
+              if (field.name === "Progress") {
+                progressFieldId = field.id;
+              }
+              if (field.name === "Status") {
+                statusFieldId = field.id;
+                field.options.forEach(option => {
+                  if (option.name === "Done") {
+                    doneStatusValueId = option.id;
+                  }
+                });
+              }
+            });
+
+            if (!progressFieldId || !statusFieldId || !doneStatusValueId) {
+              console.log("❌ Missing required project fields.");
+              return;
+            }
+
+            // Update the Progress field
+            await github.graphql(`
+              mutation($projectId: ID!, $itemId: ID!, $progressFieldId: ID!, $progress: String!) {
+                updateProjectV2ItemFieldValue(input: {
+                  projectId: $projectId,
+                  itemId: $itemId,
+                  fieldId: $progressFieldId,
+                  value: { text: $progress }
+                }) {
+                  projectV2Item {
+                    id
+                  }
+                }
+              }
+            `, { projectId, itemId, progressFieldId, progress: `${progress}%` });
+
+            console.log("✅ Progress field updated.");
+
+            // Move to Done and close if progress is 100%
+            if (progress === 100) {
+              await github.graphql(`
+                mutation($projectId: ID!, $itemId: ID!, $statusFieldId: ID!, $doneStatusValueId: ID!) {
+                  updateProjectV2ItemFieldValue(input: {
+                    projectId: $projectId,
+                    itemId: $itemId,
+                    fieldId: $statusFieldId,
+                    value: { singleSelectOptionId: $doneStatusValueId }
+                  }) {
+                    projectV2Item {
+                      id
+                    }
+                  }
+                }
+              `, { projectId, itemId, statusFieldId, doneStatusValueId });
+
+              console.log("✅ Moved to Done in project.");
+
+              // Close the GitHub Issue
+              await github.rest.issues.update({
+                owner,
+                repo: repoName,
+                issue_number: issueNumber,
+                state: "closed"
+              });
+
+              console.log("✅ Issue closed.");
+            }

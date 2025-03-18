@@ -58,12 +58,19 @@ jobs:
               }
             `, { owner, repo: repoName, issueNumber });
 
+            console.log("🔍 Fetching projects linked to issue...");
+            console.log(JSON.stringify(projectsResponse, null, 2));  // Prints full API response
+
             const projectItems = projectsResponse.repository.issue.projectItems.nodes;
+            console.log("📝 Project Items Retrieved:", projectItems.length);
 
             if (projectItems.length === 0) {
               console.log("❌ No project found for this issue.");
               return;
             }
+
+            console.log("📌 First Project ID:", projectItems[0].project.id);
+            console.log("📌 First Project Item ID:", projectItems[0].id);
 
             // Use the first project linked to the issue
             const projectId = projectItems[0].project.id;

@@ -146,19 +146,19 @@ jobs:
 
             // Update the Progress field
             await github.graphql(`
-              mutation($projectId: ID!, $itemId: ID!, $progressFieldId: ID!, $progress: String!) {
+              mutation($projectId: ID!, $itemId: ID!, $progressFieldId: ID!, $progress: Float!) {
                 updateProjectV2ItemFieldValue(input: {
                   projectId: $projectId,
                   itemId: $itemId,
                   fieldId: $progressFieldId,
-                  value: { text: $progress }
+                  value: { number: $progress }
                 }) {
                   projectV2Item {
                     id
                   }
                 }
               }
-            `, { projectId, itemId, progressFieldId, progress: `${progress}%` });
+            `, { projectId, itemId, progressFieldId, progress);
 
             console.log("✅ Progress field updated.");
 

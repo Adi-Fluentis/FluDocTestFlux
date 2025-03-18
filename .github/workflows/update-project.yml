@@ -5,7 +5,7 @@ on:
     types: [edited]
 
 concurrency:
-  group: auto-close-reviewed-issues
+  group: auto-close-update-project-progress
   cancel-in-progress: true
 
 jobs:

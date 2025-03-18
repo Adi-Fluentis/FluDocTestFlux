@@ -48,39 +48,35 @@ jobs:
 
             // Fetch all projects linked to this issue
             const projectsResponse = await github.graphql(`
-              query($owner: String!, $repo: String!, $issueNumber: Int!) {
-                repository(owner: $owner, name: $repo) {
-                  issue(number: $issueNumber) {
-                    projectItems(first: 1) {
-                      nodes {
+            query($owner: String!, $repo: String!, $issueNumber: Int!) {
+              repository(owner: $owner, name: $repo) {
+                issue(number: $issueNumber) {
+                  projectItems(first: 1) {
+                    nodes {
+                      id
+                      project {
                         id
-                        project {
-                          id
-                        }
+                        title
                       }
                     }
                   }
                 }
               }
+            }
             `, { owner, repo: repoName, issueNumber });
 
-            console.log("🔍 Fetching projects linked to issue...");
-            console.log(JSON.stringify(projectsResponse, null, 2));  // Prints full API response
+            console.log("📌 Full Projects V2 Response:", JSON.stringify(projectsResponse, null, 2));
 
             const projectItems = projectsResponse.repository.issue.projectItems.nodes;
-            console.log("📝 Project Items Retrieved:", projectItems.length);
-
             if (projectItems.length === 0) {
               console.log("❌ No project found for this issue.");
               return;
             }
 
-            console.log("📌 First Project ID:", projectItems[0].project.id);
-            console.log("📌 First Project Item ID:", projectItems[0].id);
-
-            // Use the first project linked to the issue
             const projectId = projectItems[0].project.id;
             const itemId = projectItems[0].id;
+
+            console.log("✅ Found Project:", projectItems[0].project.title);
             console.log("🔹 Project ID:", projectId);
             console.log("🔹 Project Item ID:", itemId);
 

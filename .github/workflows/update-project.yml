@@ -82,9 +82,17 @@ jobs:
                   fields(first: 20) {  # Increased to 20 to retrieve all fields
                     nodes {
                       __typename  # Helps us determine field type at runtime
-                      
+
+                      # Common fields (for fields with name & ID)
+                      ... on ProjectV2FieldCommon {
+                        id
+                        name
+                      }
+
                       # Single-select fields (e.g., "Status")
                       ... on ProjectV2SingleSelectField {
+                        id
+                        name
                         options {
                           id
                           name
@@ -92,8 +100,9 @@ jobs:
                       }
 
                       # Number fields (e.g., "Progress")
-                      ... on ProjectV2FieldCommon {
-                        dataType  # Ensures we are dealing with a number field
+                      ... on ProjectV2IterationField {
+                        id
+                        name
                       }
                     }
                   }
@@ -133,6 +142,7 @@ jobs:
             console.log("✅ Progress Field ID:", progressFieldId);
             console.log("✅ Status Field ID:", statusFieldId);
             console.log("✅ Done Status Value ID:", doneStatusValueId);
+
 
             // Update the Progress field
             await github.graphql(`

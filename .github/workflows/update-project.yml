@@ -83,12 +83,6 @@ jobs:
                     nodes {
                       __typename  # Helps us determine field type at runtime
 
-                      # Common fields (for fields with name & ID)
-                      ... on ProjectV2FieldCommon {
-                        id
-                        name
-                      }
-
                       # Single-select fields (e.g., "Status")
                       ... on ProjectV2SingleSelectField {
                         id
@@ -121,7 +115,7 @@ jobs:
               console.log(`🔹 Found Field: ${field.name} (Type: ${field.__typename})`);
 
               // Identify "Progress" field
-              if (field.__typename === "ProjectV2FieldCommon" && field.name === "Progress") {
+              if (field.__typename === "ProjectV2Field" && field.name === "Progress") {
                 progressFieldId = field.id;
               }
 

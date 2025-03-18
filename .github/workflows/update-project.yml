@@ -75,38 +75,52 @@ jobs:
             console.log("🔹 Project ID:", projectId);
             console.log("🔹 Project Item ID:", itemId);
 
-            // Get the project fields (Progress & Status)
             const fieldsResponse = await github.graphql(`
-              query($projectId: ID!) {
-                node(id: $projectId) {
-                  ... on ProjectV2 {
-                    fields(first: 10) {
-                      nodes {
-                        id
-                        name
-                        ... on ProjectV2SingleSelectField {
-                          options {
-                            id
-                            name
-                          }
+            query($projectId: ID!) {
+              node(id: $projectId) {
+                ... on ProjectV2 {
+                  fields(first: 20) {  # Increased to 20 to retrieve all fields
+                    nodes {
+                      __typename  # Helps us determine field type at runtime
+                      
+                      # Single-select fields (e.g., "Status")
+                      ... on ProjectV2SingleSelectField {
+                        options {
+                          id
+                          name
                         }
+                      }
+
+                      # Number fields (e.g., "Progress")
+                      ... on ProjectV2FieldCommon {
+                        dataType  # Ensures we are dealing with a number field
                       }
                     }
                   }
                 }
               }
+            }
             `, { projectId });
 
+            // Variables to store field IDs
             let progressFieldId = null;
             let statusFieldId = null;
             let doneStatusValueId = null;
 
+            // Process retrieved fields
             fieldsResponse.node.fields.nodes.forEach(field => {
-              if (field.name === "Progress") {
+              console.log(`🔹 Found Field: ${field.name} (Type: ${field.__typename})`);
+
+              // Identify "Progress" field
+              if (field.__typename === "ProjectV2FieldCommon" && field.name === "Progress") {
                 progressFieldId = field.id;
               }
-              if (field.name === "Status") {
+
+              // Identify "Status" field
+              if (field.__typename === "ProjectV2SingleSelectField" && field.name === "Status") {
                 statusFieldId = field.id;
+
+                // Find "Done" status option
                 field.options.forEach(option => {
                   if (option.name === "Done") {
                     doneStatusValueId = option.id;
@@ -115,10 +129,10 @@ jobs:
               }
             });
 
-            if (!progressFieldId || !statusFieldId || !doneStatusValueId) {
-              console.log("❌ Missing required project fields.");
-              return;
-            }
+            // Debugging output
+            console.log("✅ Progress Field ID:", progressFieldId);
+            console.log("✅ Status Field ID:", statusFieldId);
+            console.log("✅ Done Status Value ID:", doneStatusValueId);
 
             // Update the Progress field
             await github.graphql(`

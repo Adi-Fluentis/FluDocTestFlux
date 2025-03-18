@@ -158,7 +158,7 @@ jobs:
                   }
                 }
               }
-            `, { projectId, itemId, progressFieldId, progress);
+            `, { projectId, itemId, progressFieldId, progress });
 
             console.log("✅ Progress field updated.");
 

@@ -83,6 +83,12 @@ jobs:
                     nodes {
                       __typename  # Helps us determine field type at runtime
 
+                      # Common fields (for fields with name & ID)
+                      ... on ProjectV2FieldCommon {
+                        id
+                        name
+                      }
+
                       # Single-select fields (e.g., "Status")
                       ... on ProjectV2SingleSelectField {
                         id

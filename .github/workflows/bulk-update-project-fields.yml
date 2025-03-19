@@ -112,8 +112,8 @@ jobs:
                     return;
                 }
 
-                // ✅ Fix: Ensure labels exist before accessing `.map()`
-                const labels = (issue.labels && issue.labels.nodes) ? issue.labels.nodes.map(label => label.name) : [];
+                const labels = issue.labels?.nodes?.map(label => label.name) ?? issue.labels?.map(label => label.name) ?? [];
+
                 console.log(`🔎 Debug: Labels on Issue #${issue.number}:`, labels);  // 🛠 Add this debug line
 
                 if (!labels.includes("review")) {

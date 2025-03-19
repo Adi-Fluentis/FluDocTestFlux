@@ -56,40 +56,40 @@ jobs:
 
             // Loop through each issue in the project
             for (const item of projectItems) {
-              const issue = item.content;
+                const issue = item.content;
 
-              if (!issue || !issue.body) {
-                console.log(`❌ Skipping Issue #${issue?.number || "Unknown"} - No content.`);
-                continue;
-              }
-
-              console.log(`🔹 Processing Issue #${issue.number}: ${issue.title}`);
-
-              // Extract estimated word count
-              const wordCountMatch = issue.body.match(/📊 \*\*Estimated Word Count:\*\* (\d+)/);
-              const totalWords = wordCountMatch ? parseInt(wordCountMatch[1], 10) : 0;
-
-              if (totalWords === 0) {
-                console.log("❌ No word count found, skipping update.");
-                continue;
-              }
-
-              console.log("📊 Total Words in Issue:", totalWords);
-
-              // Find completed tasks and sum words
-              let completedWords = 0;
-              const allTasks = issue.body.match(/- \[[ x]\] \*\*(.*?)\*\* \| (\d+)/g) || [];
-
-              allTasks.forEach(task => {
-                const match = task.match(/- \[x\] \*\*(.*?)\*\* \| (\d+)/);
-                if (match) {
-                  completedWords += parseInt(match[2], 10);
+                if (!issue || !issue.body) {
+                    console.log(`❌ Skipping Issue #${issue?.number || "Unknown"} - No content.`);
+                    continue;
                 }
-              });
 
-              console.log("✅ Completed Words:", completedWords);
+                console.log(`🔹 Processing Issue #${issue.number}: ${issue.title}`);
 
-              // Compute percentage
-              const progressPercent = totalWords > 0 ? Math.round((completedWords / totalWords) * 100) : 0;
-              console.log("📊 Progress Calculated:", progressPercent, "%");
+                // Extract estimated word count
+                const wordCountMatch = issue.body.match(/\*\*Estimated Word Count:\*\* (\d+)/);
+                const totalWords = wordCountMatch ? parseInt(wordCountMatch[1], 10) : 0;
+
+                if (totalWords === 0) {
+                    console.log("❌ No word count found, skipping update.");
+                    continue;
+                }
+
+                console.log("📊 Total Words in Issue:", totalWords);
+
+                // Find completed tasks and sum words
+                let completedWords = 0;
+                const allTasks = issue.body.match(/- \[[x]\] (.*?) \| (\d+)/g) || [];
+
+                allTasks.forEach(task => {
+                    const match = task.match(/- \[[x]\] .*? \| (\d+)/);
+                    if (match) {
+                        completedWords += parseInt(match[1], 10);
+                    }
+                });
+
+                console.log("✅ Completed Words:", completedWords);
+
+                // Compute percentage
+                const progressPercent = totalWords > 0 ? Math.round((completedWords / totalWords) * 100) : 0;
+                console.log("📊 Progress Calculated:", progressPercent, "%");
             }

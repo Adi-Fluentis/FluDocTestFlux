@@ -18,51 +18,86 @@ jobs:
         with:
           github-token: ${{ secrets.GH_PAT }}
           script: |
-            const issue = context.payload.issue;
-
-            if (!issue) {
-              console.log("❌ No issue found in payload. Exiting.");
-              return;
-            }
-
             const repo = context.repo;
             const owner = repo.owner;
             const repoName = repo.repo;
-            const issueNumber = issue.number;
-            const issueBody = issue.body || "";  // Ensure issueBody is always a string
 
-            console.log("🔹 Issue Number:", issueNumber);
+            console.log("🔹 Fetching all issues in the project...");
 
-            // Extract estimated word count from issue body
-            const wordCountMatch = issueBody.match(/Estimated Word Count:\s*([\d,]+)/);
-            const totalWords = wordCountMatch?.[1] ? parseInt(wordCountMatch[1].replace(/,/g, ''), 10) : 0;
+            // Fetch the project and all issues
+            const projectsResponse = await github.graphql(`
+            query($owner: String!, $repo: String!) {
+              repository(owner: $owner, name: $repo) {
+                projectV2(number: 1) {  // Adjust project number if needed
+                  items(first: 50) {   // Adjust if you need more issues
+                    nodes {
+                      id
+                      content {
+                        ... on Issue {
+                          number
+                          title
+                          body
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }`, { owner, repo: repoName });
 
-            if (totalWords === 0) {
-              console.log("❌ No word count found, skipping update.");
+            const projectItems = projectsResponse.repository?.projectV2?.items?.nodes || [];
+
+            if (projectItems.length === 0) {
+              console.log("❌ No issues found in the project.");
               return;
             }
 
-            console.log("📊 Total Words in Issue:", totalWords);
+            console.log(`✅ Found ${projectItems.length} issues. Processing...`);
 
-            // Find completed tasks and sum words
-            let completedWords = 0;
-            const allCheckboxes = issueBody.match(/- \[[ x]\] \*\*(.*?)\*\* \(([\d,]+) words\)/g) || [];
+            // Loop through each issue in the project
+            for (const item of projectItems) {
+              const issue = item.content;
 
-            allCheckboxes.forEach(line => {
-              if (line.includes("- [x]")) {
-                const wordMatch = line.match(/\(([\d,]+) words\)/);
-                if (wordMatch?.[1]) {
-                  completedWords += parseInt(wordMatch[1].replace(/,/g, ''), 10) || 0;
-                }
+              if (!issue || !issue.body) {
+                console.log(`❌ Skipping Issue #${issue?.number || "Unknown"} - No content.`);
+                continue;
               }
-            });
 
-            console.log("✅ Completed Words:", completedWords);
+              console.log(`🔹 Processing Issue #${issue.number}: ${issue.title}`);
 
-            // Compute percentage
-            const progressPercent = totalWords > 0 ? Math.round((completedWords / totalWords) * 100) : 0;
-            console.log("📊 Progress Calculated:", progressPercent, "%");
+              // Extract estimated word count from issue body
+              const wordCountMatch = issue.body.match(/Estimated Word Count:\s*([\d,]+)/);
+              const totalWords = wordCountMatch?.[1] ? parseInt(wordCountMatch[1].replace(/,/g, ''), 10) : 0;
 
-            console.log("✅ Progress field updated.");
+              if (totalWords === 0) {
+                console.log(`❌ Skipping Issue #${issue.number} - No word count found.`);
+                continue;
+              }
+
+              console.log(`📊 Total Words in Issue #${issue.number}: ${totalWords}`);
+
+              // Find completed tasks and sum words
+              let completedWords = 0;
+              const allCheckboxes = issue.body.match(/- \[[ x]\] \*\*(.*?)\*\* \(([\d,]+) words\)/g) || [];
+
+              allCheckboxes.forEach(line => {
+                if (line.includes("- [x]")) {
+                  const wordMatch = line.match(/\(([\d,]+) words\)/);
+                  if (wordMatch?.[1]) {
+                    completedWords += parseInt(wordMatch[1].replace(/,/g, ''), 10) || 0;
+                  }
+                }
+              });
+
+              console.log(`✅ Completed Words for Issue #${issue.number}: ${completedWords}`);
+
+              // Compute percentage
+              const progressPercent = totalWords > 0 ? Math.round((completedWords / totalWords) * 100) : 0;
+              console.log(`📊 Progress for Issue #${issue.number}: ${progressPercent}%`);
+
+              console.log(`✅ Done processing Issue #${issue.number}.`);
+            }
+
+            console.log("✅ Finished processing all issues.");
 
 

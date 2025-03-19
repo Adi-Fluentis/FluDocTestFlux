@@ -119,11 +119,7 @@ jobs:
             fieldsResponse.node.fields.nodes.forEach(field => {
               console.log(`🔹 Found Field: ${field.name} (Type: ${field.__typename})`);
 
-              if (field.name === "Weight") weightFieldId = field.id;
-              if (field.name === "Completed Weight") completedWeightFieldId = field.id;
-              if (field.name === "Progress") progressFieldId = field.id;
-            });
-
+       
             console.log("✅ Weight Field ID:", weightFieldId);
             console.log("✅ Completed Weight Field ID:", completedWeightFieldId);
             console.log("✅ Progress Field ID:", progressFieldId);

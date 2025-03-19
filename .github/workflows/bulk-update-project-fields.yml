@@ -16,7 +16,7 @@ jobs:
         id: get_issues
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_PAT }}
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
@@ -36,7 +36,7 @@ jobs:
         id: update_project
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_PAT }}
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
@@ -55,6 +55,11 @@ jobs:
               // Extract word count from body
               const wordMatch = issueBody.match(/Estimated Word Count: (\d+)/);
               const wordCount = wordMatch ? parseInt(wordMatch[1], 10) : 0;
+
+              if (!wordCount || wordCount === 0) {
+                console.log(`❌ Skipping Issue #${issueNumber} - No word count found.`);
+                continue;
+              }
 
               // Count total and completed checkboxes
               const allCheckboxes = (issueBody.match(/- \[[ x]\]/g) || []).length;

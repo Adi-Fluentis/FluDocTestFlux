@@ -65,39 +65,32 @@ jobs:
 
               console.log(`🔹 Processing Issue #${issue.number}: ${issue.title}`);
 
-              // Extract estimated word count from issue body
-              const wordCountMatch = issue.body.match(/Estimated Word Count:\s*([\d,]+)/);
-              const totalWords = wordCountMatch?.[1] ? parseInt(wordCountMatch[1].replace(/,/g, ''), 10) : 0;
+              // Extract estimated word count
+              const wordCountMatch = issueBody.match(/📊 \*\*Estimated Word Count:\*\* (\d+)/);
+              const totalWords = wordCountMatch ? parseInt(wordCountMatch[1], 10) : 0;
 
               if (totalWords === 0) {
-                console.log(`❌ Skipping Issue #${issue.number} - No word count found.`);
-                continue;
+                console.log("❌ No word count found, skipping update.");
+                return;
               }
 
-              console.log(`📊 Total Words in Issue #${issue.number}: ${totalWords}`);
+              console.log("📊 Total Words in Issue:", totalWords);
 
               // Find completed tasks and sum words
               let completedWords = 0;
-              const allCheckboxes = issue.body.match(/- \[[ x]\] \*\*(.*?)\*\* \(([\d,]+) words\)/g) || [];
+              const allTasks = issueBody.match(/- \[[ x]\] \*\*(.*?)\*\* \| (\d+)/g) || [];
 
-              allCheckboxes.forEach(line => {
-                if (line.includes("- [x]")) {
-                  const wordMatch = line.match(/\(([\d,]+) words\)/);
-                  if (wordMatch?.[1]) {
-                    completedWords += parseInt(wordMatch[1].replace(/,/g, ''), 10) || 0;
-                  }
+              allTasks.forEach(task => {
+                const match = task.match(/- \[x\] \*\*(.*?)\*\* \| (\d+)/);
+                if (match) {
+                  completedWords += parseInt(match[2], 10);
                 }
               });
 
-              console.log(`✅ Completed Words for Issue #${issue.number}: ${completedWords}`);
+              console.log("✅ Completed Words:", completedWords);
 
               // Compute percentage
               const progressPercent = totalWords > 0 ? Math.round((completedWords / totalWords) * 100) : 0;
-              console.log(`📊 Progress for Issue #${issue.number}: ${progressPercent}%`);
-
-              console.log(`✅ Done processing Issue #${issue.number}.`);
-            }
-
-            console.log("✅ Finished processing all issues.");
+              console.log("📊 Progress Calculated:", progressPercent, "%");
 
 

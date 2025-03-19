@@ -29,6 +29,7 @@ jobs:
             query($owner: String!, $repo: String!) {
               repository(owner: $owner, name: $repo) {
                 projectV2(number: 1) {  
+                  id  # ✅ Ensure the project ID is fetched
                   items(first: 50) {   
                     nodes {
                       id

@@ -102,4 +102,98 @@ jobs:
                 // Compute percentage
                 const progressPercent = totalWords > 0 ? Math.round((completedWords / totalWords) * 100) : 0;
                 console.log("📊 Progress Calculated:", progressPercent, "%");
+
+                // ✅ Step 1: Fetch Project Fields
+                const fieldsResponse = await github.graphql(`
+                query($projectId: ID!) {
+                  node(id: $projectId) {
+                    ... on ProjectV2 {
+                      fields(first: 20) {
+                        nodes {
+                          __typename
+                          ... on ProjectV2FieldCommon {
+                            id
+                            name
+                          }
+                        }
+                      }
+                    }
+                  }
+                }`, { projectId });
+
+                console.log("📌 Full Fields Response:", JSON.stringify(fieldsResponse, null, 2));
+
+                // ✅ Step 2: Extract Field IDs
+                let weightFieldId = null;
+                let completedWeightFieldId = null;
+                let progressFieldId = null;
+
+                fieldsResponse.node.fields.nodes.forEach(field => {
+                    console.log(`🔹 Found Field: ${field.name} (Type: ${field.__typename})`);
+                    if (field.name === "Weight") weightFieldId = field.id;
+                    if (field.name === "Completed Weight") completedWeightFieldId = field.id;
+                    if (field.name === "Progress") progressFieldId = field.id;
+                });
+
+                console.log("✅ Weight Field ID:", weightFieldId);
+                console.log("✅ Completed Weight Field ID:", completedWeightFieldId);
+                console.log("✅ Progress Field ID:", progressFieldId);
+
+                // ✅ Step 3: Ensure we have valid field IDs before updating
+                if (!weightFieldId || !completedWeightFieldId || !progressFieldId) {
+                    console.log("❌ One or more field IDs are missing. Skipping update.");
+                    return;
+                }
+
+                // ✅ Step 4: Update the Weight (Total Word Count)
+                await github.graphql(`
+                mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: Float!) {
+                  updateProjectV2ItemFieldValue(input: {
+                    projectId: $projectId,
+                    itemId: $itemId,
+                    fieldId: $fieldId,
+                    value: { number: $value }
+                  }) {
+                    projectV2Item {
+                      id
+                    }
+                  }
+                }`, { projectId, itemId, fieldId: weightFieldId, value: totalWords });
+
+                console.log("✅ Weight field updated.");
+
+                // ✅ Step 5: Update the Completed Weight (Completed Words)
+                await github.graphql(`
+                mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: Float!) {
+                  updateProjectV2ItemFieldValue(input: {
+                    projectId: $projectId,
+                    itemId: $itemId,
+                    fieldId: $fieldId,
+                    value: { number: $value }
+                  }) {
+                    projectV2Item {
+                      id
+                    }
+                  }
+                }`, { projectId, itemId, fieldId: completedWeightFieldId, value: completedWords });
+
+                console.log("✅ Completed Weight field updated.");
+
+                // ✅ Step 6: Update the Progress Field (Percentage Completed)
+                await github.graphql(`
+                mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: Float!) {
+                  updateProjectV2ItemFieldValue(input: {
+                    projectId: $projectId,
+                    itemId: $itemId,
+                    fieldId: $fieldId,
+                    value: { number: $value }
+                  }) {
+                    projectV2Item {
+                      id
+                    }
+                  }
+                }`, { projectId, itemId, fieldId: progressFieldId, value: progressPercent });
+
+                console.log("✅ Progress field updated.");
+
             }

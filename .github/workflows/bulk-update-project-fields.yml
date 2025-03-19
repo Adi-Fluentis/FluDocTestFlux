@@ -28,8 +28,8 @@ jobs:
             const projectsResponse = await github.graphql(`
             query($owner: String!, $repo: String!) {
               repository(owner: $owner, name: $repo) {
-                projectV2(number: 1) {  // Adjust project number if needed
-                  items(first: 50) {   // Adjust if you need more issues
+                projectV2(number: 1) {  
+                  items(first: 50) {   
                     nodes {
                       id
                       content {

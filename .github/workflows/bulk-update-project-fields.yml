@@ -6,8 +6,8 @@ on:
     types: [opened, edited]  # Trigger on issue creation or edit
 
 concurrency:
-  group: auto-close-update-project-progress
-  cancel-in-progress: true
+  group: ${{ github.event_name == 'opened' && github.run_id || 'update-project-progress' }}  # if edited or manual, use the same group
+  cancel-in-progress: ${{ github.event_name != 'opened' }}
 
 jobs:
   update_project_fields:

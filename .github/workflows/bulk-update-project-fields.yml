@@ -116,10 +116,6 @@ jobs:
             let completedWeightFieldId = null;
             let progressFieldId = null;
 
-            fieldsResponse.node.fields.nodes.forEach(field => {
-              console.log(`🔹 Found Field: ${field.name} (Type: ${field.__typename})`);
-
-       
             console.log("✅ Weight Field ID:", weightFieldId);
             console.log("✅ Completed Weight Field ID:", completedWeightFieldId);
             console.log("✅ Progress Field ID:", progressFieldId);

@@ -65,8 +65,14 @@ jobs:
 
                 console.log(`🔹 Processing Issue #${issue.number}: ${issue.title}`);
 
+                // Print the full issue body for debugging
+                console.log("📜 Issue Body:", issue.body);
+
                 // Extract estimated word count
                 const wordCountMatch = issue.body.match(/\*\*Estimated Word Count:\*\* (\d+)/);
+
+                console.log("🕵️‍♂️ Debug: Word Count Match Result:", wordCountMatch);
+
                 const totalWords = wordCountMatch ? parseInt(wordCountMatch[1], 10) : 0;
 
                 if (totalWords === 0) {
@@ -80,9 +86,13 @@ jobs:
                 let completedWords = 0;
                 const allTasks = issue.body.match(/- \[[x]\] (.*?) \| (\d+)/g) || [];
 
+                console.log("🔎 Debug: Matched Completed Tasks:", allTasks);
+
                 allTasks.forEach(task => {
+                    console.log("🛠 Parsing Task:", task);
                     const match = task.match(/- \[[x]\] .*? \| (\d+)/);
                     if (match) {
+                        console.log("✅ Matched Word Count:", match[1]);
                         completedWords += parseInt(match[1], 10);
                     }
                 });

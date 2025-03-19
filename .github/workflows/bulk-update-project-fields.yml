@@ -66,19 +66,19 @@ jobs:
               console.log(`🔹 Processing Issue #${issue.number}: ${issue.title}`);
 
               // Extract estimated word count
-              const wordCountMatch = issueBody.match(/📊 \*\*Estimated Word Count:\*\* (\d+)/);
+              const wordCountMatch = issue.body.match(/📊 \*\*Estimated Word Count:\*\* (\d+)/);
               const totalWords = wordCountMatch ? parseInt(wordCountMatch[1], 10) : 0;
 
               if (totalWords === 0) {
                 console.log("❌ No word count found, skipping update.");
-                return;
+                continue;
               }
 
               console.log("📊 Total Words in Issue:", totalWords);
 
               // Find completed tasks and sum words
               let completedWords = 0;
-              const allTasks = issueBody.match(/- \[[ x]\] \*\*(.*?)\*\* \| (\d+)/g) || [];
+              const allTasks = issue.body.match(/- \[[ x]\] \*\*(.*?)\*\* \| (\d+)/g) || [];
 
               allTasks.forEach(task => {
                 const match = task.match(/- \[x\] \*\*(.*?)\*\* \| (\d+)/);
@@ -92,5 +92,4 @@ jobs:
               // Compute percentage
               const progressPercent = totalWords > 0 ? Math.round((completedWords / totalWords) * 100) : 0;
               console.log("📊 Progress Calculated:", progressPercent, "%");
-
-
+            }

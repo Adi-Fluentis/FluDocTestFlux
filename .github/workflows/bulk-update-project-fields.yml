@@ -5,6 +5,10 @@ on:
   issues:
     types: [opened, edited]  # Trigger on issue creation or edit
 
+concurrency:
+  group: auto-close-update-project-progress
+  cancel-in-progress: true
+
 jobs:
   update_project_fields:
     runs-on: ubuntu-latest

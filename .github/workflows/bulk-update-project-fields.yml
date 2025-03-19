@@ -57,37 +57,5 @@ jobs:
             const progressPercent = totalWords > 0 ? Math.round((completedWords / totalWords) * 100) : 0;
             console.log("📊 Progress Calculated:", progressPercent, "%");
 
-            // Fetch the project linked to the issue
-            const projectsResponse = await github.graphql(`
-            query($owner: String!, $repo: String!, $issueNumber: Int!) {
-              repository(owner: $owner, name: $repo) {
-                issue(number: $issueNumber) {
-                  projectItems(first: 1) {
-                    nodes {
-                      id
-                      project {
-                        id
-                        title
-                      }
-                    }
-                  }
-                }
-              }
-            }`, { owner, repo: repoName, issueNumber });
-
-            const projectItems = projectsResponse.repository.issue.projectItems.nodes;
-            if (projectItems.length === 0) {
-              console.log("❌ No project found for this issue.");
-              return;
-            }
-
-            const projectId = projectItems[0].project.id;
-            const itemId = projectItems[0].id;
-
-            console.log("✅ Found Project:", projectItems[0].project.title);
-            console.log("🔹 Project ID:", projectId);
-            console.log("🔹 Project Item ID:", itemId);
-
-        
-
+          
             console.log("✅ Progress field updated.");

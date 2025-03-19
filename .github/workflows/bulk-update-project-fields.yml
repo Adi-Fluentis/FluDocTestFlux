@@ -1,8 +1,7 @@
 name: Update Project Fields
 
 on:
-  issues:
-    types: [edited]
+ workflow_dispatch: # Manual trigger
 
 jobs:
   update_project_fields:

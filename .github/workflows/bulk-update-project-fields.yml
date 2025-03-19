@@ -112,7 +112,9 @@ jobs:
                     return;
                 }
 
-                const labels = issue.labels?.nodes.map(label => label.name) || [];
+                // ✅ Fix: Ensure labels exist before accessing `.map()`
+                const labels = (issue.labels && issue.labels.nodes) ? issue.labels.nodes.map(label => label.name) : [];
+
                 if (!labels.includes("review")) {
                     console.log(`❌ Skipping Issue #${issue.number} - Missing 'review' label.`);
                     return;

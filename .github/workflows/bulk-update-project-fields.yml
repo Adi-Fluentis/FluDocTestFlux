@@ -1,0 +1,117 @@
+name: Bulk Update Issues with Weight and Absolute Progress
+
+on:
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  update_issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug Token and Repo Info
+        run: |
+          echo "🔹 Repository: ${{ github.repository }}"
+          echo "🔹 Triggered by: ${{ github.actor }}"
+
+      - name: Fetch All Open Issues
+        id: get_issues
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            
+            console.log("🔹 Fetching open issues...");
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: "open",
+              per_page: 100
+            });
+
+            console.log(`✅ Found ${issues.length} issues.`);
+            return issues;
+
+      - name: Update Issues in Project
+        id: update_project
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const projectId = "PVT_kwHOCmCTV84A0kLb"; // Replace with your actual project ID
+            const issues = ${{ steps.get_issues.outputs.result }};
+
+            console.log("🔹 Project ID:", projectId);
+            console.log(`🔹 Updating ${issues.length} issues...`);
+
+            for (const issue of issues) {
+              const issueNumber = issue.number;
+              const issueBody = issue.body || "";
+              
+              console.log(`\n🔹 Processing Issue #${issueNumber}`);
+
+              // Extract word count from body
+              const wordMatch = issueBody.match(/Estimated Word Count: (\d+)/);
+              const wordCount = wordMatch ? parseInt(wordMatch[1], 10) : 0;
+
+              // Count total and completed checkboxes
+              const allCheckboxes = (issueBody.match(/- \[[ x]\]/g) || []).length;
+              const completedCheckboxes = (issueBody.match(/- \[x\]/g) || []).length;
+              const absoluteProgress = Math.round((completedCheckboxes / allCheckboxes) * wordCount) || 0;
+
+              console.log(`  📊 Word Count: ${wordCount}`);
+              console.log(`  ✅ Completed Words: ${absoluteProgress}`);
+
+              // Get project item ID
+              const projectItemsResponse = await github.graphql(`
+                query($owner: String!, $repo: String!, $issueNumber: Int!) {
+                  repository(owner: $owner, name: $repo) {
+                    issue(number: $issueNumber) {
+                      projectItems(first: 1) {
+                        nodes {
+                          id
+                        }
+                      }
+                    }
+                  }
+                }
+              `, { owner, repo, issueNumber });
+
+              const projectItem = projectItemsResponse.repository.issue.projectItems.nodes[0];
+              if (!projectItem) {
+                console.log(`❌ Issue #${issueNumber} is not in the project.`);
+                continue;
+              }
+
+              const itemId = projectItem.id;
+              console.log(`  ✅ Issue is in project. Item ID: ${itemId}`);
+
+              // Update fields in the project
+              await github.graphql(`
+                mutation($projectId: ID!, $itemId: ID!, $weight: Float!, $progress: Float!) {
+                  updateProjectV2ItemFieldValue(input: {
+                    projectId: $projectId,
+                    itemId: $itemId,
+                    fieldId: "Weight_Field_ID",   # Replace with actual field ID
+                    value: { number: $weight }
+                  }) {
+                    projectV2Item { id }
+                  }
+                  updateProjectV2ItemFieldValue(input: {
+                    projectId: $projectId,
+                    itemId: $itemId,
+                    fieldId: "Absolute_Progress_Field_ID",  # Replace with actual field ID
+                    value: { number: $progress }
+                  }) {
+                    projectV2Item { id }
+                  }
+                }
+              `, { projectId, itemId, weight: wordCount, progress: absoluteProgress });
+
+              console.log(`  ✅ Updated Weight (${wordCount}) & Absolute Progress (${absoluteProgress})`);
+            }
+
+      - name: Finish
+        run: echo "✅ All issues updated successfully!"

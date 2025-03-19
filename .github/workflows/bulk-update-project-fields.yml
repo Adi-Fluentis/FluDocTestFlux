@@ -127,54 +127,71 @@ jobs:
             console.log("✅ Weight Field ID:", weightFieldId);
             console.log("✅ Completed Weight Field ID:", completedWeightFieldId);
             console.log("✅ Progress Field ID:", progressFieldId);
+            
+            // Ensure we have valid IDs for fields
+            if (!weightFieldId || !completedWeightFieldId || !progressFieldId) {
+                console.log("❌ One or more field IDs are missing. Aborting.");
+                return;
+            }
 
-            // Update Weight field
-            await github.graphql(`
-            mutation($projectId: ID!, $itemId: ID!, $weightFieldId: ID!, $totalWords: Float!) {
-              updateProjectV2ItemFieldValue(input: {
-                projectId: $projectId,
-                itemId: $itemId,
-                fieldId: $weightFieldId,
-                value: { number: $totalWords }
-              }) {
-                projectV2Item {
-                  id
-                }
-              }
-            }`, { projectId, itemId, weightFieldId, totalWords });
+            // Ensure values are valid
+            if (totalWords === null || completedWords === null || progressPercent === null) {
+                console.log("❌ Some values are missing, skipping update.");
+                return;
+            }
 
-            console.log("✅ Weight field updated.");
+            console.log(`📌 Updating fields with:
+              Weight Field ID: ${weightFieldId} -> ${totalWords}
+              Completed Weight Field ID: ${completedWeightFieldId} -> ${completedWords}
+              Progress Field ID: ${progressFieldId} -> ${progressPercent}`);
 
-            // Update Completed Weight field
-            await github.graphql(`
-            mutation($projectId: ID!, $itemId: ID!, $completedWeightFieldId: ID!, $completedWords: Float!) {
-              updateProjectV2ItemFieldValue(input: {
-                projectId: $projectId,
-                itemId: $itemId,
-                fieldId: $completedWeightFieldId,
-                value: { number: $completedWords }
-              }) {
-                projectV2Item {
-                  id
-                }
-              }
-            }`, { projectId, itemId, completedWeightFieldId, completedWords });
+            # // Update Weight field
+            # await github.graphql(`
+            # mutation($projectId: ID!, $itemId: ID!, $weightFieldId: ID!, $totalWords: Float!) {
+            #   updateProjectV2ItemFieldValue(input: {
+            #     projectId: $projectId,
+            #     itemId: $itemId,
+            #     fieldId: $weightFieldId,
+            #     value: { number: $totalWords }
+            #   }) {
+            #     projectV2Item {
+            #       id
+            #     }
+            #   }
+            # }`, { projectId, itemId, weightFieldId, totalWords });
 
-            console.log("✅ Completed Weight field updated.");
+            # console.log("✅ Weight field updated.");
 
-            // Update Progress field
-            await github.graphql(`
-            mutation($projectId: ID!, $itemId: ID!, $progressFieldId: ID!, $progressPercent: Float!) {
-              updateProjectV2ItemFieldValue(input: {
-                projectId: $projectId,
-                itemId: $itemId,
-                fieldId: $progressFieldId,
-                value: { number: $progressPercent }
-              }) {
-                projectV2Item {
-                  id
-                }
-              }
-            }`, { projectId, itemId, progressFieldId, progressPercent });
+            # // Update Completed Weight field
+            # await github.graphql(`
+            # mutation($projectId: ID!, $itemId: ID!, $completedWeightFieldId: ID!, $completedWords: Float!) {
+            #   updateProjectV2ItemFieldValue(input: {
+            #     projectId: $projectId,
+            #     itemId: $itemId,
+            #     fieldId: $completedWeightFieldId,
+            #     value: { number: $completedWords }
+            #   }) {
+            #     projectV2Item {
+            #       id
+            #     }
+            #   }
+            # }`, { projectId, itemId, completedWeightFieldId, completedWords });
+
+            # console.log("✅ Completed Weight field updated.");
+
+            # // Update Progress field
+            # await github.graphql(`
+            # mutation($projectId: ID!, $itemId: ID!, $progressFieldId: ID!, $progressPercent: Float!) {
+            #   updateProjectV2ItemFieldValue(input: {
+            #     projectId: $projectId,
+            #     itemId: $itemId,
+            #     fieldId: $progressFieldId,
+            #     value: { number: $progressPercent }
+            #   }) {
+            #     projectV2Item {
+            #       id
+            #     }
+            #   }
+            # }`, { projectId, itemId, progressFieldId, progressPercent });
 
             console.log("✅ Progress field updated.");

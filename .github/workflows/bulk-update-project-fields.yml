@@ -176,6 +176,18 @@ jobs:
 
                 await updateField(progressFieldId, progressPercent);
                 console.log("✅ Progress field updated.");
+
+                // ✅ Auto-Close Issue if Progress Reaches 100%
+                if (progressPercent === 100) {
+                    console.log("🚀 Issue is fully completed (100% progress). Closing issue...");
+                    await github.rest.issues.update({
+                        owner: repo.owner,
+                        repo: repo.repo,
+                        issue_number: issue.number,
+                        state: "closed"
+                    });
+                    console.log("✅ Issue successfully closed.");
+                }
             }
 
             // ✅ Run bulk processing only when triggered manually

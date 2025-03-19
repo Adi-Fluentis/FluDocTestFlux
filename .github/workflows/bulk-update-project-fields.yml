@@ -23,15 +23,15 @@ jobs:
             const owner = repo.owner;
             const repoName = repo.repo;
             const issueNumber = issue.number;
-            const issueBody = issue.body;
+            const issueBody = issue.body || "";  // Ensure issueBody is always a string
 
             console.log("🔹 Issue Number:", issueNumber);
-            
+
             // Extract estimated word count from issue body
             const wordCountMatch = issueBody.match(/Estimated Word Count:\s*([\d,]+)/);
-            const totalWords = wordCountMatch ? parseInt(wordCountMatch[1].replace(/,/g, ''), 10) : null;
-            
-            if (!totalWords) {
+            const totalWords = wordCountMatch ? parseInt(wordCountMatch[1].replace(/,/g, ''), 10) : 0;
+
+            if (totalWords === 0) {
               console.log("❌ No word count found, skipping update.");
               return;
             }
@@ -41,12 +41,12 @@ jobs:
             // Find completed tasks and sum words
             let completedWords = 0;
             const allCheckboxes = issueBody.match(/- \[[ x]\] \*\*(.*?)\*\* \(([\d,]+) words\)/g) || [];
-            
+
             allCheckboxes.forEach(line => {
               if (line.includes("- [x]")) {
                 const wordMatch = line.match(/\(([\d,]+) words\)/);
                 if (wordMatch) {
-                  completedWords += parseInt(wordMatch[1].replace(/,/g, ''), 10);
+                  completedWords += parseInt(wordMatch[1].replace(/,/g, ''), 10) || 0;
                 }
               }
             });
@@ -57,5 +57,5 @@ jobs:
             const progressPercent = totalWords > 0 ? Math.round((completedWords / totalWords) * 100) : 0;
             console.log("📊 Progress Calculated:", progressPercent, "%");
 
-          
             console.log("✅ Progress field updated.");
+

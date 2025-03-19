@@ -69,7 +69,7 @@ jobs:
                 console.log("📜 Issue Body:", issue.body);
 
                 // Extract estimated word count
-                const wordCountMatch = issue.body.match(/\*\*Estimated Word Count:\*\* (\d+)/);
+                const wordCountMatch = issue.body.match(/\*\*\s*Estimated Word Count\s*\*\*:\s*(\d+)/);
 
                 console.log("🕵️‍♂️ Debug: Word Count Match Result:", wordCountMatch);
 

@@ -105,7 +105,13 @@ jobs:
                 }
               }
             }`, { projectId });
+            console.log("📌 Full Fields Response:", JSON.stringify(fieldsResponse, null, 2));
 
+            // Check if fields exist before looping
+            if (!fieldsResponse.node || !fieldsResponse.node.fields || !fieldsResponse.node.fields.nodes) {
+                console.log("❌ No fields found in response.");
+                return;
+            }
             let weightFieldId = null;
             let completedWeightFieldId = null;
             let progressFieldId = null;

@@ -5,7 +5,7 @@ on:
     types: [edited]
 
 concurrency:
-  group: auto-close-reviewed-issues
+  group: auto-close-reviewed-issue-${{ github.event.issue.number }}
   cancel-in-progress: true
 
 jobs:

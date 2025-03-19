@@ -45,6 +45,16 @@ jobs:
               }
             }`, { owner, repo: repoName });
 
+            // ✅ Extract Project ID from the GraphQL response
+            const projectId = projectsResponse.repository?.projectV2?.id;
+
+            if (!projectId) {
+                console.log("❌ Project ID not found in response. Skipping update.");
+                return;
+            }
+
+            console.log("✅ Found Project ID:", projectId);
+
             const projectItems = projectsResponse.repository?.projectV2?.items?.nodes || [];
 
             if (projectItems.length === 0) {

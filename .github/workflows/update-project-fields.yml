@@ -102,6 +102,7 @@ jobs:
             let progressFieldId = null;
             let endDateFieldId = null;
             let statusField = null;
+            let inProgressOption = null;
 
             fieldsResponse.node.fields.nodes.forEach(field => {
                 if (field.name === "Weight") weightFieldId = field.id;
@@ -117,7 +118,11 @@ jobs:
             }
 
             // Find the "In Progress" option inside the field options
-            const inProgressOption = statusField.options.find(option => option.name === "In Progress");
+            statusField.options.forEach(option => {
+              if (option.name === "In Progress") {
+                inProgressOption = option.id;
+              }
+            });
 
             if (!inProgressOption) {
                 console.log("❌ 'In Progress' option not found.");

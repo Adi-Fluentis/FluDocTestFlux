@@ -189,7 +189,11 @@ jobs:
                         state: "closed"
                     });
                     console.log("✅ Issue successfully closed.");
-                    // update closed date
+
+                    // Set End Date (Current Date)
+                    const today = new Date().toISOString().split("T")[0];
+                    console.log(`📅 Setting End Date to: ${today}`);
+
                     await github.graphql(`
                       mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: Date!) {
                         updateProjectV2ItemFieldValue(input: {

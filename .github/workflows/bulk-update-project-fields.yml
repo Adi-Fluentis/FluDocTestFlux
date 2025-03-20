@@ -88,14 +88,16 @@ jobs:
             let weightFieldId = null;
             let completedWeightFieldId = null;
             let progressFieldId = null;
+            let endDateFieldId = null;
 
             fieldsResponse.node.fields.nodes.forEach(field => {
                 if (field.name === "Weight") weightFieldId = field.id;
                 if (field.name === "Completed Weight") completedWeightFieldId = field.id;
                 if (field.name === "Progress") progressFieldId = field.id;
+                if (field.name === "End Date") endDateFieldId = field.id;
             });
 
-            if (!weightFieldId || !completedWeightFieldId || !progressFieldId) {
+            if (!weightFieldId || !completedWeightFieldId || !progressFieldId || !endDateFieldId) {
                 console.log("❌ Missing one or more field IDs. Skipping update.");
                 return;
             }
@@ -187,6 +189,22 @@ jobs:
                         state: "closed"
                     });
                     console.log("✅ Issue successfully closed.");
+                    // update closed date
+                    await github.graphql(`
+                      mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: Date!) {
+                        updateProjectV2ItemFieldValue(input: {
+                          projectId: $projectId,
+                          itemId: $itemId,
+                          fieldId: $fieldId,
+                          value: { date: $value } 
+                        }) {
+                          projectV2Item {
+                            id
+                          }
+                        }
+                      }`, { projectId, itemId, fieldId: endDateFieldId, value: new Date(today) });
+
+                      console.log("✅ End Date successfully updated!");
                 }
             }
 

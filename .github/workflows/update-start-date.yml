@@ -18,10 +18,12 @@ jobs:
           script: |
             const issue = context.payload.issue;
             const repo = context.repo;
+            const repoName = repo.repo;
             const owner = repo.owner;
             const assignees = issue.assignees.map(a => a.login);
             const editor = context.payload.sender.login;
 
+            console.log(`Repo: ${repoName}, Owner: ${owner}, Editor: ${editor}`);
             console.log(`🔍 Issue #${issue.number} was edited by: ${editor}`);
 
             // Only proceed if the editor is an assignee
@@ -48,7 +50,7 @@ jobs:
                   }
                 }
               }
-            }`, { owner, repo: repo.name }); // ✅ Fixed repo.repo -> repo.name
+            }`, { owner, repo: repoName }); 
 
             const projectId = projectsResponse.repository?.projectV2?.id;
             if (!projectId) {

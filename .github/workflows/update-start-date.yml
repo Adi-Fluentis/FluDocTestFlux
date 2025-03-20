@@ -48,7 +48,7 @@ jobs:
                   }
                 }
               }
-            }`, { owner, repo: repo.repo });
+            }`, { owner, repo: repo.name }); // ✅ Fixed repo.repo -> repo.name
 
             const projectId = projectsResponse.repository?.projectV2?.id;
             if (!projectId) {
@@ -73,16 +73,21 @@ jobs:
                 ... on ProjectV2 {
                   fields(first: 20) {
                     nodes {
-                        __typename
-                        ... on ProjectV2FieldCommon {
-                            id
-                            name
-                        }
+                      __typename
+                      ... on ProjectV2FieldCommon {
+                        id
+                        name
+                      }
                     }
                   }
                 }
               }
             }`, { projectId });
+
+            if (!fieldsResponse.node || !fieldsResponse.node.fields) {
+              console.log("❌ Failed to fetch project fields.");
+              return;
+            }
 
             const fields = fieldsResponse.node.fields.nodes;
             const startDateField = fields.find(f => f.name === "Start Date");
@@ -94,27 +99,32 @@ jobs:
 
             const startDateFieldId = startDateField.id;
 
-            // Check if Start Date is already set (if the issue already has a start date, do nothing)
+            // Check if Start Date is already set
             console.log(`🔎 Checking if Start Date is already set for Issue #${issue.number}`);
 
             const itemFieldsResponse = await github.graphql(`
             query($itemId: ID!) {
-                node(id: $itemId) {
-                    ... on ProjectV2Item {
-                    fieldValues(first: 10) {
-                        nodes {
-                        __typename
-                        ... on ProjectV2ItemFieldDateValue {
-                            field {
-                            name
-                            }
-                            date
+              node(id: $itemId) {
+                ... on ProjectV2Item {
+                  fieldValues(first: 10) {
+                    nodes {
+                      __typename
+                      ... on ProjectV2ItemFieldDateValue {
+                        field {
+                          name
                         }
-                        }
+                        date
+                      }
                     }
-                    }
+                  }
                 }
+              }
             }`, { itemId });
+
+            if (!itemFieldsResponse.node || !itemFieldsResponse.node.fieldValues) {
+              console.log("❌ Failed to fetch item fields.");
+              return;
+            }
 
             const startDateFieldValue = itemFieldsResponse.node.fieldValues.nodes.find(
                 f => f.field?.name === "Start Date" // ✅ Ensure 'field' is not undefined
@@ -125,7 +135,6 @@ jobs:
                 return;
             }
 
-
             // Set Start Date (Current Date)
             const today = new Date().toISOString().split("T")[0];
 
@@ -133,16 +142,16 @@ jobs:
 
             await github.graphql(`
             mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: String!) {
-            updateProjectV2ItemFieldValue(input: {
+              updateProjectV2ItemFieldValue(input: {
                 projectId: $projectId,
                 itemId: $itemId,
                 fieldId: $fieldId,
                 value: { date: $value }  // ✅ Use `date` instead of `text`
-            }) {
+              }) {
                 projectV2Item {
-                id
+                  id
                 }
-            }
+              }
             }`, { projectId, itemId, fieldId: startDateFieldId, value: today });
 
             console.log("✅ Start Date successfully updated!");

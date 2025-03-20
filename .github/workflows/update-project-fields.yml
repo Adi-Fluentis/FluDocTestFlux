@@ -117,20 +117,20 @@ jobs:
                 return;
             }
 
-            // Find the "In Progress" option inside the field options
+            if (statusField && statusField.__typename === "ProjectV2SingleSelectField" && statusField.options) {
             statusField.options.forEach(option => {
-              if (option.name === "In Progress") {
-                inProgressStatusOption = option.id;
-              }
+                if (option.name === "In Progress") {
+                    inProgressStatusOptionId = option.id;
+                }
             });
+            } else {
+                console.log("❌ 'Status' field does not have selectable options or is of incorrect type.");
+            }
 
-            if (!inProgressStatusOption) {
+            if (!inProgressStatusOptionId) {
                 console.log("❌ 'In Progress' option not found.");
                 return;
             }
-
-            const inProgressOptionId = inProgressStatusOption.id;
-            console.log(`✅ 'In Progress' Option ID: ${inProgressOptionId}`);
 
             // ✅ Function to process a single issue
             async function processIssue(issue, itemId) {

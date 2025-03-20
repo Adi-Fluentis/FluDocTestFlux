@@ -22,6 +22,7 @@ jobs:
             const owner = repo.owner;
             const assignees = issue.assignees.map(a => a.login);
             const editor = context.payload.sender.login;
+            const PROJECT_NUMBER = 3;  // Change this if you need to update the project number
 
             console.log(`Repo: ${repoName}, Owner: ${owner}, Editor: ${editor}`);
             console.log(`🔍 Issue #${issue.number} was edited by: ${editor}`);
@@ -34,9 +35,9 @@ jobs:
 
             // Fetch the project ID
             const projectsResponse = await github.graphql(`
-            query($owner: String!, $repo: String!) {
-              repository(owner: $owner, name: $repo) {
-                projectV2(number: 1) {
+            query($owner: String!, $projectNumber: Int!) {
+              user(login: $owner) {  
+                projectV2(number: $projectNumber) {  
                   id
                   items(first: 50) {
                     nodes {
@@ -50,16 +51,16 @@ jobs:
                   }
                 }
               }
-            }`, { owner, repo: repoName }); 
+            }`, { owner, projectNumber: PROJECT_NUMBER }); 
 
-            const projectId = projectsResponse.repository?.projectV2?.id;
+            const projectId = projectsResponse.user?.projectV2?.id;
             if (!projectId) {
               console.log("❌ Project ID not found. Exiting.");
               return;
             }
 
             // Find the matching project item
-            const projectItems = projectsResponse.repository?.projectV2?.items?.nodes || [];
+            const projectItems = projectsResponse.user?.projectV2?.items?.nodes || [];
             const item = projectItems.find(item => item.content?.number === issue.number);
             if (!item) {
               console.log(`❌ Issue #${issue.number} is not in the project.`);

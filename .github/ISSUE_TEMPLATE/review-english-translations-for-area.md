@@ -7,7 +7,12 @@ assignees: Adi-Fluentis
 
 ---
 
-### 📌 Modules:
+**📖 Review Progress for professional-men**
 
-- [ ] [MODULE1]
-- [ ] [MODULE2]
+🔍 **Estimated Word Count**: [total weight(weight1 + wight2 +..)]
+
+### ✅ Review Checklist:
+- [ ] **[module1]** | [weight1]
+- [ ] **[module2]** | [weight2]
+
+⏳ Track progress by checking off each item.

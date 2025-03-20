@@ -67,7 +67,7 @@ jobs:
             }
             console.log("✅ Found Project ID:", projectId);
 
-            const projectItems = projectsResponse.repository?.projectV2?.items?.nodes || [];
+            const projectItems = projectsResponse.user?.projectV2?.items?.nodes || [];
 
             console.log(`✅ Found ${projectItems.length} issues in project.`);
 

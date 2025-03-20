@@ -139,7 +139,7 @@ jobs:
                 return;
             }
 
-            /*
+            
 
             // Set Start Date (Current Date)
             const today = new Date().toISOString().split("T")[0];
@@ -152,7 +152,7 @@ jobs:
                 projectId: $projectId,
                 itemId: $itemId,
                 fieldId: $fieldId,
-                value: { date: $value }  // ✅ Use `date` instead of `text`
+                value: { date: $value } 
               }) {
                 projectV2Item {
                   id
@@ -161,4 +161,4 @@ jobs:
             }`, { projectId, itemId, fieldId: startDateFieldId, value: today });
 
             console.log("✅ Start Date successfully updated!");
-            */
+            

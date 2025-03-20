@@ -98,31 +98,32 @@ jobs:
             console.log(`🔎 Checking if Start Date is already set for Issue #${issue.number}`);
 
             const itemFieldsResponse = await github.graphql(`
-            query($projectId: ID!, $itemId: ID!) {
+            query($itemId: ID!) {
                 node(id: $itemId) {
                     ... on ProjectV2Item {
                     fieldValues(first: 10) {
                         nodes {
                         __typename
-                        ... on ProjectV2ItemFieldTextValue {
+                        ... on ProjectV2ItemFieldDateValue {
                             field {
                             name
                             }
-                            text
+                            date
                         }
                         }
                     }
                     }
                 }
-            }`, { projectId, itemId });
+            }`, { itemId });
 
             const startDateFieldValue = itemFieldsResponse.node.fieldValues.nodes.find(
-              f => f.field.name === "Start Date"
+            f => f.field.name === "Start Date"
             );
 
-            if (startDateFieldValue?.text) {
-              console.log(`✅ Start Date already set: ${startDateFieldValue.text}`);
-              return;
+            // ✅ Check `date` instead of `text`
+            if (startDateFieldValue?.date) {
+            console.log(`✅ Start Date already set: ${startDateFieldValue.date}`);
+            return;
             }
 
             // Set Start Date (Current Date)
@@ -132,16 +133,16 @@ jobs:
 
             await github.graphql(`
             mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: String!) {
-              updateProjectV2ItemFieldValue(input: {
+            updateProjectV2ItemFieldValue(input: {
                 projectId: $projectId,
                 itemId: $itemId,
                 fieldId: $fieldId,
-                value: { text: $value }
-              }) {
+                value: { date: $value }  // ✅ Use `date` instead of `text`
+            }) {
                 projectV2Item {
-                  id
+                id
                 }
-              }
+            }
             }`, { projectId, itemId, fieldId: startDateFieldId, value: today });
 
             console.log("✅ Start Date successfully updated!");

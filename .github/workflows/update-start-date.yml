@@ -111,9 +111,9 @@ jobs:
                 fieldValues(first: 10) {
                     nodes {
                     __typename
-                    ... on ProjectV2ItemFieldDateValue {  // ✅ If it's a date field
+                    ... on ProjectV2ItemFieldDateValue {
                         field {
-                        ... on ProjectV2FieldCommon {   // ✅ Explicitly specify common field types
+                        ... on ProjectV2FieldCommon {
                             name
                         }
                         }

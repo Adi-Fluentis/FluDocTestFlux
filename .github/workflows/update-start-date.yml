@@ -103,7 +103,7 @@ jobs:
 
             // Check if Start Date is already set
             console.log(`🔎 Checking if Start Date is already set for Issue #${issue.number}`);
-            /*
+
             const itemFieldsResponse = await github.graphql(`
             query($itemId: ID!) {
               node(id: $itemId) {
@@ -136,6 +136,8 @@ jobs:
                 console.log(`✅ Start Date already set: ${startDateFieldValue.date}`);
                 return;
             }
+
+            /*
 
             // Set Start Date (Current Date)
             const today = new Date().toISOString().split("T")[0];

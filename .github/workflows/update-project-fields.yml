@@ -33,10 +33,10 @@ jobs:
 
             console.log("🔹 Fetching all issues in the project...");
 
-            // Fetch the project and all issues
+            // Fetch the project and all issues (User-Level Project)
             const projectsResponse = await github.graphql(`
-            query($owner: String!, $repo: String!, $projectNumber: Int!) {
-              repository(owner: $owner, name: $repo) {
+            query($owner: String!, $projectNumber: Int!) {
+              user(login: $owner) {  
                 projectV2(number: $projectNumber) {  
                   id  
                   items(first: 50) {   
@@ -56,7 +56,8 @@ jobs:
                   }
                 }
               }
-            }`, { owner, repo: repoName, projectNumber: PROJECT_NUMBER });
+            }`, { owner, projectNumber: PROJECT_NUMBER }); 
+
 
             // ✅ Extract Project ID
             const projectId = projectsResponse.repository?.projectV2?.id;

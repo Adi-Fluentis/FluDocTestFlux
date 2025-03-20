@@ -147,7 +147,7 @@ jobs:
             console.log(`📅 Setting Start Date to: ${today}`);
 
             await github.graphql(`
-            mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: String!) {
+            mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: Date!) {
               updateProjectV2ItemFieldValue(input: {
                 projectId: $projectId,
                 itemId: $itemId,
@@ -158,7 +158,7 @@ jobs:
                   id
                 }
               }
-            }`, { projectId, itemId, fieldId: startDateFieldId, value: today });
+            }`, { projectId, itemId, fieldId: startDateFieldId, value: new Date(today });
 
             console.log("✅ Start Date successfully updated!");
             

@@ -7,7 +7,7 @@ assignees: Adi-Fluentis
 
 ---
 
-**📖 Review Progress for professional-men**
+**📖 Review Progress for [Area Name]**
 
 🔍 **Estimated Word Count**: [total weight(weight1 + wight2 +..)]
 

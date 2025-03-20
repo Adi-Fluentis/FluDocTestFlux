@@ -24,8 +24,8 @@ jobs:
         with:
           github-token: ${{ secrets.GH_PAT }}
           script: |
-            const PROJECT_NUMBER = 1;  // Change this if you need to update the project number
-            const REQUIRED_LABEL = "review"; // Change this if you want a different label
+            const PROJECT_NUMBER = 3;  // Change this if you need to update the project number
+            const REQUIRED_LABEL = "review-auto-translation"; // Change this if you want a different label
 
             const repo = context.repo;
             const owner = repo.owner;

@@ -89,7 +89,7 @@ jobs:
               return;
             }
 
-            const fields = fieldsResponse.node.fields.nodes;
+            const fields = fieldsResponse.node.fields.nodes || [];
             const startDateField = fields.find(f => f.name === "Start Date");
 
             if (!startDateField) {
@@ -127,7 +127,7 @@ jobs:
             }
 
             const startDateFieldValue = itemFieldsResponse.node.fieldValues.nodes.find(
-                f => f.field?.name === "Start Date" // ✅ Ensure 'field' is not undefined
+                f => f?.field?.name === "Start Date" // ✅ Ensure 'field' is not undefined
             );
 
             if (startDateFieldValue?.date) {  // ✅ Correctly checks `date`

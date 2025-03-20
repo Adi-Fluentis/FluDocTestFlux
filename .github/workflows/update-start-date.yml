@@ -158,7 +158,7 @@ jobs:
                   id
                 }
               }
-            }`, { projectId, itemId, fieldId: startDateFieldId, value: new Date(today });
+            }`, { projectId, itemId, fieldId: startDateFieldId, value: new Date(today) });
 
             console.log("✅ Start Date successfully updated!");
             

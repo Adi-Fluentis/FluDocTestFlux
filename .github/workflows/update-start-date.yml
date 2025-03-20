@@ -73,8 +73,11 @@ jobs:
                 ... on ProjectV2 {
                   fields(first: 20) {
                     nodes {
-                      id
-                      name
+                        __typename
+                        ... on ProjectV2FieldCommon {
+                            id
+                            name
+                        }
                     }
                   }
                 }
@@ -96,18 +99,21 @@ jobs:
 
             const itemFieldsResponse = await github.graphql(`
             query($projectId: ID!, $itemId: ID!) {
-              node(id: $projectId) {
-                ... on ProjectV2Item {
-                  fieldValues(first: 10) {
-                    nodes {
-                      ... on ProjectV2ItemFieldTextValue {
-                        field { name }
-                        text
-                      }
+                node(id: $itemId) {
+                    ... on ProjectV2Item {
+                    fieldValues(first: 10) {
+                        nodes {
+                        __typename
+                        ... on ProjectV2ItemFieldTextValue {
+                            field {
+                            name
+                            }
+                            text
+                        }
+                        }
                     }
-                  }
+                    }
                 }
-              }
             }`, { projectId, itemId });
 
             const startDateFieldValue = itemFieldsResponse.node.fieldValues.nodes.find(

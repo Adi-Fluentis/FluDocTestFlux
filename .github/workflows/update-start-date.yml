@@ -8,7 +8,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update_project_fields:
+  update_start_date:
     runs-on: ubuntu-latest
     steps:
       - name: Update Start Date if Missing

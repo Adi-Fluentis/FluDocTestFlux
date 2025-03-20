@@ -24,6 +24,9 @@ jobs:
         with:
           github-token: ${{ secrets.GH_PAT }}
           script: |
+            const PROJECT_NUMBER = 1;  // Change this if you need to update the project number
+            const REQUIRED_LABEL = "review"; // Change this if you want a different label
+
             const repo = context.repo;
             const owner = repo.owner;
             const repoName = repo.repo;
@@ -32,9 +35,9 @@ jobs:
 
             // Fetch the project and all issues
             const projectsResponse = await github.graphql(`
-            query($owner: String!, $repo: String!) {
+            query($owner: String!, $repo: String!, $projectNumber: Int!) {
               repository(owner: $owner, name: $repo) {
-                projectV2(number: 1) {  
+                projectV2(number: $projectNumber) {  
                   id  
                   items(first: 50) {   
                     nodes {
@@ -53,7 +56,7 @@ jobs:
                   }
                 }
               }
-            }`, { owner, repo: repoName });
+            }`, { owner, repo: repoName, projectNumber: PROJECT_NUMBER });
 
             // ✅ Extract Project ID
             const projectId = projectsResponse.repository?.projectV2?.id;
@@ -118,7 +121,7 @@ jobs:
 
                 console.log(`🔎 Debug: Labels on Issue #${issue.number}:`, labels);  // 🛠 Add this debug line
 
-                if (!labels.includes("review")) {
+                if (!labels.includes(REQUIRED_LABEL)) {
                     console.log(`❌ Skipping Issue #${issue.number} - Missing 'review' label.`);
                     return;
                 }
@@ -230,8 +233,10 @@ jobs:
                   // Ensure projectItems exists before searching for the itemId
                   let itemId = projectItems?.find(item => item.content?.number === issue.number)?.id || null;
 
-                  // If not found, add the issue to the project
-                  if (!itemId) {
+                  // If not found and the label is present, add the issue to the project
+                  const labels = issue.labels?.nodes?.map(label => label.name) ?? issue.labels?.map(label => label.name) ?? [];
+
+                  if (!itemId && labels.includes(REQUIRED_LABEL)) {
                       console.log("➕ Issue not found in project, adding...");
                       const addItemResponse = await github.graphql(`
                       mutation($projectId: ID!, $contentId: ID!) {

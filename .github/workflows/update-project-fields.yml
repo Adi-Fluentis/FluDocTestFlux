@@ -83,6 +83,14 @@ jobs:
                         id
                         name
                       }
+                      ... on ProjectV2SingleSelectField {
+                        id
+                        name
+                        options {
+                          id
+                          name
+                        }
+                      }
                     }
                   }
                 }
@@ -93,18 +101,31 @@ jobs:
             let completedWeightFieldId = null;
             let progressFieldId = null;
             let endDateFieldId = null;
+            let statusField = null;
 
             fieldsResponse.node.fields.nodes.forEach(field => {
                 if (field.name === "Weight") weightFieldId = field.id;
                 if (field.name === "Completed Weight") completedWeightFieldId = field.id;
                 if (field.name === "Progress") progressFieldId = field.id;
                 if (field.name === "End Date") endDateFieldId = field.id;
+                if (field.name === "Status") statusField = field.id;
             });
 
-            if (!weightFieldId || !completedWeightFieldId || !progressFieldId || !endDateFieldId) {
+            if (!weightFieldId || !completedWeightFieldId || !progressFieldId || !endDateFieldId || !statusField) {
                 console.log("❌ Missing one or more field IDs. Skipping update.");
                 return;
             }
+
+            // Find the "In Progress" option inside the field options
+            const inProgressOption = statusField.options.find(option => option.name === "In Progress");
+
+            if (!inProgressOption) {
+                console.log("❌ 'In Progress' option not found.");
+                return;
+            }
+
+            const inProgressOptionId = inProgressOption.id;
+            console.log(`✅ 'In Progress' Option ID: ${inProgressOptionId}`);
 
             // ✅ Function to process a single issue
             async function processIssue(issue, itemId) {

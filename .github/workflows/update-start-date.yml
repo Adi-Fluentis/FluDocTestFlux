@@ -117,14 +117,14 @@ jobs:
             }`, { itemId });
 
             const startDateFieldValue = itemFieldsResponse.node.fieldValues.nodes.find(
-            f => f.field.name === "Start Date"
+                f => f.field?.name === "Start Date" // ✅ Ensure 'field' is not undefined
             );
 
-            // ✅ Check `date` instead of `text`
-            if (startDateFieldValue?.date) {
-            console.log(`✅ Start Date already set: ${startDateFieldValue.date}`);
-            return;
+            if (startDateFieldValue?.date) {  // ✅ Correctly checks `date`
+                console.log(`✅ Start Date already set: ${startDateFieldValue.date}`);
+                return;
             }
+
 
             // Set Start Date (Current Date)
             const today = new Date().toISOString().split("T")[0];

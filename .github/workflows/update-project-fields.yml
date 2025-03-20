@@ -59,8 +59,8 @@ jobs:
             }`, { owner, projectNumber: PROJECT_NUMBER }); 
 
 
-            // ✅ Extract Project ID
-            const projectId = projectsResponse.repository?.projectV2?.id;
+            // ✅ Extract Project ID (Fix for User-Level Project)
+            const projectId = projectsResponse.user?.projectV2?.id;  // 🔹 Use `user` instead of `repository`
             if (!projectId) {
                 console.log("❌ Project ID not found. Skipping update.");
                 return;

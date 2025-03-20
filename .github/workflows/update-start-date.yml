@@ -1,0 +1,141 @@
+name: Update Project Start Date
+
+on:
+  issues:
+    types: [edited]  # Run when an issue is edited
+concurrency:
+  group: set-start-date-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  update_project_fields:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Start Date if Missing
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_PAT }}
+          script: |
+            const issue = context.payload.issue;
+            const repo = context.repo;
+            const owner = repo.owner;
+            const assignees = issue.assignees.map(a => a.login);
+            const editor = context.payload.sender.login;
+
+            console.log(`🔍 Issue #${issue.number} was edited by: ${editor}`);
+
+            // Only proceed if the editor is an assignee
+            if (!assignees.includes(editor)) {
+              console.log(`⏭️ Editor ${editor} is not an assignee. Skipping Start Date update.`);
+              return;
+            }
+
+            // Fetch the project ID
+            const projectsResponse = await github.graphql(`
+            query($owner: String!, $repo: String!) {
+              repository(owner: $owner, name: $repo) {
+                projectV2(number: 1) {
+                  id
+                  items(first: 50) {
+                    nodes {
+                      id
+                      content {
+                        ... on Issue {
+                          number
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }`, { owner, repo: repo.repo });
+
+            const projectId = projectsResponse.repository?.projectV2?.id;
+            if (!projectId) {
+              console.log("❌ Project ID not found. Exiting.");
+              return;
+            }
+
+            // Find the matching project item
+            const projectItems = projectsResponse.repository?.projectV2?.items?.nodes || [];
+            const item = projectItems.find(item => item.content?.number === issue.number);
+            if (!item) {
+              console.log(`❌ Issue #${issue.number} is not in the project.`);
+              return;
+            }
+
+            const itemId = item.id;
+
+            // Fetch Project Fields to check if "Start Date" exists
+            const fieldsResponse = await github.graphql(`
+            query($projectId: ID!) {
+              node(id: $projectId) {
+                ... on ProjectV2 {
+                  fields(first: 20) {
+                    nodes {
+                      id
+                      name
+                    }
+                  }
+                }
+              }
+            }`, { projectId });
+
+            const fields = fieldsResponse.node.fields.nodes;
+            const startDateField = fields.find(f => f.name === "Start Date");
+
+            if (!startDateField) {
+              console.log("❌ 'Start Date' field not found in project.");
+              return;
+            }
+
+            const startDateFieldId = startDateField.id;
+
+            // Check if Start Date is already set (if the issue already has a start date, do nothing)
+            console.log(`🔎 Checking if Start Date is already set for Issue #${issue.number}`);
+
+            const itemFieldsResponse = await github.graphql(`
+            query($projectId: ID!, $itemId: ID!) {
+              node(id: $projectId) {
+                ... on ProjectV2Item {
+                  fieldValues(first: 10) {
+                    nodes {
+                      ... on ProjectV2ItemFieldTextValue {
+                        field { name }
+                        text
+                      }
+                    }
+                  }
+                }
+              }
+            }`, { projectId, itemId });
+
+            const startDateFieldValue = itemFieldsResponse.node.fieldValues.nodes.find(
+              f => f.field.name === "Start Date"
+            );
+
+            if (startDateFieldValue?.text) {
+              console.log(`✅ Start Date already set: ${startDateFieldValue.text}`);
+              return;
+            }
+
+            // Set Start Date (Current Date)
+            const today = new Date().toISOString().split("T")[0];
+
+            console.log(`📅 Setting Start Date to: ${today}`);
+
+            await github.graphql(`
+            mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: String!) {
+              updateProjectV2ItemFieldValue(input: {
+                projectId: $projectId,
+                itemId: $itemId,
+                fieldId: $fieldId,
+                value: { text: $value }
+              }) {
+                projectV2Item {
+                  id
+                }
+              }
+            }`, { projectId, itemId, fieldId: startDateFieldId, value: today });
+
+            console.log("✅ Start Date successfully updated!");

@@ -5,7 +5,7 @@ on:
     types: [edited]  # Run when an issue is edited
 concurrency:
   group: set-start-date-${{ github.event.issue.number }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   update_project_fields:

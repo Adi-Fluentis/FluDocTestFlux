@@ -106,21 +106,23 @@ jobs:
 
             const itemFieldsResponse = await github.graphql(`
             query($itemId: ID!) {
-              node(id: $itemId) {
+            node(id: $itemId) {
                 ... on ProjectV2Item {
-                  fieldValues(first: 10) {
+                fieldValues(first: 10) {
                     nodes {
-                      __typename
-                      ... on ProjectV2ItemFieldDateValue {
+                    __typename
+                    ... on ProjectV2ItemFieldDateValue {  // ✅ If it's a date field
                         field {
-                          name
+                        ... on ProjectV2FieldCommon {   // ✅ Explicitly specify common field types
+                            name
+                        }
                         }
                         date
-                      }
                     }
-                  }
+                    }
                 }
-              }
+                }
+            }
             }`, { itemId });
 
             if (!itemFieldsResponse.node || !itemFieldsResponse.node.fieldValues) {

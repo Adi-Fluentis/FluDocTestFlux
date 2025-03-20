@@ -209,6 +209,28 @@ jobs:
                 await updateField(progressFieldId, progressPercent);
                 console.log("✅ Progress field updated.");
 
+                // ✅ Move issue to "In Progress" only if needed
+                //if (progressPercent > 0 && progressPercent < 100 && currentStatus !== "In Progress") {
+                if (progressPercent > 0 && progressPercent < 100) {
+                    console.log("🔄 Moving issue to 'In Progress'...");
+
+                    await github.graphql(`
+                    mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: String!) {
+                      updateProjectV2ItemFieldValue(input: {
+                        projectId: $projectId,
+                        itemId: $itemId,
+                        fieldId: $fieldId,
+                        value: { singleSelectOptionId: $value }
+                      }) {
+                        projectV2Item {
+                          id
+                        }
+                      }
+                    }`, { projectId, itemId, fieldId: statusField.id, value: inProgressStatusOptionId });
+
+                    console.log("✅ Issue moved to 'In Progress'.");
+                }
+
                 // ✅ Auto-Close Issue if Progress Reaches 100%
                 if (progressPercent === 100) {
                     console.log("🚀 Issue is fully completed (100% progress). Closing issue...");

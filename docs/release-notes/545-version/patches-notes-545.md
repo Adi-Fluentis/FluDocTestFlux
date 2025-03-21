@@ -1,6 +1,6 @@
 ---
 title: Patch notes Versione 545
-sidebar_position: 1
+sidebar_position: 1 
 ---
 
 ### Patch 545.1-0115- 07/03/2025

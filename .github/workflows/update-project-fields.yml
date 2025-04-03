@@ -36,8 +36,6 @@ jobs:
               console.log("🌐 Inputs received via workflow_dispatch:");
               console.log(context.payload.inputs); // log all inputs for debugging
 
-              const core = require("@actions/core");
-
               const rawInput = core.getInput("project_number");
               console.log("📥 Raw input project_number:", rawInput);
 

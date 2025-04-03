@@ -30,10 +30,11 @@ jobs:
           github-token: ${{ secrets.GH_PAT }}
           script: |
             let projectNumber;
+            const core = require("@actions/core");
 
             if (context.eventName === "workflow_dispatch") {
               // Accept project number as input from workflow_dispatch
-              projectNumber = parseInt(core.getInput("project_number"));
+              projectNumber = parseInt(core.getInput("project_number"), 10);
               if (!projectNumber || isNaN(projectNumber)) {
                 console.log("❌ No project number provided for manual run. Exiting.");
                 return;

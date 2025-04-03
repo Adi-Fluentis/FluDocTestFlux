@@ -1,4 +1,4 @@
-name: Update Project Start Date
+name: Project - Update Start Date
 
 on:
   issues:

@@ -1,4 +1,4 @@
-name: Update Project Fields
+name: Project - Update Fields
 
 on:
   workflow_dispatch:  # Manual trigger

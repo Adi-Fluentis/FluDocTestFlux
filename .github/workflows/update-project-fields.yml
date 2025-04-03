@@ -2,6 +2,11 @@ name: Update Project Fields
 
 on:
   workflow_dispatch:  # Manual trigger
+   inputs:
+      project_number:
+        description: 'The Project Number (as shown in GitHub Project URL)'
+        required: true
+        type: number
   issues:
     types: [opened, edited]  # Trigger on issue creation or edit
 
@@ -24,7 +29,27 @@ jobs:
         with:
           github-token: ${{ secrets.GH_PAT }}
           script: |
-            const PROJECT_NUMBER = 3;  // Change this if you need to update the project number
+            let projectNumber;
+
+            if (context.eventName === "workflow_dispatch") {
+              // Accept project number as input from workflow_dispatch
+              projectNumber = parseInt(core.getInput("project_number"));
+              if (!projectNumber || isNaN(projectNumber)) {
+                console.log("❌ No project number provided for manual run. Exiting.");
+                return;
+              }
+              console.log(`🛠 Running manually with project number #${projectNumber}`);
+            } else if (context.eventName === "issues") {
+              // Try to extract the first linked project number from the issue context (if available)
+              const projectsUrl = context.payload.issue?.repository_url + "/projects";
+              const match = projectsUrl?.match(/\\d+$/);
+              if (!match) {
+                console.log("❌ No linked project number found in issue. Skipping.");
+                return;
+              }
+              projectNumber = parseInt(match[0], 10);
+              console.log(`🔄 Running for issue's linked project #${projectNumber}`);
+            }
             const REQUIRED_LABEL = "review-auto-translation"; // Change this if you want a different label
 
             const repo = context.repo;
@@ -56,7 +81,7 @@ jobs:
                   }
                 }
               }
-            }`, { owner, projectNumber: PROJECT_NUMBER }); 
+            }`, { owner, projectNumber: projectNumber }); 
 
 
             // ✅ Extract Project ID (Fix for User-Level Project)

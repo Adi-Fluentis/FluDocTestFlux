@@ -33,6 +33,18 @@ jobs:
 
             if (context.eventName === "workflow_dispatch") {
               // Accept project number as input from workflow_dispatch
+              console.log("🧪 Inputs received via workflow_dispatch:");
+              console.log(JSON.stringify(core.getInput, null, 2));
+
+              const projectNumberRaw = core.getInput("project_number");
+              console.log(`📥 Raw input project_number: "${projectNumberRaw}"`);
+
+              const projectNumber = parseInt(projectNumberRaw, 10);
+              if (!projectNumber || isNaN(projectNumber)) {
+                console.log("❌ No project number provided for manual run. Exiting.");
+                return;
+              }
+
               projectNumber = parseInt(core.getInput("project_number"), 10);
               if (!projectNumber || isNaN(projectNumber)) {
                 console.log("❌ No project number provided for manual run. Exiting.");

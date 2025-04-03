@@ -36,16 +36,9 @@ jobs:
               console.log("🌐 Inputs received via workflow_dispatch:");
               console.log(context.payload.inputs); // log all inputs for debugging
 
-              const projectNumberRaw = core.getInput("project_number");
-              console.log(`📥 Raw input project_number: "${projectNumberRaw}"`);
+              console.log("📥 Raw input project_number:", inputs.project_number);
+              const projectNumber = parseInt(inputs.project_number, 10);
 
-              const projectNumber = parseInt(projectNumberRaw, 10);
-              if (!projectNumber || isNaN(projectNumber)) {
-                console.log("❌ No project number provided for manual run. Exiting.");
-                return;
-              }
-
-              projectNumber = parseInt(core.getInput("project_number"), 10);
               if (!projectNumber || isNaN(projectNumber)) {
                 console.log("❌ No project number provided for manual run. Exiting.");
                 return;

@@ -47,15 +47,54 @@ jobs:
 
               console.log(`⚙️ Running manually with project number #${projectNumber}`);
             } else if (context.eventName === "issues") {
-              // Try to extract the first linked project number from the issue context (if available)
-              const projectsUrl = context.payload.issue?.repository_url + "/projects";
-              const match = projectsUrl?.match(/\\d+$/);
-              if (!match) {
-                console.log("❌ No linked project number found in issue. Skipping.");
+              const issue = context.payload.issue;
+              const issueNodeId = issue.node_id;
+
+              console.log("🔎 Searching user-level projects to find one linked to this issue...");
+
+              // Fetch user's projects
+              const userProjectsResponse = await github.graphql(`
+                query($login: String!) {
+                  user(login: $login) {
+                    projectsV2(first: 10) {
+                      nodes {
+                        id
+                        number
+                        title
+                        items(first: 50) {
+                          nodes {
+                            content {
+                              ... on Issue {
+                                id
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              `, { login: owner });
+
+              const projects = userProjectsResponse.user.projectsV2.nodes;
+
+              let foundProject = null;
+
+              for (const proj of projects) {
+                const itemMatch = proj.items.nodes.find(item => item.content?.id === issueNodeId);
+                if (itemMatch) {
+                  foundProject = proj;
+                  break;
+                }
+              }
+
+              if (!foundProject) {
+                console.log("❌ Issue is not linked to any user-level project. Skipping.");
                 return;
               }
-              projectNumber = parseInt(match[0], 10);
-              console.log(`🔄 Running for issue's linked project #${projectNumber}`);
+
+              console.log(`✅ Found project '${foundProject.title}' (number: ${foundProject.number}) containing this issue.`);
+              projectNumber = foundProject.number;
             }
             const REQUIRED_LABEL = "review-auto-translation"; // Change this if you want a different label
 

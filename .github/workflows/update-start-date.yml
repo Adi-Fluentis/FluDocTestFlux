@@ -22,7 +22,7 @@ jobs:
             const owner = repo.owner;
             const assignees = issue.assignees.map(a => a.login);
             const editor = context.payload.sender.login;
-            const PROJECT_NUMBER = 3;  // Change this if you need to update the project number
+            let projectNumber;
 
             console.log(`Repo: ${repoName}, Owner: ${owner}, Editor: ${editor}`);
             console.log(`🔍 Issue #${issue.number} was edited by: ${editor}`);
@@ -31,6 +31,57 @@ jobs:
             if (!assignees.includes(editor)) {
               console.log(`⏭️ Editor ${editor} is not an assignee. Skipping Start Date update.`);
               return;
+            }
+
+            if (context.eventName === "issues") {
+              const issue = context.payload.issue;
+              const issueNodeId = issue.node_id;
+
+              console.log("🔎 Searching user-level projects to find one linked to this issue...");
+
+              // Fetch user's projects
+              const userProjectsResponse = await github.graphql(`
+                query($login: String!) {
+                  user(login: $login) {
+                    projectsV2(first: 10) {
+                      nodes {
+                        id
+                        number
+                        title
+                        items(first: 50) {
+                          nodes {
+                            content {
+                              ... on Issue {
+                                id
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              `, { login: owner });
+
+              const projects = userProjectsResponse.user.projectsV2.nodes;
+
+              let foundProject = null;
+
+              for (const proj of projects) {
+                const itemMatch = proj.items.nodes.find(item => item.content?.id === issueNodeId);
+                if (itemMatch) {
+                  foundProject = proj;
+                  break;
+                }
+              }
+
+              if (!foundProject) {
+                console.log("❌ Issue is not linked to any user-level project. Skipping.");
+                return;
+              }
+
+              console.log(`✅ Found project '${foundProject.title}' (number: ${foundProject.number}) containing this issue.`);
+              projectNumber = foundProject.number;
             }
 
             // Fetch the project ID
@@ -51,7 +102,7 @@ jobs:
                   }
                 }
               }
-            }`, { owner, projectNumber: PROJECT_NUMBER }); 
+            }`, { owner, projectNumber: projectNumber }); 
 
             const projectId = projectsResponse.user?.projectV2?.id;
             if (!projectId) {

@@ -30,7 +30,6 @@ jobs:
           github-token: ${{ secrets.GH_PAT }}
           script: |
             let projectNumber;
-            const core = require("@actions/core");
 
             if (context.eventName === "workflow_dispatch") {
               // Accept project number as input from workflow_dispatch

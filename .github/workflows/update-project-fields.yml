@@ -6,7 +6,7 @@ on:
       project_number:
         description: 'The Project Number (as shown in GitHub Project URL)'
         required: true
-        type: number
+        type: string
   issues:
     types: [opened, edited]  # Trigger on issue creation or edit
 
@@ -33,8 +33,8 @@ jobs:
 
             if (context.eventName === "workflow_dispatch") {
               // Accept project number as input from workflow_dispatch
-              console.log("🧪 Inputs received via workflow_dispatch:");
-              console.log(JSON.stringify(core.getInput, null, 2));
+              console.log("🌐 Inputs received via workflow_dispatch:");
+              console.log(context.payload.inputs); // log all inputs for debugging
 
               const projectNumberRaw = core.getInput("project_number");
               console.log(`📥 Raw input project_number: "${projectNumberRaw}"`);

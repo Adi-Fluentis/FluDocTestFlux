@@ -30,6 +30,10 @@ jobs:
           github-token: ${{ secrets.GH_PAT }}
           script: |
             let projectNumber;
+            const REQUIRED_LABEL = "review-auto-translation"; // Change this if you want a different label
+            const repo = context.repo;
+            const owner = repo.owner;
+            const repoName = repo.repo;
 
             if (context.eventName === "workflow_dispatch") {
               // Accept project number as input from workflow_dispatch
@@ -96,11 +100,6 @@ jobs:
               console.log(`✅ Found project '${foundProject.title}' (number: ${foundProject.number}) containing this issue.`);
               projectNumber = foundProject.number;
             }
-            const REQUIRED_LABEL = "review-auto-translation"; // Change this if you want a different label
-
-            const repo = context.repo;
-            const owner = repo.owner;
-            const repoName = repo.repo;
 
             console.log("🔹 Fetching all issues in the project...");
 

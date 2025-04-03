@@ -6,7 +6,7 @@ on:
       project_number:
         description: 'The Project Number (as shown in GitHub Project URL)'
         required: true
-        type: string
+        type: number
   issues:
     types: [opened, edited]  # Trigger on issue creation or edit
 
@@ -36,14 +36,18 @@ jobs:
               console.log("🌐 Inputs received via workflow_dispatch:");
               console.log(context.payload.inputs); // log all inputs for debugging
 
-              console.log("📥 Raw input project_number:", inputs.project_number);
-              const projectNumber = parseInt(inputs.project_number, 10);
+              const core = require("@actions/core");
 
+              const rawInput = core.getInput("project_number");
+              console.log("📥 Raw input project_number:", rawInput);
+
+              projectNumber = parseInt(rawInput, 10);
               if (!projectNumber || isNaN(projectNumber)) {
                 console.log("❌ No project number provided for manual run. Exiting.");
                 return;
               }
-              console.log(`🛠 Running manually with project number #${projectNumber}`);
+
+              console.log(`⚙️ Running manually with project number #${projectNumber}`);
             } else if (context.eventName === "issues") {
               // Try to extract the first linked project number from the issue context (if available)
               const projectsUrl = context.payload.issue?.repository_url + "/projects";

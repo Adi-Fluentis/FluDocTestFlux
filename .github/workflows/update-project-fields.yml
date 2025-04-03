@@ -28,6 +28,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GH_PAT }}
+          project_number: ${{ inputs.project_number }}
           script: |
             let projectNumber;
 
@@ -36,7 +37,7 @@ jobs:
               console.log("🌐 Inputs received via workflow_dispatch:");
               console.log(context.payload.inputs); // log all inputs for debugging
 
-              const rawInput = core.getInput("project_number");
+              const rawInput = inputs.project_number || context.payload.inputs.project_number;
               console.log("📥 Raw input project_number:", rawInput);
 
               projectNumber = parseInt(rawInput, 10);

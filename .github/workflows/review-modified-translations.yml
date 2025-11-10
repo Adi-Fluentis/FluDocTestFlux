@@ -16,7 +16,14 @@ env:
   REVIEW_EXCLUDE_USER: adi-fluentis
 
 jobs:
+
+  check-actor:
+    runs-on: ubuntu-latest
+    steps:
+        - run: echo "Workflow triggered by ${{ github.actor }}"
+
   create-issues:
+    needs: check-actor
     if: ${{ github.actor != env.REVIEW_EXCLUDE_USER }}
     runs-on: ubuntu-latest
     permissions:

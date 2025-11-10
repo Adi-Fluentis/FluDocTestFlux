@@ -12,8 +12,6 @@ on:
 #     paths:
 #       - 'docs/**' # Folder to watch for changes
 
-env:
-  REVIEW_EXCLUDE_USER: adi-fluentis
 
 jobs:
 
@@ -25,6 +23,8 @@ jobs:
   create-issues:
     needs: check-actor
     if: ${{ github.actor != env.REVIEW_EXCLUDE_USER }}
+    env:
+      REVIEW_EXCLUDE_USER: adi-fluentis
     runs-on: ubuntu-latest
     permissions:
         issues: write

@@ -12,8 +12,12 @@ on:
 #     paths:
 #       - 'docs/**' # Folder to watch for changes
 
+env:
+  REVIEW_EXCLUDE_USER: adi-fluentis
+
 jobs:
   create-issues:
+    if: ${{ github.actor != env.REVIEW_EXCLUDE_USER }}
     runs-on: ubuntu-latest
     permissions:
         issues: write
